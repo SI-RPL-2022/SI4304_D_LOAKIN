@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\DriverAdminController;
+use App\Http\Controllers\Admin\UserAdminController;
 
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
@@ -14,6 +15,8 @@ use App\Http\Controllers\Driver\ProfileDriverController;
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
 use App\Http\Controllers\User\CheckoutUserController;
+use App\Http\Controllers\User\LoginUserController;
+use App\Http\Controllers\User\RegisterUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +53,11 @@ Route::prefix('admin')->group(function () {
         Route::get('/', [DriverAdminController::class, 'index'])->name('index');
         
     });
+
+    Route::prefix('userdata')->name('userdata.')->group(function () {
+        Route::get('/', [UserAdminController::class, 'index'])->name('index');
+        
+    });
 });
 
 Route::get('logindriver', [LoginDriverController::class, 'logindriver'])->name('logindriver');
@@ -69,16 +77,25 @@ Route::prefix('driver')->group(function () {
     
 });
 
+Route::get('loginuser', [LoginUserController::class, 'loginuser'])->name('loginuser');
+Route::post('proses_loginuser', [LoginUserController::class, 'proses_loginuser'])->name('proses_loginuser');
+
+Route::get('registeruser', [RegisterUserController::class, 'registeruser'])->name('registeruser');
+Route::post('proses_registeruser', [RegisterUserController::class, 'proses_registeruser'])->name('proses_registeruser');
+
+Route::get('logoutuser', [LoginUserController::class, 'logoutuser'])->name('logoutuser');
+
+
 Route::prefix('/')->group(function () {
     Route::prefix('/')->name('home.')->group(function () {
         Route::get('/', [HomeUserController::class, 'index'])->name('index');
     }); 
 
     Route::prefix('/order')->name('order.')->group(function () {
-        Route::get('/', [OrderUserController::class, 'index'])->name('index');
+        Route::get('/', [OrderUserController::class, 'index'])->name('index')->middleware('auth');
     }); 
 
     Route::prefix('/checkout')->name('checkout.')->group(function () {
-        Route::get('/', [CheckoutUserController::class, 'index'])->name('index');
+        Route::get('/', [CheckoutUserController::class, 'index'])->name('index')->middleware('auth');
     }); 
 });

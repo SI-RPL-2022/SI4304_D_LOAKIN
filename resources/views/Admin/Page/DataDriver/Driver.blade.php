@@ -11,7 +11,7 @@
                     <li class="breadcrumb-item text-sm active" aria-current="page">Data Driver</li>
                 </ol>
                 <div class="card-header pb-0">
-                <h4>Data Produk</h4>
+                <h4>Data Driver</h4>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">

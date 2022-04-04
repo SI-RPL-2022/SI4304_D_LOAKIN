@@ -1,31 +1,60 @@
-<html>
-    <head>
-        <title>Login</title>
-        <link rel="stylesheet" href="../style.css">
-    </head>
-    <body>
-        <div class="container">
-          <h1>Login</h1>
-            <form method="POST" action="../index.php">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Masuk - LOAKIN</title>
+    <link rel="icon" type="image/png" href="{{asset('logoatas.png')}}">
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="border-radius: 15px; margin-top: 5%">
+                    <div class="card-body p-5">
+                        <center><img src="{{asset('logo.png')}}" width="350" height="60" alt="" class="img-fluid"></center><br>
+                        <h2 class="text-uppercase text-center mb-5" style="font-family: 'Montserrat'; color: #F58814; "><b>Masuk</b></h2>
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-danger alert-block" style="margin-top: 10px">   
+                                <strong>{{ $message }}</strong>
+                            </div>
+                        @endif
+                        <form action="{{route('proses_loginuser')}}" method="POST" id="logForm">
+                            {{ csrf_field() }}
 
-                <!-- tipe hidden tidak akan tampil pada website --> 
-                <input name="tujuan" type="hidden" value="LOGIN" >
-
-                <label>Username</label>
-                <br>
-                <input name="username" type="text">
-                <br>
-                <label>Password</label>
-                <br>
-                <input name="password" type="password">
-                <br>
-
-                <button>Log In</button>
-                
-                <p> Belum punya akun?
-                  <a href="Registrasi.blade.php">Daftar di sini</a>
-                </p>
-            </form>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form3Example3cg">Email</label>
+                            <input class="form-control py-3" id="inputEmailAddress" name="email" type="email" placeholder="Masukkan Email"/>
+                        </div>
+        
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form3Example4cg">Password</label>
+                            <input class="form-control py-3" id="inputEmailAddress" name="password" type="password" placeholder="Masukkan password"/>
+                        </div>
+        
+        
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-outline-light" name="checkout" type="submit" style="background-color:#F58814;font-color:white;width:100%;border-radius:25px 25px 25px 25px; font-size:18px"><b>Masuk</b></button>
+                        </div>
+        
+                        <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="" class="fw-bold text-body"><u>Register here</u></a></p>
+        
+                        </form>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <center><img src="{{asset('login.png')}}" width="400" height="60" alt="" class="img-fluid  "></center><br>
+            </div>
         </div>
-    </body>
+        
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html>
