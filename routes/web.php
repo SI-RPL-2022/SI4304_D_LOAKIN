@@ -25,6 +25,9 @@ use App\Http\Controllers\User\CheckoutUserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/profile', function () {
+    return view('User.Page.Profile.profile');
+});
 
 Route::get('loginadmin', [LoginAdminController::class, 'loginadmin'])->name('loginadmin');
 Route::post('proses_loginadmin', [LoginAdminController::class, 'proses_loginadmin'])->name('proses_loginadmin');
