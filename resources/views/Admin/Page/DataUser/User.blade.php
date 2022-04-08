@@ -22,7 +22,7 @@
                             <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7 ps-2">Nama User</th>
                             <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Email User</th>
                             <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">No HP</th>
-                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Status</th>
+                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Alamat</th>
                             <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Aksi</th>
                             </tr>
                         </thead>
@@ -52,7 +52,14 @@
                             </td>
                             <td class="align-middle  text-center">
                                 <a href="" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
-                                <a href="" class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash-o" aria-hidden="true" style="margin-right: 10px;"></i>Hapus</a>
+                                <?php
+                                    if($dr->status == 'Belum Aktif')
+                                {
+                                ?>
+                                    <a href="{{route('userdata.update', $dr->id)}}" class="btn btn-danger" ><i class="fa fa-power-off"  aria-hidden="true" style="margin-right: 10px"></i>Aktifkan</a>
+                                <?php
+                                }
+                                ?>
                             </td>
                             </tr>
                             @endforeach

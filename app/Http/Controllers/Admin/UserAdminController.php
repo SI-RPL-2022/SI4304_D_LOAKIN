@@ -23,4 +23,15 @@ class UserAdminController extends Controller
             return redirect()->route('loginadmin');
         }
     }
+
+    public function update($id)
+    {
+        
+        $user = User::find($id);
+
+        $user->status     = 'Aktif';
+        $user->save();
+
+        return redirect(route('userdata.index'))->with(['success' => 'Account Berhasil di Aktifkan']);
+    }
 }

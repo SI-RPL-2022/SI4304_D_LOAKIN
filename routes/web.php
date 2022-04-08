@@ -14,6 +14,7 @@ use App\Http\Controllers\Driver\ProfileDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
+use App\Http\Controllers\User\StatusUserController;
 use App\Http\Controllers\User\CheckoutUserController;
 use App\Http\Controllers\User\LoginUserController;
 use App\Http\Controllers\User\RegisterUserController;
@@ -56,7 +57,7 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('userdata')->name('userdata.')->group(function () {
         Route::get('/', [UserAdminController::class, 'index'])->name('index');
-        
+        Route::get('/update/{id}', [UserAdminController::class, 'update'])->name('update');
     });
 });
 
@@ -93,9 +94,16 @@ Route::prefix('/')->group(function () {
 
     Route::prefix('/order')->name('order.')->group(function () {
         Route::get('/', [OrderUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::post('/order', [OrderUserController::class, 'order'])->name('order');
+        
     }); 
 
     Route::prefix('/checkout')->name('checkout.')->group(function () {
         Route::get('/', [CheckoutUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::get('/update/{id}', [CheckoutUserController::class, 'update'])->name('update')->middleware('auth');
+    }); 
+
+    Route::prefix('/status')->name('status.')->group(function () {
+        Route::get('/', [StatusUserController::class, 'index'])->name('index')->middleware('auth');
     }); 
 });

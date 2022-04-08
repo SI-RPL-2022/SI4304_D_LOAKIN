@@ -10,7 +10,7 @@
                             <div class="numbers">
                                 <p class="text-sm mb-0 text-uppercase font-weight-bold">Data Pelanggan</p>
                                 <h5 class="font-weight-bolder">
-                                
+                                {{$user}}
                                 </h5>
                             </div>
                             </div>
@@ -31,7 +31,7 @@
                             <div class="numbers">
                                 <p class="text-sm mb-0 text-uppercase font-weight-bold">Data Driver</p>
                                 <h5 class="font-weight-bolder">
-                                
+                                {{$driver}}
                                 </h5>
                             </div>
                             </div>
@@ -73,7 +73,7 @@
                             <div class="numbers">
                                 <p class="text-sm mb-0 text-uppercase font-weight-bold">Data Transaksi</p>
                                 <h5 class="font-weight-bolder">
-                                
+                                {{$order}}
                                 </h5>
                             </div>
                             </div>
