@@ -82,3 +82,11 @@ Route::prefix('/')->group(function () {
         Route::get('/', [CheckoutUserController::class, 'index'])->name('index');
     }); 
 });
+
+Route::get('/login', function () {
+    return view('User.Authentifikasi.Login');
+});
+
+Route::get('/register', function () {
+    return view('User.Authentifikasi.Registrasi');
+});

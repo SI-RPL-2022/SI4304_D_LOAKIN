@@ -1,9 +1,11 @@
+<!DOCTYPE HTML>
 <html>
     <head>
         <title>Login</title>
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+
         <div class="container">
           <h1>Login</h1>
             <form method="POST" action="../index.php">
@@ -13,11 +15,11 @@
 
                 <label>Username</label>
                 <br>
-                <input name="username" type="text">
+                <input name="username" type="text" required>
                 <br>
                 <label>Password</label>
                 <br>
-                <input name="password" type="password">
+                <input name="password" type="password" required>
                 <br>
 
                 <button>Log In</button>
