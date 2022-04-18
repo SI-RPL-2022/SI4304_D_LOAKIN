@@ -7,13 +7,15 @@
             <ul class="navbar-nav me-auto">
                 <li class="nav-item" >
                     <a class="navbar-brand mx-100" href="">
-                        <img src="http://drive.google.com/uc?export=view&id=1PO_71ydm3B8ayH4KD7GKO4B1rpTWCW5d" width="200" height="60" alt="">
+                        <img src="{{asset('logo.png')}}" width="200" height="60" alt="">
                     </a>
                 </li>
             </ul>
+    
+        @if(session()->has('user'))
         <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Nunito'; font-weight:bold">
             <li class="nav-item">
-                <a class="nav-link" href="" >HOME</a>
+                <a class="nav-link" href="/" >HOME</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">ACTIVITY</a>
@@ -21,11 +23,26 @@
             <li class="nav-item">
                 <a class="nav-link" href="">ACCOUNT</a>
             </li>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href=""><i class="fa fa-user" aria-hidden="true" style="margin-right: 10px"></i>Login</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" ><i class="fa fa-user" aria-hidden="true" style="margin-right: 10px"></i>{{session()->get('user')->name}}</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{url('logoutuser')}}">Logout</a></li>
+                </ul>
             </li>
         </ul>
+        @else
+        <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Nunito'; font-weight:bold">
+            <li class="nav-item">
+                <a class="nav-link" href="/" >HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('loginuser')}}">LOGIN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('registeruser')}}">REGISTER</a>
+            </li>
+        </ul>
+        @endif
         </div>
     </div>
 </nav>

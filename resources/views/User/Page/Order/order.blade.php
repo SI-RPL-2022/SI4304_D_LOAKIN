@@ -8,21 +8,85 @@
 
     <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
         <div style="margin-left: 20px;margin-right:20px">
-            <table class="table-responsive" cellpadding="4">
-                <thead>
-                    <tr style="color: #D77409">
-                        <td scope="col"><h5><i class="bi bi-geo-alt-fill" ></i></h5></td>
-                        <td scope="col" colspan="3"><h5><b>Alamat Pengambilan</b></h5></td>
-                    </tr>
-                </thead>
-                <tbody>   
-                    <tr>
-                        <td></td>
-                        <td><b>Jung Jaehyun</b></td>
-                        <td rowspan="2">Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</td>
-                        <td><b><a href="" style="color: #D77409;text-decoration:none" data-bs-toggle="modal" data-bs-target="#exampleModal">UBAH</a></b></td>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="row">
+            <div class="col-lg-10"><h4 style="color: #D77409">Alamat Pengambilan</h4></div>
+            <div class="col-lg-2 d-flex justify-content-end"><h5><b><a href="" style="color: #D77409;text-decoration:none" data-bs-toggle="modal" data-bs-target="#exampleModal">UBAH</a></b></h5></div>
+        </div>
+            
+            <div class="row">
+                @foreach($user as $us)  
+                <div class="col-lg-4">
+                    <p><b>{{$us->name}}</b></p>
+                    <p><b>{{$us->telepon}}</b></p>
+                </div>
+                <div class="col-lg-6">
+                    {{$us->alamat}}
+               
+                </div>
+                <div class="col-lg-2">
+                
+                </div>
+                @endforeach
+                    </div>   
+            
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <form method="POST" action="{{ route('order.order') }}" enctype="multipart/form-data"> 
+        @csrf
+            <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
+                <h5 style="color: #D77409; margin-left:20px"><b>Item Details</b></h5>
+                <div style="margin-left: 50px;margin-right:40px">
+                    <div class="mb-3">
+                        <label for="weightm" class="form-label"><b>Weight Measure</b></label>
+                        <div class="form-check">
+                            <input class="form-check-input"  type="radio" name="tipeweight" id="dibawah" value="Dibawah 10kg">
+                            <label class="form-check-label" for="dibawah">
+                                Dibawah 10kg
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipeweight" id="diatas" value="Diatas 10kg">
+                            <label class="form-check-label" for="diatas">
+                                Diatas 10kg
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
+                        <input type="text" class="form-control" name="desc" id="desc" style="border-width:0 0 1px 0;box-shadow:none" placeholder="Kardus">
+                    </div>
+                    <div class="mb-3">
+                        <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
+                        <input type="text" class="form-control" name="weight" id="weight" style="border-width:0 0 1px 0;box-shadow:none" placeholder="0,5">
+                    </div>
+                    <div>
+                        <label for="pay" class="form-label"><b>Payment</b></label>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="cash" value="cash">
+                            <label class="form-check-label" for="cash">Cash</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="dana" value="dana">
+                            <label class="form-check-label" for="dana">Dana</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="ovo" value="ovo">
+                            <label class="form-check-label" for="ovo">OVO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row-reverse" style="margin-top: 30px;">
+				<button class="btn" type="submit" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem">NEXT</button>
+			</div>
+        </form>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                 <div class="modal-header">
@@ -61,66 +125,4 @@
                                 </form>
                             </div>
                         </div>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><b>(+62)81233671818</b></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div class="mt-4">
-        <form method="post">
-            <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-                <h5 style="color: #D77409; margin-left:20px"><b>Item Details</b></h5>
-                <div style="margin-left: 50px;margin-right:40px">
-                    <div class="mb-3">
-                        <label for="weightm" class="form-label"><b>Weight Measure</b></label>
-                        <div class="form-check">
-                            <input class="form-check-input"  type="radio" name="dibawah" id="dibawah" >
-                            <label class="form-check-label" for="dibawah">
-                                Dibawah 10kg
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="diatas" id="diatas">
-                            <label class="form-check-label" for="diatas">
-                                Diatas 10kg
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
-                        <input type="text" class="form-control" id="desc" style="border-width:0 0 1px 0;box-shadow:none" placeholder="Kardus">
-                    </div>
-                    <div class="mb-3">
-                        <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
-                        <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" placeholder="0,5">
-                    </div>
-                    <div>
-                        <label for="pay" class="form-label"><b>Payment</b></label>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cash" value="cash">
-                            <label class="form-check-label" for="cash">Cash</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dana" value="dana">
-                            <label class="form-check-label" for="dana">Dana</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ovo" value="ovo">
-                            <label class="form-check-label" for="ovo">OVO</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex flex-row-reverse" style="margin-top: 30px;">
-				<button class="btn" type="submit" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem">NEXT</button>
-			</div>
-        </form>
-    </div>
 @endsection
