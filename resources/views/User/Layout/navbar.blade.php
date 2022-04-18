@@ -21,7 +21,7 @@
                 <a class="nav-link" href="">ACTIVITY</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">ACCOUNT</a>
+                <a class="nav-link" href="{{route('account.index')}}">ACCOUNT</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" ><i class="fa fa-user" aria-hidden="true" style="margin-right: 10px"></i>{{session()->get('user')->name}}</a>
