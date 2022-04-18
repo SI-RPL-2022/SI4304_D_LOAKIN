@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
                 'password'      => bcrypt('12345'),
                 'telepon'       => '0812456782',
                 'alamat'        => 'surabaya',
-                'foto'          => 'tiara.png',
+                'foto'          => 'User.png',
             ]
         ];
 

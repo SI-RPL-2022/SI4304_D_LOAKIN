@@ -51,7 +51,7 @@
                                 {{$dr->alamat}}   
                             </td>
                             <td class="align-middle  text-center">
-                                <a href="" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
+                                <a href="{{route('userdata.view', $dr->id)}}" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
                                 <?php
                                     if($dr->status == 'Belum Aktif')
                                 {

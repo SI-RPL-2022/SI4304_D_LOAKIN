@@ -53,12 +53,14 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('driverdata')->name('driverdata.')->group(function () {
         Route::get('/', [DriverAdminController::class, 'index'])->name('index');
+        Route::get('/view/{id}', [DriverAdminController::class, 'view'])->name('view');
         
     });
 
     Route::prefix('userdata')->name('userdata.')->group(function () {
         Route::get('/', [UserAdminController::class, 'index'])->name('index');
         Route::get('/update/{id}', [UserAdminController::class, 'update'])->name('update');
+        Route::get('/view/{id}', [UserAdminController::class, 'view'])->name('view');
     });
 });
 

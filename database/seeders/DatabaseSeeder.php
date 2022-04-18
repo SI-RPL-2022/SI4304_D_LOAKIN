@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $user = [
             [
                 'name'      => 'admin',
-                'username'     => 'admin@admin.com',
+                'username'  => 'admin@admin.com',
                 'password'  => '12345',
             ]
         ];

@@ -34,4 +34,10 @@ class UserAdminController extends Controller
 
         return redirect(route('userdata.index'))->with(['success' => 'Account Berhasil di Aktifkan']);
     }
+
+    public function view($id)
+    {
+        $user = User::find($id);
+        return view('Admin.Page.DataUser.Show', compact('user'));
+    }
 }

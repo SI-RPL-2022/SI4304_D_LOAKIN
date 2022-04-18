@@ -23,4 +23,10 @@ class DriverAdminController extends Controller
         }
     }
 
+    public function view($id)
+    {
+        $driver = Driver::find($id);
+        return view('Admin.Page.DataDriver.Show', compact('driver'));
+    }
+
 }
