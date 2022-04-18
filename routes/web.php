@@ -18,6 +18,7 @@ use App\Http\Controllers\User\StatusUserController;
 use App\Http\Controllers\User\CheckoutUserController;
 use App\Http\Controllers\User\LoginUserController;
 use App\Http\Controllers\User\RegisterUserController;
+use App\Http\Controllers\User\ProfileUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,4 +107,9 @@ Route::prefix('/')->group(function () {
     Route::prefix('/status')->name('status.')->group(function () {
         Route::get('/', [StatusUserController::class, 'index'])->name('index')->middleware('auth');
     }); 
+
+    Route::prefix('account')->name('account.')->group(function () {
+        Route::get('/', [ProfileUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
+    });
 });

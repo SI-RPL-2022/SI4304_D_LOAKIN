@@ -25,7 +25,7 @@
                         <form action="{{route('proses_loginadmin')}}" method="POST" >
                             {{ csrf_field() }}
 
-                            <h3 class="text-center mb-4" style="color: #F58814">Login</h3>
+                            <h3 class="text-center mb-4" style="color: #F58814">Login Admin</h3>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Username</label>
                                 <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">

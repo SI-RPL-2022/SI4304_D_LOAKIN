@@ -10,7 +10,7 @@
         
     </style>
   </head>
-  <body>
+  <body style="background: #F58814">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -41,7 +41,7 @@
                             <button class="btn btn-outline-light" name="checkout" type="submit" style="background-color:#F58814;font-color:white;width:100%;border-radius:25px 25px 25px 25px; font-size:18px"><b>Masuk</b></button>
                         </div>
         
-                        <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="" class="fw-bold text-body"><u>Register here</u></a></p>
+                        <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="{{route('registeruser')}}" class="fw-bold text-body"><u>Register here</u></a></p>
         
                         </form>
         
