@@ -52,35 +52,34 @@
     <div class="mt-4">
             
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-                <h5 style="color: #D77409; margin-left:20px"><b>Contact Driver</b></h5>
+                <h4 style="color: #D77409; margin-left:20px"> 
+                    <i class="fa fa-user" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;">Contact Driver</a>
+                </h4>
+
                 <div style="margin-left: 50px;margin-right:40px">
                     
                     <div class="mb-3">
-                        <label for="weightm" class="form-label"><b>Nomor Order</b></label>
+                        <label for="weightm" class="form-label"><b>Driver Code</b></label>
                         <p>frfr</p>
                     </div>
                     <div class="mb-3">
-                        <label for="weightm" class="form-label"><b>Weight Measure</b></label>
-                        <p>333</p>
+                        <label for="weightm" class="form-label"><b>Driver Name</b></label>
+                        <p>Park Chanyeol</p>
                     </div>
                     <div class="mb-3">
-                        <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
-                        <p>efref</p>
+                        <label for="desc" class="form-label"><b>Driver Number</b></label>
+                        <p>(+62)81928372638</p>
                     </div>
                     <div class="mb-3">
-                        <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
-                        <p>r33</p>
-                    </div>
-                    <div>
-                        <label for="pay" class="form-label"><b>Payment</b></label>
-                        <p>342er4</p>
+                        <label for="weight" class="form-label"><b>Chat with Driver</b></label>
+                        <p style="color: green"><i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" href="https://web.whatsapp.com/" style="text-decoration:none;">Whatsapp</a></p>
                     </div>
                     
                 </div>
             </div>
             <div class="d-flex" style="margin-top: 30px;">
-				<a class="btn p-2 bd-highlight" href="{{ route('order.index') }}" style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem; ">BACK</a>
-                <a href="/checkout/update/" class="btn ms-auto p-2 bd-highlight" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">LOAK.IN AJA</a>
+				<a class="btn p-2 bd-highlight" href="{{ route('order.index') }}" style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem; ">CHECK ITEM DETAIL</a>
+                <a href="/checkout" class="btn ms-auto p-2 bd-highlight" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">FINISH</a>
     
             </div>
             
@@ -90,7 +89,7 @@
 
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("May 8, 2022 17:40:00").getTime();
+        var countDownDate = new Date("May 8, 2022 17:30:59").getTime();
         
         // Update the count down every 1 second
         var x = setInterval(function() {
