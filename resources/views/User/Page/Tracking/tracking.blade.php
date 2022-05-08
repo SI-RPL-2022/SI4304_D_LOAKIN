@@ -7,13 +7,13 @@
     </div>
 
     {{-- time,address --}}
-    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
+    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; ">
         {{-- adress --}}
         <div style="margin-left: 20px;margin-right:20px">
             <div class="row">
                 <div class="col-lg-10">
                     <h4 style="color: #D77409">
-                        <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;">Pick Up Address</a>
+                        <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;"><b>Pick Up Address</b></a>
                     </h4>
                 </div>
             </div>
@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-lg-10">
                     <h4 style="color: #D77409">
-                        <i class="fa fa-clock-o" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;">Status</a>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Status</b></a>
                     </h4>
                 </div>
             </div>
@@ -49,15 +49,15 @@
 
 
     {{-- @foreach($order as $or)  --}}
+    {{-- Contact Driver --}}
     <div class="mt-4">
             
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-                <h4 style="color: #D77409; margin-left:20px"> 
-                    <i class="fa fa-user" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;">Contact Driver</a>
+                <h4 style="color: #D77409; margin-left:20px; margin-bottom:24px;"> 
+                    <i class="fa fa-user" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Contact Driver</b></a>
                 </h4>
 
-                <div style="margin-left: 50px;margin-right:40px">
-                    
+                <div style="margin-left: 55px;margin-right:40px;">
                     <div class="mb-3">
                         <label for="weightm" class="form-label"><b>Driver Code</b></label>
                         <p>frfr</p>
@@ -72,49 +72,49 @@
                     </div>
                     <div class="mb-3">
                         <label for="weight" class="form-label"><b>Chat with Driver</b></label>
-                        <p style="color: green"><i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" href="https://web.whatsapp.com/" style="text-decoration:none;">Whatsapp</a></p>
+                        <p style="color: rgb(7, 166, 7)"><i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 10px"></i><a class="text-reset" href="https://web.whatsapp.com/" style="text-decoration:none;" target="_blank">Whatsapp</a></p>
                     </div>
-                    
                 </div>
+
             </div>
-            <div class="d-flex" style="margin-top: 30px;">
-				<a class="btn p-2 bd-highlight"data-bs-toggle="modal" data-bs-target="#exampleModal"  style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem; ">CHECK ITEM DETAIL</a>
-                <a href="/checkout" class="btn ms-auto p-2 bd-highlight" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">FINISH</a>
-    
+            {{-- Button --}}
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 30px;">
+				<a class="btn me-md-2 p-2 bd-highlight"data-bs-toggle="modal" data-bs-target="#exampleModal"  style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem; ">CHECK ITEM DETAIL</a>
+                <a href="#" class="btn p-2 bd-highlight" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">FINISH</a>
             </div>
             
-            <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: #D77409;""><b>Item Details</b></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: #D77409;""><b>Item Details</b></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="weightm" class="form-label"><b>Weight Measure</b></label>
+                        <p>Dibawah 10kg</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
+                        <p>Kardus</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
+                        <p>0,5</p>
+                    </div>
+                    <div>
+                        <label for="pay" class="form-label"><b>Payment</b></label>
+                        <p>Cash</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label for="weightm" class="form-label"><b>Weight Measure</b></label>
-                    <p>Dibawah 10kg</p>
-                </div>
-                <div class="mb-3">
-                    <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
-                    <p>Kardus</p>
-                </div>
-                <div class="mb-3">
-                    <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
-                    <p>0,5</p>
-                </div>
-                <div>
-                    <label for="pay" class="form-label"><b>Payment</b></label>
-                    <p>Cash</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
-        </div>
-    </div>
         
     </div>
     {{-- @endforeach --}}
