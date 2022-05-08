@@ -1,21 +1,23 @@
 @extends('User.master')
 
 @section('content')
-
+    {{-- Judul --}}
     <div class="container d-flex justify-content-center mt-3">
         <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Tracking Loak.in Aja</h2>
     </div>
 
+    {{-- time,address --}}
     <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
+        {{-- adress --}}
         <div style="margin-left: 20px;margin-right:20px">
             <div class="row">
                 <div class="col-lg-10">
                     <h4 style="color: #D77409">
-                        <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;">Pick Up Adress</a>
+                        <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;">Pick Up Address</a>
                     </h4>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-5 mt-2" style="margin-left:35px; font-weight:600;">
                     <p>Jung Jaehyun</p>
@@ -25,28 +27,24 @@
                     <p>Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</p>
                
                 </div>
-                
             </div>
             
+            {{-- Status waktu --}}
             <div class="row">
                 <div class="col-lg-10">
                     <h4 style="color: #D77409">
-                        <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;">Pick Up Adress</a>
+                        <i class="fa fa-clock-o" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;">Status</a>
                     </h4>
                 </div>
             </div>
             
             <div class="row">
                 <div class="col-lg-5 mt-2" style="margin-left:35px; font-weight:600;">
-                    <p>Jung Jaehyun</p>
-                    <p>(+62)8123456248</p>
-                </div>
-                
+                    <p id='demo'></p>
+                </div> 
             </div>
 
-
         </div>   
-            
     </div>
 
 
@@ -89,4 +87,35 @@
         
     </div>
     {{-- @endforeach --}}
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("May 8, 2022 17:40:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = minutes + " menit lagi" + ". Tunggu yaa";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Drivermu sudah sampai";
+          }
+        }, 1000);
+        </script>
+        
 @endsection
