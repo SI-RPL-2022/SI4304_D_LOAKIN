@@ -82,3 +82,5 @@ Route::prefix('/')->group(function () {
         Route::get('/', [CheckoutUserController::class, 'index'])->name('index');
     }); 
 });
+
+Route::view('/tracking', '/User/Page/Tracking/tracking');
