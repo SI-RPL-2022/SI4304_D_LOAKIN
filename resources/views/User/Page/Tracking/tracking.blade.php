@@ -79,8 +79,8 @@
             </div>
             {{-- Button --}}
             <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 30px;">
-				<a class="btn me-md-2 p-2 bd-highlight"data-bs-toggle="modal" data-bs-target="#exampleModal"  style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem; ">CHECK ITEM DETAIL</a>
-                <a href="#" class="btn p-2 bd-highlight" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">FINISH</a>
+				<a class="btn me-md-2 p-2 bd-highlight"data-bs-toggle="modal" data-bs-target="#exampleModal"  style="background-color:#FBCE9D; font-weight: 500; border-radius:7px 7px 7px 7px;width:15rem;">CHECK ITEM DETAIL</a>
+                <a href="#" class="btn p-2 bd-highlight" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">FINISH</a>
             </div>
             
         <!-- Modal -->
