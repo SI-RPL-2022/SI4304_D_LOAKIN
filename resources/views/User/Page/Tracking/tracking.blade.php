@@ -78,11 +78,43 @@
                 </div>
             </div>
             <div class="d-flex" style="margin-top: 30px;">
-				<a class="btn p-2 bd-highlight" href="{{ route('order.index') }}" style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem; ">CHECK ITEM DETAIL</a>
+				<a class="btn p-2 bd-highlight"data-bs-toggle="modal" data-bs-target="#exampleModal"  style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem; ">CHECK ITEM DETAIL</a>
                 <a href="/checkout" class="btn ms-auto p-2 bd-highlight" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">FINISH</a>
     
             </div>
             
+            <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: #D77409;""><b>Item Details</b></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="weightm" class="form-label"><b>Weight Measure</b></label>
+                    <p>Dibawah 10kg</p>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
+                    <p>Kardus</p>
+                </div>
+                <div class="mb-3">
+                    <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
+                    <p>0,5</p>
+                </div>
+                <div>
+                    <label for="pay" class="form-label"><b>Payment</b></label>
+                    <p>Cash</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
         
     </div>
     {{-- @endforeach --}}
