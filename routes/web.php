@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\DriverAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
+use App\Http\Controllers\Admin\OrderAdminController;
 
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
@@ -50,6 +51,17 @@ Route::prefix('admin')->group(function () {
         Route::post('/update/{id}', [ProdukAdminController::class, 'update_process'])->name('update.process');
         Route::get('/delete/{id}', [ProdukAdminController::class, 'delete'])->name('delete');
     });
+
+    Route::prefix('orderadmin')->name('orderadmin.')->group(function () {
+        Route::get('/', [OrderAdminController::class, 'index'])->name('index');
+        // Route::get('/create', [ProdukAdminController::class, 'create_view'])->name('create');
+        // Route::post('/create', [ProdukAdminController::class, 'create_process'])->name('create.process');
+        // Route::get('/view/{id}', [ProdukAdminController::class, 'view'])->name('view');
+        // Route::get('/update/{id}', [ProdukAdminController::class, 'update_view'])->name('update');
+        // Route::post('/update/{id}', [ProdukAdminController::class, 'update_process'])->name('update.process');
+        // Route::get('/delete/{id}', [ProdukAdminController::class, 'delete'])->name('delete');
+    });
+
 
     Route::prefix('driverdata')->name('driverdata.')->group(function () {
         Route::get('/', [DriverAdminController::class, 'index'])->name('index');
