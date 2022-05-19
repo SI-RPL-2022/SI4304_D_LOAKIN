@@ -1,7 +1,7 @@
 @extends('User.master')
 
 @section('content')
-    <div>
+    <div class="pt-3">
         <img src="https://drive.google.com/uc?export=view&id=1rombM23nFmTjJ2QlYspO0Y41L5Yvb1fX" alt="banner" width="100%">
         </div>
         <div class="container">
