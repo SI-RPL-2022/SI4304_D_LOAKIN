@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\DriverAdminController;
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
+use App\Http\Controllers\Driver\InputBeratDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
@@ -66,7 +67,7 @@ Route::prefix('driver')->group(function () {
         Route::get('/', [ProfileDriverController::class, 'index'])->name('index');
         Route::post('/update', [ProfileDriverController::class, 'update'])->name('update');
     });
-    
+
 });
 
 Route::prefix('/')->group(function () {
@@ -82,3 +83,5 @@ Route::prefix('/')->group(function () {
         Route::get('/', [CheckoutUserController::class, 'index'])->name('index');
     }); 
 });
+
+Route::get('/InputBerat', [InputBeratDriverController::class, 'index'])->name('index');
