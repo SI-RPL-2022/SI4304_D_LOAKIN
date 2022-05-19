@@ -41,18 +41,18 @@
                 <div style="margin-left: 50px;margin-right:40px">
                     <div class="mb-3">
                         <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
-                        <input type="text" class="form-control" id="desc" style="border-width:0 0 1px 0;box-shadow:none" placeholder="Kardus">
+                        <p>Kardus</p>
                     </div>
                     <div class="mb-3">
                         <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
-                        <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" placeholder="0,5">
+                        <p>0,5</p>
                     </div>
                     <div>
                         <label for="pay" class="form-label"><b>Payment</b></label>
                         <p>Cash</p>
                     </div>
                     <div class="mb-3">
-                        <label for="total" class="form-label"><b>Payment</b></label>
+                        <label for="total" class="form-label"><b>Total</b></label>
                         <p>3000</p> <!-- weight * 3000 -->
                     </div>
                 </div>

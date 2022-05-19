@@ -52,7 +52,7 @@
                         <p>Cash</p>
                     </div>
                     <div class="mb-3">
-                        <label for="total" class="form-label"><b>Payment</b></label>
+                        <label for="total" class="form-label"><b>Total</b></label>
                         <p>3000</p> <!-- weight * 3000 -->
                     </div>
                 </div>

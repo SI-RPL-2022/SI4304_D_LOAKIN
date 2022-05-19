@@ -11,6 +11,7 @@ use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
 use App\Http\Controllers\Driver\InputBeratDriverController;
+use App\Http\Controllers\Driver\KonfirmBeratDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
@@ -85,3 +86,4 @@ Route::prefix('/')->group(function () {
 });
 
 Route::get('/InputBerat', [InputBeratDriverController::class, 'index'])->name('index');
+Route::get('/KonfirmBerat', [KonfirmBeratDriverController::class, 'index'])->name('index');
