@@ -17,6 +17,8 @@ use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
 use App\Http\Controllers\User\CheckoutUserController;
 
+use App\Http\Controllers\User\HomeShopUserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -87,3 +89,4 @@ Route::prefix('/')->group(function () {
 
 Route::get('/InputBerat', [InputBeratDriverController::class, 'index'])->name('index');
 Route::get('/KonfirmBerat', [KonfirmBeratDriverController::class, 'index'])->name('index');
+Route::get('/HomeShop', [HomeShopUserController::class, 'index'])->name('index');
