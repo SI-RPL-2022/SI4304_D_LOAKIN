@@ -57,8 +57,9 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-row-reverse" style="margin-top: 30px;">
-				<button class="btn" type="submit" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem">NEXT</button>
+            <div class="d-flex" style="margin-top: 30px;">
+				<button class="btn p-2 bd-highlight" type="submit" style="background-color:#FBCE9D;border-radius:7px 7px 7px 7px;width:15rem">BACK</button>
+                <button class="btn ms-auto p-2 bd-highlight" type="submit" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem">LOAK.IN AJA</button>
 			</div>
         </form>
     </div>
