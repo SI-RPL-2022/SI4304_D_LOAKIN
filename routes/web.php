@@ -84,3 +84,5 @@ Route::prefix('/')->group(function () {
 });
 
 Route::view('/tracking', '/User/Page/Tracking/tracking');
+Route::view('/trackinguser', '/Driver/Page/Track/trackinguser');
+Route::view('/pickup', '/Driver/Page/PickUp/pickup');
