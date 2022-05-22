@@ -7,7 +7,7 @@
     </div>
 
     {{-- time,address --}}
-    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; ">
+    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
         {{-- adress --}}
         <div style="margin-left: 20px;margin-right:20px">
             <div class="row">
@@ -50,7 +50,7 @@
 
     {{-- @foreach($order as $or)  --}}
     {{-- Contact Driver --}}
-    <div class="mt-4">
+    <div class="mt-4" style=" font-family: 'Segoe UI', Arial, sans-serif;">
             
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
                 <h4 style="color: #D77409; margin-left:20px; margin-bottom:24px;"> 
