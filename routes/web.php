@@ -20,6 +20,8 @@ use App\Http\Controllers\User\CheckoutUserController;
 use App\Http\Controllers\User\LoginUserController;
 use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\ProfileUserController;
+use App\Http\Controllers\User\KeranjangUserController;
+use App\Http\Controllers\User\ShopUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,4 +128,13 @@ Route::prefix('/')->group(function () {
         Route::get('/', [ProfileUserController::class, 'index'])->name('index')->middleware('auth');
         Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
     });
+
+    Route::prefix('/keranjang')->name('keranjang.')->group(function () {
+        Route::get('/', [KeranjangUserController::class, 'index'])->name('index')->middleware('auth');
+    }); 
+
+    Route::prefix('/shop')->name('shop.')->group(function () {
+        Route::get('/', [ShopUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::get('/detail/{id}', [ShopUserController::class, 'detail'])->name('detail')->middleware('auth');
+    }); 
 });

@@ -24,7 +24,7 @@
         <div class="card-body">
           <h5 class="card-title" style="font-family: Nunito; font-weight:bold; text-align: center; color:#F58814">LOAK.IN SHOP</h5>
           <p class="card-text" style="font-size:16px; font-family: Nunito; font-weight: 400; text-align: center;">Loak.in Shop merupakan fitur yang berguna untuk pembelian dan penjualan barang bekas yang masih layak pakai ataupun hasil daur ulang barang bekas.</p>
-          <a class="btn btn-outline-light" style="background-color:#F58814;font-color:white;width:50%;border-radius:25px 25px 25px 25px; width: 182px; left: 336px; font-family: Nunito; margin-left: 100px" href="">SHOP NOW</a>
+          <a href="{{ route('shop.index') }}" class="btn btn-outline-light" style="background-color:#F58814;font-color:white;width:50%;border-radius:25px 25px 25px 25px; width: 182px; left: 336px; font-family: Nunito; margin-left: 100px" href="">SHOP NOW</a>
         </div> 
       </div>
     </div> 
