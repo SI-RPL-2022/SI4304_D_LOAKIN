@@ -17,11 +17,13 @@
               </div>
             </div>
 
-                {{-- Judul --}}
+    {{-- Judul --}}
     <div class="container d-flex justify-content-center mt-3">
         <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Pick Up Loak.in Aja</h2>
     </div>
 
+
+    {{-- Tabel --}}
     <div class="comtainer mt-5" style=" font-family: 'Segoe UI', Arial, sans-serif;">
         <table class="table table-responsive table-bordered">
             <thead style="font-weight: 600; background-color:#F58814;color:white;">
