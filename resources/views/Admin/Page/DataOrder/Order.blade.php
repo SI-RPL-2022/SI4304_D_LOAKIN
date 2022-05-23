@@ -15,35 +15,59 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
+
+                <div class="row mt-4">
+                    <div class="col-6" >
+                        <div class="d-grid gap-2">
+                            <a href="{{route('orderadmin.index')}}" class="btn btn-primary" type="button">Data Order Loak.In</a>
+                        </div>
+                    </div>
+                    <div class="col-6" >
+                        <div class="d-grid gap-2">
+                            <a href="#" class="btn btn-primary" type="button">Data Order Loak.In Shop</a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="card-header pb-0">
-                <h4>Data Order</h4>
+                <h4>Data Order Loak.In</h4>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
                         <table class="table align-items-center mb-0">
                         <thead>
                             <tr>
-                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Nomor Order</th>
-                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Tanggal Pesanan</th>
-                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Nama Pelanggan</th>
-                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Total Transaksi</th>
-                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Bukti Pembayaran</th>
-                            <th class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Aksi</th>
+                            <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Nomor Order</th>
+                            <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Tanggal Pesanan</th>
+                            <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Nama Pelanggan</th>
+                            <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Total Transaksi</th>
+                            <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                                        $no = 0;
+                                    ?>
+                                    @foreach($order as $ts)
+                                    <?php
+                                        $no += 1;
+                                    ?>
                             <tr>
-                                <td>1</td>
-                                <td>09 Mei 2022</td>
-                                <td>Tiara</td>
-                                <td>Rp 55000</td>
-                                <td>-</td>
+                                <td>{{$ts->no_order}}</td>
+                                <td>{{date('d-m-Y', strtotime($ts->created_at));}}</td>
+                                <td>{{$ts->user->name}}</td>
+                                <td>Rp {{$ts->total_harga}}</td>
                                 <td>
-                                    <a href="" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
-                                    <a href="" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Approve</a>
+                                    <a href="{{route('orderadmin.view', $ts->no_order)}}" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
+                                    @if($ts->status == 'On Prosess')
+                                        <a href="{{route('orderadmin.fixorder', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Approve</a>
+                                    @elseif($ts->status == 'Fix Order')
+                                        <a href="{{route('orderadmin.pilihdriver', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Pilih Driver</a>
+                                    @endif
                                 </td>
                             </tr>
+                            
+                            @endforeach
                         </tbody>
                         </table>
                     </div>

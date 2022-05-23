@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\DriverAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
-use App\Http\Controllers\Admin\OrderAdminController;
+use App\Http\Controllers\Admin\OrderLoakInAdminController;
 
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
@@ -55,13 +55,11 @@ Route::prefix('admin')->group(function () {
     });
 
     Route::prefix('orderadmin')->name('orderadmin.')->group(function () {
-        Route::get('/', [OrderAdminController::class, 'index'])->name('index');
-        // Route::get('/create', [ProdukAdminController::class, 'create_view'])->name('create');
-        // Route::post('/create', [ProdukAdminController::class, 'create_process'])->name('create.process');
-        // Route::get('/view/{id}', [ProdukAdminController::class, 'view'])->name('view');
-        // Route::get('/update/{id}', [ProdukAdminController::class, 'update_view'])->name('update');
-        // Route::post('/update/{id}', [ProdukAdminController::class, 'update_process'])->name('update.process');
-        // Route::get('/delete/{id}', [ProdukAdminController::class, 'delete'])->name('delete');
+        Route::get('/', [OrderLoakInAdminController::class, 'index'])->name('index');
+        Route::get('/view/{no_order}', [OrderLoakInAdminController::class, 'view'])->name('view');
+        Route::get('/fixorder/{id}', [OrderLoakInAdminController::class, 'fixorder'])->name('fixorder');
+        Route::get('/pilihdriver/{id}', [OrderLoakInAdminController::class, 'pilihdriver'])->name('pilihdriver');
+        Route::post('/submitdriver/{id}', [OrderLoakInAdminController::class, 'submitdriver'])->name('submitdriver');
     });
 
 
