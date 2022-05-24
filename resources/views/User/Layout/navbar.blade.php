@@ -11,7 +11,7 @@
                     </a>
                 </li>
             </ul>
-        <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Nunito'; font-weight:bold">
+        <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Segoe UI', Arial, sans-serif;; font-weight:bold">
             <li class="nav-item">
                 <a class="nav-link" href="" >HOME</a>
             </li>
