@@ -22,6 +22,7 @@ use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\ProfileUserController;
 use App\Http\Controllers\User\KeranjangUserController;
 use App\Http\Controllers\User\ShopUserController;
+use App\Http\Controllers\User\CartUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -135,4 +136,10 @@ Route::prefix('/')->group(function () {
         Route::get('/', [ShopUserController::class, 'index'])->name('index')->middleware('auth');
         Route::get('/detail/{id}', [ShopUserController::class, 'detail'])->name('detail')->middleware('auth');
     }); 
+
+    Route::prefix('/cart')->name('cart.')->group(function () {
+        Route::get('/', [CartUserController::class, 'index'])->name('index');
+        Route::get('/create/{id}', [CartUserController::class, 'create'])->name('create');
+        Route::get('/delete/{id}', [CartUserController::class, 'delete'])->name('delete');
+    });
 });

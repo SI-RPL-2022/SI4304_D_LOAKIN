@@ -41,6 +41,6 @@
 
     </div>
     <div class="d-flex justify-content-end">
-        <button style="background-color: rgb(239,136,48)" class="btn btn-md text-white w-25 align-right">Masukan keranjang</button>
+        <a href="{{ route('cart.create', $produk->id) }}" style="background-color: rgb(239,136,48)" class="btn btn-md text-white w-25 align-right">Masukan keranjang</a>
     </div>
 @endsection
