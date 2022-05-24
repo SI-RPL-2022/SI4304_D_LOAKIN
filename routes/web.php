@@ -92,6 +92,9 @@ Route::prefix('driver')->group(function () {
         Route::post('/update', [ProfileDriverController::class, 'update'])->name('update');
     });
     
+    Route::prefix('pickup')->name('pickup.')->group(function () {
+        Route::get('/detail/{no_order}', [DashboardDriverController::class, 'view'])->name('view');
+    });
 });
 
 Route::get('loginuser', [LoginUserController::class, 'loginuser'])->name('loginuser');
@@ -143,3 +146,7 @@ Route::prefix('/')->group(function () {
         Route::get('/delete/{id}', [CartUserController::class, 'delete'])->name('delete');
     });
 });
+
+Route::view('/berat', '/Driver/Page/Berat/InputBerat');
+
+Route::view('/konfberat', '/Driver/Page/Berat/KonfirmBerat');
