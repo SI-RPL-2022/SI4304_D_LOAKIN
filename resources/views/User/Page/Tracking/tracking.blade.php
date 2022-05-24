@@ -9,7 +9,7 @@
         {{-- time,address --}}
         <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
             {{-- adress --}}
-            <div style="margin-left: 20px;margin-right:20px">
+            <div class="mt-4" style="margin-left: 20px;margin-right:20px">
                 <div class="row">
                     <div class="col-lg-10">
                         <h4 style="color: #D77409">
@@ -49,8 +49,8 @@
 
 
         {{-- Contact Driver --}}
-        <div class="mt-4" style="font-family: 'Segoe UI', Arial, sans-serif; border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-            <h4 style="color: #D77409; margin-left:20px; margin-bottom:24px;"> 
+        <div class="mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
+            <h4 style="color: #D77409; margin-left:20px; margin-bottom:24px;margin-top: 16px;"> 
                 <i class="fa fa-user" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Contact Driver</b></a>
             </h4>
 
