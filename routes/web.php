@@ -100,7 +100,7 @@ Route::prefix('driver')->group(function () {
     });
 
     Route::prefix('trackingalamat')->name('trackingalamat.')->group(function () {
-        Route::get('/trackingalamat/{id}', [TrackingAlamatDriverController::class, 'index'])->name('index');
+        Route::get('/trackingalamat/{no_order}', [TrackingAlamatDriverController::class, 'index'])->name('index');
     });
 });
 

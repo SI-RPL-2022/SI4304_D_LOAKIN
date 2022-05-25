@@ -18,7 +18,7 @@ class DashboardDriverController extends Controller
 
             $order = Order::with(['user'])
                     ->where('id_driver', session()->get('driver')->id)
-                    ->where('status', 'Berhasil Menemukan Driver')
+                    ->orderBy('created_at', 'desc')
                     ->paginate(5);
 
             return view('Driver.Page.Dashboard.Dashboard', compact('order'));
@@ -43,7 +43,7 @@ class DashboardDriverController extends Controller
             $order->status     = 'Driver Menuju Ke Lokasi';
             $order->save();
 
-            return redirect(route('trackingalamat.index', $id));
+            return redirect(route('driver.index'));
         }
         else{
             return redirect()->route('loginadmin');
