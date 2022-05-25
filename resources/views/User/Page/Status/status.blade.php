@@ -40,23 +40,24 @@
             
             @if ($or->status == 'Fix Order')
                 <center><div class="loader mt-4 mb-4 "></div></center>
-                <h5 class="card-title" style="font-family: Nunito; font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
-                <p class="card-text mb-5" style="font-size:20px; font-family: Nunito; font-weight: 400; text-align: center;">Tunggu Dulu yaa... Admin sedang mencarikan driver untuk kamu...</p>
+                <h5 class="card-title" style="font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
+                <p class="card-text mb-5" style="font-size:20px; font-weight: 400; text-align: center;">Tunggu Dulu yaa... Admin sedang mencarikan driver untuk kamu...</p>
             
-            @elseif ($or->status == 'Driver OK')
-                <center><div class="loader mt-4 mb-4 "></div></center>
-                <h5 class="card-title" style="font-family: Nunito; font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
-                <p class="card-text mb-5" style="font-size:20px; font-family: Nunito; font-weight: 400; text-align: center;">Yeay Berhasil Dapet Driver... Silahkan Hubungi Driver & Track Pesananmu</p>
+            @elseif ($or->status == 'Driver Menuju Ke Lokasi')
+                <center><img class="mb-4" src="{{ asset('oke.png') }}" alt="image" /></center>
+                <h5 class="card-title" style="font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
+                <p class="card-text mb-5" style="font-size:20px;  font-weight: 400; text-align: center;">Yeay Berhasil Dapet Driver... Silahkan Hubungi Driver & Track Pesananmu</p>
             
             @elseif ($or->status == 'Dibatalkan')
-                <h5 class="card-title" style="font-family: Nunito; font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
-                <p class="card-text mb-5" style="font-size:20px; font-family: Nunito; font-weight: 400; text-align: center;">Maaf Pesanan Kamu di Batalkan... Silahkan Order Lagi yaaa...</p>
+                <center><img class="mb-4" src="{{ asset('oke.png') }}" alt="image" /></center>
+                <h5 class="card-title" style="font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
+                <p class="card-text mb-5" style="font-size:20px;  font-weight: 400; text-align: center;">Maaf Pesanan Kamu di Batalkan... Silahkan Order Lagi yaaa...</p>
             
             @endif
             
             <center>
-                <a href="" class="btn btn-outline-light mb-2" style="background-color:#F58814;font-color:white;border-radius:15px; width: 210px; font-family: Nunito;">TRACK ORDER</a><br>
-                <a href="{{ route('home.index') }}" class="btn btn-outline-light" style="background-color:#FBCE9D;color:black;border-radius:15px; width: 210px; font-family: Nunito; ">BACK TO HOME</a>
+                <a href="{{ route('activityloakin.loakintrack') }}" class="btn btn-outline-light mb-2" style="background-color:#F58814;font-color:white;border-radius:15px; width: 210px; ">TRACK ORDER</a><br>
+                <a href="{{ route('home.index') }}" class="btn btn-outline-light" style="background-color:#FBCE9D;color:black;border-radius:15px; width: 210px; ">BACK TO HOME</a>
             </center>
           @endforeach
         </div> 

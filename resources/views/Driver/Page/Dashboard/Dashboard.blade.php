@@ -26,7 +26,7 @@
 
 
     {{-- Tabel --}}
-    <div class="comtainer mt-3" style=" font-family: 'Segoe UI', Arial, sans-serif;">
+    <div class="comtainer mt-3 " style=" font-family: 'Segoe UI', Arial, sans-serif; ">
         <table class="table table-responsive table-bordered">
             <thead style="font-weight: 600; background-color:#F58814;color:white;">
                 <tr>

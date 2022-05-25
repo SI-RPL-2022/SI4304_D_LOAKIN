@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container mt-5 justify-content-center" id="cont">
-    <h2 class="text-center fw-bold fst-italic" style="color: rgb(239,136,48)">Keranjang Saya</h2>
+<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Keranjang Saya</h2>
 
         <div class="d-grid gap-2" style="padding-left: 20%; padding-right: 20%; margin-top: 30px;margin-bottom:30px;">
             <a href="{{ route('shop.index') }}" class="btn btn-outline-light" name="hapus" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px;">Belanja Lagi Yuk</a>

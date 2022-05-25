@@ -1,4 +1,4 @@
-<footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 120px; font-family: 'Nunito';">
+<footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 120px; font-family: 'Segoe UI', Arial, sans-serif;">
     
     <section class="justify-content-center justify-content-lg-between p-4 border-bottom" style="background-color: #F58814; color: white;">
       <div class="container text-center mt-5">

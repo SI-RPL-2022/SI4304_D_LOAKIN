@@ -23,6 +23,7 @@ use App\Http\Controllers\User\ProfileUserController;
 use App\Http\Controllers\User\KeranjangUserController;
 use App\Http\Controllers\User\ShopUserController;
 use App\Http\Controllers\User\CartUserController;
+use App\Http\Controllers\User\ActivityUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,19 +132,20 @@ Route::prefix('/')->group(function () {
         Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
     });
 
-    Route::prefix('/keranjang')->name('keranjang.')->group(function () {
-        Route::get('/', [KeranjangUserController::class, 'index'])->name('index')->middleware('auth');
-    }); 
-
     Route::prefix('/shop')->name('shop.')->group(function () {
         Route::get('/', [ShopUserController::class, 'index'])->name('index')->middleware('auth');
         Route::get('/detail/{id}', [ShopUserController::class, 'detail'])->name('detail')->middleware('auth');
     }); 
 
     Route::prefix('/cart')->name('cart.')->group(function () {
-        Route::get('/', [CartUserController::class, 'index'])->name('index');
-        Route::get('/create/{id}', [CartUserController::class, 'create'])->name('create');
-        Route::get('/delete/{id}', [CartUserController::class, 'delete'])->name('delete');
+        Route::get('/', [CartUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::get('/create/{id}', [CartUserController::class, 'create'])->name('create')->middleware('auth');
+        Route::get('/delete/{id}', [CartUserController::class, 'delete'])->name('delete')->middleware('auth');
+    });
+
+    Route::prefix('/activityloakin')->name('activityloakin.')->group(function () {
+        Route::get('/', [ActivityUserController::class, 'loakintrack'])->name('loakintrack')->middleware('auth');
+        Route::get('/viewtrack/{no_order}', [ActivityUserController::class, 'viewtrack'])->name('viewtrack')->middleware('auth');
     });
 });
 
