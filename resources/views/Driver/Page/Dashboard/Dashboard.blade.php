@@ -20,9 +20,6 @@
             <h1 class="text-center mb-4">Selamat Datang Driver {{session()->get('driver')->name}}</h1>
 
             {{-- Judul --}}
-    <div class="container d-flex justify-content-center mt-4">
-        <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; text-shadow: 3px 2px #FDE0C3;">Pick Up Loak.in Aja</h2>
-    </div>
 
 
     {{-- Tabel --}}
