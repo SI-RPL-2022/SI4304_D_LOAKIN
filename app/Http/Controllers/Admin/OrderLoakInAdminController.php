@@ -72,7 +72,7 @@ class OrderLoakInAdminController extends Controller
             $order = Order::find($id);
 
             $order->id_driver       = $request->update_driver;
-            $order->status          = "Driver Menuju Ke Lokasi";
+            $order->status          = "Berhasil Menemukan Driver";
             $order->save();
 
             return redirect(route('orderadmin.index'))->with(['success' => 'Berhasil Mendapatkan Driver']);

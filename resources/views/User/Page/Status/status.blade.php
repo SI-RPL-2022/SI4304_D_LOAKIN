@@ -43,7 +43,7 @@
                 <h5 class="card-title" style="font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
                 <p class="card-text mb-5" style="font-size:20px; font-weight: 400; text-align: center;">Tunggu Dulu yaa... Admin sedang mencarikan driver untuk kamu...</p>
             
-            @elseif ($or->status == 'Driver Menuju Ke Lokasi')
+            @elseif ($or->status == 'Berhasil Menemukan Driver')
                 <center><img class="mb-4" src="{{ asset('oke.png') }}" alt="image" /></center>
                 <h5 class="card-title" style="font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$or->no_order}}</b></h5>
                 <p class="card-text mb-5" style="font-size:20px;  font-weight: 400; text-align: center;">Yeay Berhasil Dapet Driver... Silahkan Hubungi Driver & Track Pesananmu</p>

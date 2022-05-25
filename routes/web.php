@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\OrderLoakInAdminController;
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
+use App\Http\Controllers\Driver\TrackingAlamatDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
@@ -86,6 +87,7 @@ Route::get('logoutdriver', [LoginDriverController::class, 'logoutdriver'])->name
 Route::prefix('driver')->group(function () {
     Route::prefix('driver')->name('driver.')->group(function () {
         Route::get('/', [DashboardDriverController::class, 'index'])->name('index');
+        Route::get('/confirmpickup/{id}', [DashboardDriverController::class, 'fixpickup'])->name('fixpickup');
     });
 
     Route::prefix('profile')->name('profile.')->group(function () {
@@ -95,6 +97,10 @@ Route::prefix('driver')->group(function () {
     
     Route::prefix('pickup')->name('pickup.')->group(function () {
         Route::get('/detail/{no_order}', [DashboardDriverController::class, 'view'])->name('view');
+    });
+
+    Route::prefix('trackingalamat')->name('trackingalamat.')->group(function () {
+        Route::get('/trackingalamat/{id}', [TrackingAlamatDriverController::class, 'index'])->name('index');
     });
 });
 
