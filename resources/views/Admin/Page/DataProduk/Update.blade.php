@@ -17,7 +17,7 @@
                                 <div style="margin: 3%; margin-top: 1%">
                                 <div class="card-body">
                                         <form class="form form-horizontal" action="{{ route('produk.update.process',$produk->id) }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
+                                        
                                         <div class="form-body">
                                                 <div class="row">
                                                     <div class="col-md-3 mb-4">

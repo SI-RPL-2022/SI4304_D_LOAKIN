@@ -49,4 +49,20 @@ class DashboardDriverController extends Controller
             return redirect()->route('loginadmin');
         }
     }
+
+    public function selesai($id)
+    {
+        if(Session::has('driver')){
+            $order = Order::find($id);
+
+            $order->status     = 'Pesanan Selesai';
+            $order->save();
+
+            return redirect(route('driver.index'));
+        }
+        else{
+            return redirect()->route('loginadmin');
+        }
+    }
 }
+

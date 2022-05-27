@@ -39,13 +39,14 @@
                     </tr>
                 </tbody>
             </table>
-            @endforeach
+            
         </div>
     </div>
     
 
     <div class="mt-4" style="padding-bottom: 6%">
-        <form action="{{ route('produk.create.process') }}" method="POST" enctype="multipart/form-data" >
+        <form action="{{ route('inputberat.inputdetail', $ts->id) }}" method="POST" enctype="multipart/form-data" >
+        @csrf
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
                 <h5 style="color: #D77409; margin-left:20px"><b>Item Details</b></h5>
                 <div style="margin-left: 50px;margin-right:40px">
@@ -64,6 +65,6 @@
 			</div>
         </form>
         
-    </div>
+    </div>@endforeach
 
 @endsection

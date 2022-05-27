@@ -89,6 +89,7 @@ Route::prefix('driver')->group(function () {
     Route::prefix('driver')->name('driver.')->group(function () {
         Route::get('/', [DashboardDriverController::class, 'index'])->name('index');
         Route::get('/confirmpickup/{id}', [DashboardDriverController::class, 'fixpickup'])->name('fixpickup');
+        Route::get('/selesai/{id}', [DashboardDriverController::class, 'selesai'])->name('selesai');
     });
 
     Route::prefix('profile')->name('profile.')->group(function () {
@@ -107,6 +108,8 @@ Route::prefix('driver')->group(function () {
 
     Route::prefix('inputberat')->name('inputberat.')->group(function () {
         Route::get('/inputberat/{id}', [InputBeratDriverController::class, 'index'])->name('index');
+        Route::post('/inputdetail/{id}', [InputBeratDriverController::class, 'inputdetail'])->name('inputdetail');
+        Route::get('/konf/{id}', [InputBeratDriverController::class, 'konf'])->name('konf');
     });
 });
 

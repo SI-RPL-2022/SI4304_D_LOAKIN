@@ -27,7 +27,6 @@
         <table class="table table-responsive table-bordered" style="padding-bottom: 6%">
             <thead style="font-weight: 600; background-color:#F58814;color:white;">
                 <tr>
-                    <th scope="col"><center><b>No</b></center></th>
                     <th scope="col"><center><b>No. Order</b></center></th>
                     <th scope="col" style="width: 50%"><center><b>Customer Name</b></center></th>
                     <th scope="col"><center><b>Aksi</b></center></th>
@@ -42,23 +41,24 @@
                                     <?php
                                         $no += 1;
                                     ?>
+                @if($ts->status != 'Pesanan Selesai' )
                 <tr>  
-                    <th scope="row" style="line-height: 8rem; text-align: center">{{$no}}</th>
                     <td style="line-height: 8rem;text-align: center">{{$ts->no_order}}</td>
                     <td style="line-height: 8rem;text-align: center">{{$ts->user->name}}</td>
                     <td style="line-height: 4rem;text-align: center"><center>
                         <a class="btn btn-info" href="{{route('pickup.view', $ts->no_order)}}"  style="font-weight: 600;color:white;border-radius:7px 7px 7px 7px;width:15rem;">DETAIL</a>
                         @if($ts->status == 'Berhasil Menemukan Driver' )
                         <a class="btn btn-outline-light" href="{{route('driver.fixpickup', $ts->id)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">PICK UP</a>
+                        @elseif($ts->status == 'Pesanan Selesai - Pembayaran')
+                        <a class="btn btn-danger" href="{{route('driver.selesai', $ts->id)}}" style="font-weight: 600; color:white;border-radius:7px 7px 7px 7px;width:15rem;">SELESAI</a>
                         @else
                         <a class="btn btn-outline-light" href="{{route('trackingalamat.index', $ts->no_order)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">TRACK ALAMAT</a>
-                        
-                        
-                        
+
                         @endif
-                        <br><a class="btn btn-danger" href='#' onclick="return confirm('Are you sure?')" style="color:white;border-radius:7px 7px 7px 7px;width:15rem;">DELETE</a>
+                        
                     </center></td>
                 </tr>
+                @endif
                 @endforeach
             </tbody>
 
