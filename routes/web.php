@@ -13,6 +13,7 @@ use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
 use App\Http\Controllers\Driver\TrackingAlamatDriverController;
+use App\Http\Controllers\Driver\InputBeratDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
@@ -101,6 +102,11 @@ Route::prefix('driver')->group(function () {
 
     Route::prefix('trackingalamat')->name('trackingalamat.')->group(function () {
         Route::get('/trackingalamat/{no_order}', [TrackingAlamatDriverController::class, 'index'])->name('index');
+        Route::get('/arrive/{id}', [TrackingAlamatDriverController::class, 'arrive'])->name('arrive');
+    });
+
+    Route::prefix('inputberat')->name('inputberat.')->group(function () {
+        Route::get('/inputberat/{id}', [InputBeratDriverController::class, 'index'])->name('index');
     });
 });
 

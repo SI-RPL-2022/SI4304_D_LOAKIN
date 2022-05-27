@@ -111,12 +111,13 @@
             
         </div>
 
-        @endforeach
+        
 
         {{-- Button --}}
         <div class="d-grid gap-2 d-md-flex justify-content-md-end " style="margin-top: 30px; margin-bottom: 5%;  padding-bottom: 2%">
-            <a href="#" class="btn p-2 bd-highlight" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">ARRIVE</a>
+            <a href="{{route('trackingalamat.arrive', $ts->id)}}" class="btn p-2 bd-highlight" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">ARRIVE</a>
         </div>
+        @endforeach
 
 
 @endsection

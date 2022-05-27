@@ -27,4 +27,19 @@ class TrackingAlamatDriverController extends Controller
             return redirect()->route('logindriver');
         }
     }
+
+    public function arrive($id)
+    {
+        if(Session::has('driver')){
+            $order = Order::find($id);
+
+            $order->status     = 'Driver Sudah Sampai';
+            $order->save();
+
+            return redirect(route('inputberat.index', $id));
+        }
+        else{
+            return redirect()->route('loginadmin');
+        }
+    }
 }
