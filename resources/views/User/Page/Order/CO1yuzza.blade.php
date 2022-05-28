@@ -54,15 +54,31 @@
                 <tbody>   
                     <tr>
                         <td>
-                            <img src="https://th.bing.com/th/id/OIP.x4KGY0uFH5CmdkwrHcVfEAHaE8?pid=ImgDet&rs=1"></img>
+                            <img src="https://pngimage.net/wp-content/uploads/2018/06/logo-jnt-png.png" width="300" height="150"></img>
                         </td>
                         <td>
+                            <img src="https://th.bing.com/th/id/R.c726dedd3c597ecd3b287cd2df27cc9a?rik=nOMDt2qumPWNSA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-aSIrvq-O52s%2fUTUKkn-NY0I%2fAAAAAAAAACY%2f7ekOHtjLWw8%2fs1600%2fLogo%2bJNE.JPG&ehk=q8z3fIIgudfX5LqWrByEggCB5eiovGv2d6QnYE%2fdjYo%3d&risl=&pid=ImgRaw&r=0" width="300" height="150"></img>
+                        </td>
+                        <td>
+                            <img src="https://i2.wp.com/seismicell.com/wp-content/uploads/2018/05/logo.png?resize=1000%2C426&ssl=1" width="300" height="120"></img>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
+                            <center>
                             <input type="radio" name="JNT" value="5 - 7 Days"> <h5> 5 - 7 days </h5>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                            <input type="radio" name="JNE" value="2 - 4 Days"> <h5> 2 - 4 days </h5>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                            <input type="radio" name="JNE" value="5 - 6 Days"> <h5> 5 - 6 days </h5>
+                            </center>
                         </td>
                     </tr>
                 </tbody>
