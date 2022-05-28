@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Produk; 
+use App\Models\User; 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Cart extends Model
 {
     use HasFactory;
 
@@ -18,10 +21,4 @@ class Order extends Model
     {
         return $this->belongsTo('App\Models\User', 'id_user');
     }
-
-    public function driver()
-    {
-        return $this->belongsTo('App\Models\Driver', 'id_driver');
-    }
-    
 }

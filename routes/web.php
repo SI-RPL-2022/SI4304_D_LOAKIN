@@ -7,10 +7,14 @@ use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\DriverAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
+use App\Http\Controllers\Admin\OrderLoakInAdminController;
+use App\Http\Controllers\Admin\OrderShopAdminController;
 
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
+use App\Http\Controllers\Driver\TrackingAlamatDriverController;
+use App\Http\Controllers\Driver\InputBeratDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
@@ -19,6 +23,11 @@ use App\Http\Controllers\User\CheckoutUserController;
 use App\Http\Controllers\User\LoginUserController;
 use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\ProfileUserController;
+use App\Http\Controllers\User\KeranjangUserController;
+use App\Http\Controllers\User\ShopUserController;
+use App\Http\Controllers\User\CartUserController;
+use App\Http\Controllers\User\ActivityUserController;
+use App\Http\Controllers\User\CheckoutShopUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +60,20 @@ Route::prefix('admin')->group(function () {
         Route::get('/delete/{id}', [ProdukAdminController::class, 'delete'])->name('delete');
     });
 
+    Route::prefix('orderadmin')->name('orderadmin.')->group(function () {
+        Route::get('/', [OrderLoakInAdminController::class, 'index'])->name('index');
+        Route::get('/view/{no_order}', [OrderLoakInAdminController::class, 'view'])->name('view');
+        Route::get('/fixorder/{id}', [OrderLoakInAdminController::class, 'fixorder'])->name('fixorder');
+        Route::get('/pilihdriver/{id}', [OrderLoakInAdminController::class, 'pilihdriver'])->name('pilihdriver');
+        Route::post('/submitdriver/{id}', [OrderLoakInAdminController::class, 'submitdriver'])->name('submitdriver');
+    });
+
+    Route::prefix('ordershopadmin')->name('ordershopadmin.')->group(function () {
+        Route::get('/', [OrderShopAdminController::class, 'index'])->name('index');
+        Route::get('/view/{no_order}', [OrderShopAdminController::class, 'view'])->name('view');
+        Route::get('/approve/{id}', [OrderShopAdminController::class, 'aprove'])->name('aprove');
+    });
+
     Route::prefix('driverdata')->name('driverdata.')->group(function () {
         Route::get('/', [DriverAdminController::class, 'index'])->name('index');
         Route::get('/view/{id}', [DriverAdminController::class, 'view'])->name('view');
@@ -72,6 +95,8 @@ Route::get('logoutdriver', [LoginDriverController::class, 'logoutdriver'])->name
 Route::prefix('driver')->group(function () {
     Route::prefix('driver')->name('driver.')->group(function () {
         Route::get('/', [DashboardDriverController::class, 'index'])->name('index');
+        Route::get('/confirmpickup/{id}', [DashboardDriverController::class, 'fixpickup'])->name('fixpickup');
+        Route::get('/selesai/{id}', [DashboardDriverController::class, 'selesai'])->name('selesai');
     });
 
     Route::prefix('profile')->name('profile.')->group(function () {
@@ -79,6 +104,20 @@ Route::prefix('driver')->group(function () {
         Route::post('/update', [ProfileDriverController::class, 'update'])->name('update');
     });
     
+    Route::prefix('pickup')->name('pickup.')->group(function () {
+        Route::get('/detail/{no_order}', [DashboardDriverController::class, 'view'])->name('view');
+    });
+
+    Route::prefix('trackingalamat')->name('trackingalamat.')->group(function () {
+        Route::get('/trackingalamat/{no_order}', [TrackingAlamatDriverController::class, 'index'])->name('index');
+        Route::get('/arrive/{id}', [TrackingAlamatDriverController::class, 'arrive'])->name('arrive');
+    });
+
+    Route::prefix('inputberat')->name('inputberat.')->group(function () {
+        Route::get('/inputberat/{id}', [InputBeratDriverController::class, 'index'])->name('index');
+        Route::post('/inputdetail/{id}', [InputBeratDriverController::class, 'inputdetail'])->name('inputdetail');
+        Route::get('/konf/{id}', [InputBeratDriverController::class, 'konf'])->name('konf');
+    });
 });
 
 Route::get('loginuser', [LoginUserController::class, 'loginuser'])->name('loginuser');
@@ -114,4 +153,31 @@ Route::prefix('/')->group(function () {
         Route::get('/', [ProfileUserController::class, 'index'])->name('index')->middleware('auth');
         Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
     });
+
+    Route::prefix('/shop')->name('shop.')->group(function () {
+        Route::get('/', [ShopUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::get('/detail/{id}', [ShopUserController::class, 'detail'])->name('detail')->middleware('auth');
+    }); 
+
+    Route::prefix('/cart')->name('cart.')->group(function () {
+        Route::get('/', [CartUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::get('/create/{id}', [CartUserController::class, 'create'])->name('create')->middleware('auth');
+        Route::get('/delete/{id}', [CartUserController::class, 'delete'])->name('delete')->middleware('auth');
+    });
+
+    Route::prefix('/activityloakin')->name('activityloakin.')->group(function () {
+        Route::get('/', [ActivityUserController::class, 'loakintrack'])->name('loakintrack')->middleware('auth');
+        Route::get('/viewtrack/{no_order}', [ActivityUserController::class, 'viewtrack'])->name('viewtrack')->middleware('auth');
+        Route::get('/shoptrack', [ActivityUserController::class, 'shoptrack'])->name('shoptrack')->middleware('auth');
+    });
+
+    Route::prefix('/checkoutshop')->name('checkoutshop.')->group(function () {
+        Route::get('/', [CheckoutShopUserController::class, 'index'])->name('index');
+        Route::get('/checkout', [CheckoutShopUserController::class, 'get_checkout'])->name('checkout');
+        Route::post('/create', [CheckoutShopUserController::class, 'create'])->name('create');
+    }); 
 });
+
+Route::view('/berat', '/Driver/Page/Berat/InputBerat');
+
+Route::view('/konfberat', '/Driver/Page/Berat/KonfirmBerat');

@@ -13,12 +13,12 @@
             </ul>
     
         @if(session()->has('user'))
-        <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Nunito'; font-weight:bold">
+        <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Segoe UI', Arial, sans-serif;; font-weight:bold">
             <li class="nav-item">
-                <a class="nav-link" href="/" >HOME</a>
+                <a class="nav-link" href="{{ route('home.index') }}" >HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">ACTIVITY</a>
+                <a class="nav-link" href="{{ route('activityloakin.loakintrack') }}">ACTIVITY</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('account.index')}}">ACCOUNT</a>
@@ -31,9 +31,9 @@
             </li>
         </ul>
         @else
-        <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Nunito'; font-weight:bold">
+        <ul class="navbar-nav  mb-2 mb-lg-0" style="color:black; font-family: 'Segoe UI', Arial, sans-serif;; font-weight:bold">
             <li class="nav-item">
-                <a class="nav-link" href="/" >HOME</a>
+                <a class="nav-link" href="{{ route('home.index') }}" >HOME</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('loginuser')}}">LOGIN</a>

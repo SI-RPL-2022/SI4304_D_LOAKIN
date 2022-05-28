@@ -36,8 +36,8 @@
                         </div>
         
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example3cg">Alamat</label>
-                            <input class="form-control" id="inputEmailAddress" name="alamat" type="text" placeholder="Masukkan Alamat"/>
+                            <label class="form-label" for="form3Example3cg">Alamat Lengkap</label>
+                            <input class="form-control" id="inputEmailAddress" name="alamat" type="text" placeholder="Alamat Rumah, Kecamatan, Kota/Kabupaten, Provinsi"/>
                         </div>
 
                         <div class="form-outline mb-4">

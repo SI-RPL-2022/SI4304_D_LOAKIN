@@ -42,4 +42,6 @@ class OrderUserController extends Controller
 
         return redirect(route('checkout.index'))->with(['success' => 'Tambah Produk Berhasil']);
     }
+
+    
 }

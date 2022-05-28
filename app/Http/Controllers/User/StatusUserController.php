@@ -14,8 +14,7 @@ class StatusUserController extends Controller
     public function index()
     {
         $user = User::where('id', Auth::user()->id)->paginate(5);
-        $order = Order::where('status', 'Fix Order')
-                ->where('id_user', Auth::user()->id)
+        $order = Order::where('id_user', Auth::user()->id)
                 ->orderBy('id','DESC')
                 ->paginate(1);
 
