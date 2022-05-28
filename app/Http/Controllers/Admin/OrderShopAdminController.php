@@ -36,4 +36,19 @@ class OrderShopAdminController extends Controller
             return redirect()->route('loginadmin');
         }
     }
+
+    public function aprove($id)
+    {
+        if(Session::has('admin')){
+            $order = OrderShop::find($id);
+
+            $order->status     = 'Pesanan Sudah Diterima - Menunggu Pembayaran';
+            $order->save();
+
+            return redirect(route('ordershopadmin.index'))->with(['success' => 'Pesanan Berhasil di Approval']);
+        }
+        else{
+            return redirect()->route('loginadmin');
+        }
+    }
 }

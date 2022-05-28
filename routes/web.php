@@ -71,6 +71,7 @@ Route::prefix('admin')->group(function () {
     Route::prefix('ordershopadmin')->name('ordershopadmin.')->group(function () {
         Route::get('/', [OrderShopAdminController::class, 'index'])->name('index');
         Route::get('/view/{no_order}', [OrderShopAdminController::class, 'view'])->name('view');
+        Route::get('/approve/{id}', [OrderShopAdminController::class, 'aprove'])->name('aprove');
     });
 
     Route::prefix('driverdata')->name('driverdata.')->group(function () {

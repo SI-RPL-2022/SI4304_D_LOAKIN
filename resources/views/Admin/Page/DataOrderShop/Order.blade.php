@@ -59,7 +59,11 @@
                                 <td>Rp {{$ts->total}}</td>
                                 <td>
                                     <a href="{{route('ordershopadmin.view', $ts->no_order)}}" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
-                                    
+                                    @if($ts->status == 'On Prosess')
+                                        <a href="{{route('ordershopadmin.aprove', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Approve</a>
+                                    @elseif($ts->status == 'Fix Order')
+                                        <a href="{{route('orderadmin.pilihdriver', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Pilih Driver</a>
+                                    @endif
                                 </td>
                             </tr>
                             

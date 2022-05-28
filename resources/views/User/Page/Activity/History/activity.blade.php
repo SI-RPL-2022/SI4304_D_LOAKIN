@@ -40,7 +40,7 @@
             <tr>
                 <th colspan="4" style="line-height: 3rem">Nomer Order : {{$or->no_order}} <b style="color: red">( {{$or->status}} )</b></th>
                 <th style="line-height: 3rem"><center>Total : Rp {{$or->total}} </center></th>
-                @if ($or->status == 'On Prosess')
+                @if ($or->status == 'On Prosess' or $or->status == 'Pesanan Sudah Diterima - Menunggu Pembayaran')
                     <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Bayar Sekarang</a></center></td>
                 @elseif($or->status == 'Confirmed')
                     <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Cetak Nota</a></center></td>
@@ -65,7 +65,7 @@
                         <td style="line-height: 8rem;text-align: center">{{$ts->produk->nama_produk}}</td>
                         <td style="line-height: 8rem;text-align: center">{{$ts->jumlah}}</td>
                         <td style="line-height: 8rem;text-align: center">Rp {{$ts->produk->harga * $ts->jumlah}}</td>
-                        <td style="line-height: 8rem;text-align: center">{{$ts->status}}</td>
+                        <td style="line-height: 8rem;text-align: center"></td>
                     </tr>
                     @endif
                 @endforeach
