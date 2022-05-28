@@ -14,15 +14,16 @@
 
 <body>
 <div class="container mt-5">
+    <div class="card-body container d-flex justify-content-center mt-3">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-achieving-success-in-career-2952273-2451605.png"></img>
+    </div>
 <center>
 <div style="width: 18rem;">
-    <center>
-    <div class="card-body">
-        <img src="https://th.bing.com/th/id/OIP.x4KGY0uFH5CmdkwrHcVfEAHaE8?pid=ImgDet&rs=1"></img>
-        <p> <b> PAYMENT SUCCES </b></p>
-        <p> Please wait for your product and dont forget to like it, regards LOAKIN </p>
-    </div>
-    </center>
+    <div class="container dflex- justify-content-center mt-3">
+        <h3 style="font-family: 'Montserrat';color:#D77409"><b> PAYMENT SUCCESS </b></h3>
+        <h5 style="font-family: 'Montserrat';color:"><b> Please wait for your product and dont forget to like it, regards LOAKIN </b></h5>
+    </div>  
+
 </div>
 </center>
 </div>
