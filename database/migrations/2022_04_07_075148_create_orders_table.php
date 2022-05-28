@@ -23,6 +23,11 @@ class CreateOrdersTable extends Migration
             $table->string('weight');
             $table->string('items');
             $table->string('status')->default('On Prosess');
+            $table->unsignedBigInteger('id_driver');
+            $table->index('id_driver');
+            $table->integer('berat_asli')->default('0');
+            $table->integer('harga_total')->default('0');
+            $table->string('item_asli')->default('0');
             $table->timestamps();
         });
     }
