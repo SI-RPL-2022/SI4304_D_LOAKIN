@@ -30,7 +30,7 @@
                 </div>
                 
                 <div class="card-header pb-0">
-                <h4>Data Order Loak.In</h4>
+                <h4>Data Order Shop Loak.In</h4>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
@@ -56,14 +56,10 @@
                                 <td>{{$ts->no_order}}</td>
                                 <td>{{date('d-m-Y', strtotime($ts->created_at));}}</td>
                                 <td>{{$ts->user->name}}</td>
-                                <td>Rp {{$ts->total_harga}}</td>
+                                <td>Rp {{$ts->total}}</td>
                                 <td>
-                                    <a href="{{route('orderadmin.view', $ts->no_order)}}" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
-                                    @if($ts->status == 'On Prosess')
-                                        <a href="{{route('orderadmin.fixorder', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Approve</a>
-                                    @elseif($ts->status == 'Fix Order')
-                                        <a href="{{route('orderadmin.pilihdriver', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Pilih Driver</a>
-                                    @endif
+                                    <a href="{{route('ordershopadmin.view', $ts->no_order)}}" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
+                                    
                                 </td>
                             </tr>
                             

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\DriverAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
 use App\Http\Controllers\Admin\OrderLoakInAdminController;
+use App\Http\Controllers\Admin\OrderShopAdminController;
 
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
@@ -26,6 +27,7 @@ use App\Http\Controllers\User\KeranjangUserController;
 use App\Http\Controllers\User\ShopUserController;
 use App\Http\Controllers\User\CartUserController;
 use App\Http\Controllers\User\ActivityUserController;
+use App\Http\Controllers\User\CheckoutShopUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +68,10 @@ Route::prefix('admin')->group(function () {
         Route::post('/submitdriver/{id}', [OrderLoakInAdminController::class, 'submitdriver'])->name('submitdriver');
     });
 
+    Route::prefix('ordershopadmin')->name('ordershopadmin.')->group(function () {
+        Route::get('/', [OrderShopAdminController::class, 'index'])->name('index');
+        Route::get('/view/{no_order}', [OrderShopAdminController::class, 'view'])->name('view');
+    });
 
     Route::prefix('driverdata')->name('driverdata.')->group(function () {
         Route::get('/', [DriverAdminController::class, 'index'])->name('index');
@@ -161,7 +167,14 @@ Route::prefix('/')->group(function () {
     Route::prefix('/activityloakin')->name('activityloakin.')->group(function () {
         Route::get('/', [ActivityUserController::class, 'loakintrack'])->name('loakintrack')->middleware('auth');
         Route::get('/viewtrack/{no_order}', [ActivityUserController::class, 'viewtrack'])->name('viewtrack')->middleware('auth');
+        Route::get('/shoptrack', [ActivityUserController::class, 'shoptrack'])->name('shoptrack')->middleware('auth');
     });
+
+    Route::prefix('/checkoutshop')->name('checkoutshop.')->group(function () {
+        Route::get('/', [CheckoutShopUserController::class, 'index'])->name('index');
+        Route::get('/checkout', [CheckoutShopUserController::class, 'get_checkout'])->name('checkout');
+        Route::post('/create', [CheckoutShopUserController::class, 'create'])->name('create');
+    }); 
 });
 
 Route::view('/berat', '/Driver/Page/Berat/InputBerat');

@@ -47,7 +47,7 @@
             <tr>
                 <th colspan="4" style="line-height: 2rem;">Total Belanja</th>
                 <th style="line-height: 2rem;text-align: center">Rp {{$tot}}</th>
-                <th><center><a href="" class="btn btn-outline-light" name="hapus" style="background-color:#F58814;font-color:white;width:80%;border-radius:25px 25px 25px 25px;">Checkout</a></center></th>
+                <th><center><a href="{{ route('checkoutshop.checkout') }}" class="btn btn-outline-light" name="hapus" style="background-color:#F58814;font-color:white;width:80%;border-radius:25px 25px 25px 25px;">Checkout</a></center></th>
             </tr>
        
         </tbody>

@@ -11,6 +11,7 @@ use Session;
 
 use App\Models\Driver;
 use App\Models\Order;
+use App\Models\OrderShop;
 use App\Models\User;
 
 class ActivityUserController extends Controller
@@ -31,4 +32,10 @@ class ActivityUserController extends Controller
         return view('User.Page.Activity.Tracking.tracking', compact('order', 'account'));
     }
 
+    public function shoptrack()
+    {
+        $order = OrderShop::with(['produk'])->orderBy('created_at', 'desc')->where('id_user', Auth::user()->id)->get();
+            
+        return view('User.Page.Activity.History.activity', compact('order'));
+    }
 }
