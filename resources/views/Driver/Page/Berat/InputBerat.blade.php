@@ -56,7 +56,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="weight" class="form-label"><b>Weight</b> (Approximately in Kg)</label>
-                        <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" value="{{old('berat_asli')}}" name="berat_asli" id="berat_asli"  placeholder="0,5">
+                        <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" value="{{old('berat_asli')}}" name="berat_asli" id="berat_asli"  placeholder="0.5">
                     </div>
                 </div>
             </div>

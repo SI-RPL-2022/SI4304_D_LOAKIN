@@ -21,21 +21,7 @@
                     {{$produk->detail_produk}}
                     </p>
 
-                <h5 class="fw-bold mt-5" style="color: rgb(239,136,48)"> Spesifikasi Produk</h5>
-                <div class="mt-2">
-                   <p>Bahan Tas : Kulit Tas
-                    <br>Ukuran Tas: 190cm x 200cm
-                       <br> Warna Tas: Putih Tulang
-                   <br>Warna Tali Tas : Coklat Tua
-                   <br>Pemakaian: 2 Bulan
-                    <br>Cacat: Terdapat Noda Garis Hitam Di bawah
-                    <br>Tambahan: Dusk Bag dan Kotak
-                    <br>Dikirim Dari : Jakarta</p>
-
-                    <p class="mt-2">Dijami Original!!
-                    <br>Cocok Digunakan segala umru
-                    <br>Warna Sesuai Gambar</p>
-                </div>
+                
             </div>
         </div>
 
