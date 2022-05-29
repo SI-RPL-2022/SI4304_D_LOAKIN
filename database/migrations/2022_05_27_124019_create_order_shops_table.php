@@ -18,7 +18,7 @@ class CreateOrderShopsTable extends Migration
             $table->string('no_order');
             $table->unsignedBigInteger('id_user');
             $table->index('id_user');
-            $table->string('buktibayar');
+            $table->string('buktibayar')->default('bukti.jpg');
             $table->integer('total');
             $table->string('status')->default('On Prosess');
             $table->unsignedBigInteger('id_produk');
