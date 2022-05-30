@@ -13,14 +13,21 @@ use App\Http\Controllers\Admin\OrderShopAdminController;
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
+use App\Http\Controllers\Driver\TrackingAlamatDriverController;
 use App\Http\Controllers\Driver\InputBeratDriverController;
-use App\Http\Controllers\Driver\KonfirmBeratDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
+use App\Http\Controllers\User\StatusUserController;
 use App\Http\Controllers\User\CheckoutUserController;
-
-use App\Http\Controllers\User\HomeShopUserController;
+use App\Http\Controllers\User\LoginUserController;
+use App\Http\Controllers\User\RegisterUserController;
+use App\Http\Controllers\User\ProfileUserController;
+use App\Http\Controllers\User\KeranjangUserController;
+use App\Http\Controllers\User\ShopUserController;
+use App\Http\Controllers\User\CartUserController;
+use App\Http\Controllers\User\ActivityUserController;
+use App\Http\Controllers\User\CheckoutShopUserController;
 
 /*
 |--------------------------------------------------------------------------
