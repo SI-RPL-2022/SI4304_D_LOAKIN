@@ -152,6 +152,7 @@ Route::prefix('/')->group(function () {
     Route::prefix('account')->name('account.')->group(function () {
         Route::get('/', [ProfileUserController::class, 'index'])->name('index')->middleware('auth');
         Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
+        Route::post('/updateimg', [ProfileUserController::class, 'updateimg'])->name('updateimg')->middleware('auth');
     });
 
     Route::prefix('/shop')->name('shop.')->group(function () {
