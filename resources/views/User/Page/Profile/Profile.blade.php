@@ -6,10 +6,10 @@
         <div class="row gx-4">
           <div class="col-lg-2">
             <div class="avatar avatar-xl position-relative">
-              <img src="{{ asset('fotouser/' . $account->foto) }}" alt="profile_image" class="w-50 img-fluid border-radius-lg " style="margin-right: 0px">
+              <img src="{{ asset('fotouser/' . $account->foto) }}" alt="profile_image" class="img-fluid border-radius-lg " style="height: 100px; width: 100px; margin-right: 0px; border-radius: 50%">
             </div>
           </div>
-          <div class="col-lg-8 my-auto">
+          <div class="col-lg-6 my-auto">
             <div class="h-100">
               <h5 class="mb-1">
                 {{$account->name}}
@@ -19,10 +19,16 @@
               </p>
             </div>
           </div>
-          <div class="col-auto my-auto">
-              <div class="col-md-12">
+          <div class="col-4 ">
+            <form action="{{route('account.updateimg')}}" method="POST" id="logForm" enctype="multipart/form-data"> 
+              {{ csrf_field() }}
+              <div class="file-upload col-md-6" style="margin-top: 30px">
+                <input type="file" value="{{old('foto')}}" name="foto"> 
+              </div>
+              <div class="col-md-6">
                 <button type="submit" class="form-control " style="background-color: #F58814; color:white;">Upload Foto Profile</button>
               </div>
+            </form>
           </div>
           
         </div>

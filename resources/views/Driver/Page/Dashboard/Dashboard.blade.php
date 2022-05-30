@@ -24,6 +24,14 @@
 
     {{-- Tabel --}}
     <div class="comtainer mt-3 " style=" font-family: 'Segoe UI', Arial, sans-serif; ">
+    <?php
+                                        $no = 0;
+                                    ?>
+                                    @foreach($order as $ts)
+                                    <?php
+                                        $no += 1;
+                                    ?>
+                @if($ts->status != 'Pesanan Selesai' )
         <table class="table table-responsive table-bordered" style="padding-bottom: 6%">
             <thead style="font-weight: 600; background-color:#F58814;color:white;">
                 <tr>
@@ -34,14 +42,7 @@
             </thead>
     
             <tbody>
-                <?php
-                                        $no = 0;
-                                    ?>
-                                    @foreach($order as $ts)
-                                    <?php
-                                        $no += 1;
-                                    ?>
-                @if($ts->status != 'Pesanan Selesai' )
+                
                 <tr>  
                     <td style="line-height: 8rem;text-align: center">{{$ts->no_order}}</td>
                     <td style="line-height: 8rem;text-align: center">{{$ts->user->name}}</td>
