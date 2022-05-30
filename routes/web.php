@@ -60,6 +60,14 @@ Route::prefix('admin')->group(function () {
         Route::get('/delete/{id}', [ProdukAdminController::class, 'delete'])->name('delete');
     });
 
+    Route::prefix('orderadmin')->name('orderadmin.')->group(function () {
+        Route::get('/', [OrderLoakInAdminController::class, 'index'])->name('index');
+        Route::get('/view/{no_order}', [OrderLoakInAdminController::class, 'view'])->name('view');
+        Route::get('/fixorder/{id}', [OrderLoakInAdminController::class, 'fixorder'])->name('fixorder');
+        Route::get('/pilihdriver/{id}', [OrderLoakInAdminController::class, 'pilihdriver'])->name('pilihdriver');
+        Route::post('/submitdriver/{id}', [OrderLoakInAdminController::class, 'submitdriver'])->name('submitdriver');
+    });
+
     Route::prefix('driverdata')->name('driverdata.')->group(function () {
         Route::get('/', [DriverAdminController::class, 'index'])->name('index');
         
