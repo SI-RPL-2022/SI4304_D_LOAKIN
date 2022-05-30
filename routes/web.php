@@ -6,6 +6,9 @@ use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\DriverAdminController;
+use App\Http\Controllers\Admin\UserAdminController;
+use App\Http\Controllers\Admin\OrderLoakInAdminController;
+use App\Http\Controllers\Admin\OrderShopAdminController;
 
 use App\Http\Controllers\Driver\DashboardDriverController;
 use App\Http\Controllers\Driver\LoginDriverController;
