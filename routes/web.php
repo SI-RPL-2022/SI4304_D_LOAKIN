@@ -103,6 +103,10 @@ Route::prefix('/')->group(function () {
 
     Route::prefix('/checkout')->name('checkout.')->group(function () {
         Route::get('/', [CheckoutUserController::class, 'index'])->name('index');
+    });
+    Route::prefix('account')->name('account.')->group(function () {
+        Route::get('/', [ProfileUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
     }); 
 });
 
