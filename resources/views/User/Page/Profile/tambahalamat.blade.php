@@ -15,12 +15,12 @@
                         <input type="text" class="form-control" id="nama" style="border-width:0 0 1px 0;box-shadow:none" placeholder="Lucas">
                     </div>
                     <div class="mb-3">
-                        <label for="weight" class="form-label"><b>Nomor Telepon</b></label>
-                        <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" placeholder="081232876816">
+                        <label for="notlp" class="form-label"><b>Nomor Telepon</b></label>
+                        <input type="number" class="form-control" id="notlp" style="border-width:0 0 1px 0;box-shadow:none" placeholder="081232876816">
                     </div>
                     <div class="mb-3">
-                        <label for="weight" class="form-label"><b>Alamat</b></label>
-                        <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" placeholder="Jalanin dulu yang ada">
+                        <label for="alamat" class="form-label"><b>Alamat</b></label>
+                        <input type="text" class="form-control" id="alamat" style="border-width:0 0 1px 0;box-shadow:none" placeholder="Jalanin dulu yang ada">
                     </div>
                 </div>
             </div>
