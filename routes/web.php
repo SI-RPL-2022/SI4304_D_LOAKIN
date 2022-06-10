@@ -28,6 +28,7 @@ use App\Http\Controllers\User\ShopUserController;
 use App\Http\Controllers\User\CartUserController;
 use App\Http\Controllers\User\ActivityUserController;
 use App\Http\Controllers\User\CheckoutShopUserController;
+use App\Http\Controllers\User\UbahAlamatUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,3 +109,4 @@ Route::prefix('/')->group(function () {
 Route::get('/InputBerat', [InputBeratDriverController::class, 'index'])->name('index');
 Route::get('/KonfirmBerat', [KonfirmBeratDriverController::class, 'index'])->name('index');
 Route::get('/HomeShop', [HomeShopUserController::class, 'index'])->name('index');
+Route::get('/UbahAlamat', [UbahAlamatUserController::class, 'index'])->name('index');
