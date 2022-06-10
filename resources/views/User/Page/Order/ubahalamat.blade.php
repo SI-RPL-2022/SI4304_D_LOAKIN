@@ -74,7 +74,7 @@
                     </label>
                 </div>
             </div>
-            <div class="d-flex flex-row-reverse" style="margin-top: 30px;">
+            <div class="d-flex flex-row-reverse mt-4">
 				<button class="btn" type="submit" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem">NEXT</button>
 			</div>
         </form>
