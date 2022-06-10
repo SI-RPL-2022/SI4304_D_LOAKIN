@@ -9,7 +9,7 @@
     <div class="container">
         <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
             <div class="form-check">
-                <input class="form-check-input " type="radio" name="alamat1" id="alamat1">
+                <input class="form-check-input " type="radio" name="flexRadioDefault" id="alamat1">
                 <label class="form-check-label" for="alamat1">
                     <div>
                         <table class="table-responsive" cellpadding="4">
@@ -31,7 +31,7 @@
         </div>
         <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
             <div class="form-check">
-                <input class="form-check-input " type="radio" name="alamat2" id="alamat2">
+                <input class="form-check-input " type="radio" name="flexRadioDefault" id="alamat2">
                 <label class="form-check-label" for="alamat2">
                     <div>
                         <table class="table-responsive" cellpadding="4">
@@ -53,7 +53,7 @@
         </div>
         <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
             <div class="form-check">
-                <input class="form-check-input " type="radio" name="alamat3" id="alamat3">
+                <input class="form-check-input " type="radio" name="flexRadioDefault" id="alamat3">
                 <label class="form-check-label" for="alamat3">
                     <div>
                         <table class="table-responsive" cellpadding="4">
