@@ -18,7 +18,10 @@
                         <label for="weight" class="form-label"><b>Nomor Telepon</b></label>
                         <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" placeholder="081232876816">
                     </div>
-    
+                    <div class="mb-3">
+                        <label for="weight" class="form-label"><b>Nomor Telepon</b></label>
+                        <input type="text" class="form-control" id="weight" style="border-width:0 0 1px 0;box-shadow:none" placeholder="081232876816">
+                    </div>
                 </div>
             </div>
             <div class="d-flex flex-row-reverse" style="margin-top: 30px;">
