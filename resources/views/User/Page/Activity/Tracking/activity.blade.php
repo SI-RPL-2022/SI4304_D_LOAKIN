@@ -3,7 +3,7 @@
 @section('content')
 <h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Activity</h2>
 
-<div class="container mt-4 justify-content-center" id="cont">
+<div class="container mt-4 justify-content-center" id="cont" style="font-family: 'Segoe UI', Arial, sans-serif;">
         <div class="cont">
         <div class="isitabel">
         <div class="row mt-4 mb-4">
@@ -51,6 +51,6 @@
     </table>
         </div>
         </div>
-    </div>
+</div>
 
 @endsection

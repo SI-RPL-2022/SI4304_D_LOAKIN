@@ -7,7 +7,7 @@
         </div>
         @foreach($order as $ts)
         {{-- time,address --}}
-        <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
+        <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif; font-weight:500">
             {{-- adress --}}
             <div class="mt-4" style="margin-left: 20px;margin-right:20px">
                 <div class="row">
@@ -55,7 +55,7 @@
 
         
         {{-- Contact Driver --}}
-        <div class="mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
+        <div class="mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif; font-weight:500">
             <h4 style="color: #D77409; margin-left:20px; margin-bottom:24px;margin-top: 16px;"> 
                 <i class="fa fa-user" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Contact Driver</b></a>
             </h4>
@@ -75,14 +75,14 @@
                 </div>
                 <div class="mb-3">
                     <label for="weight" class="form-label"><b>Chat with Driver</b></label>
-                    <p style="color: rgb(7, 166, 7)"><i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 10px"></i><a class="text-reset" href="https://web.whatsapp.com/" style="text-decoration:none;" target="_blank">Whatsapp</a></p>
+                    <p style="color: rgb(7, 166, 7)"><i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 10px"></i><a class="text-reset" href="https://wa.me/081911111111" style="text-decoration:none;" target="_blank">Whatsapp</a></p>
                 </div>
             </div>
 
         </div>
 
         {{-- Detail Item Estimation --}}
-        <div class="mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
+        <div class="mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif; font-weight:500">
             <h4 style="color: #D77409; margin-left:20px; margin-bottom:24px; margin-top: 16px;"> 
                 <i class="fa fa-balance-scale" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Detail Item Estimation</b></a>
             </h4>
