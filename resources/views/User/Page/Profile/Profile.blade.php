@@ -1,7 +1,7 @@
 @extends('User.Master')
 
 @section('content')
-    <div class="card shadow-lg mx-3 card-profile-bottom mt-4">
+    <div class="card shadow-lg mx-3 card-profile-bottom mt-4" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight:500">
       <div class="card-body p-3">
         <div class="row gx-4">
           <div class="col-lg-2">
@@ -15,7 +15,7 @@
                 {{$account->name}}
               </h5>
               <p class="mb-0 font-weight-bold text-sm">
-                Status Member - <b>{{$account->status}}</b>
+                Member Status - <b>{{$account->status}}</b>
               </p>
             </div>
           </div>
@@ -34,7 +34,9 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid py-4">
+
+
+    <div class="container-fluid py-4" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight:500">
       <div class="row">
         <div class="col-md-8">
           <div class="card">
@@ -50,7 +52,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Nama Lengkap</label>
+                    <label for="example-text-input" class="form-control-label">Name</label>
                     <input class="form-control" type="text" name="nama" value="{{$account->name}}">
                   </div>
                 </div>
@@ -60,13 +62,13 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Alamat</label>
+                    <label for="example-text-input" class="form-control-label">Address</label>
                     <input class="form-control" type="text" name="alamat" value="{{$account->alamat}}">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Nomor Telepon</label>
+                    <label for="example-text-input" class="form-control-label">Phone Number</label>
                     <input class="form-control" type="text" name="nomor" value="{{$account->telepon}}">
                   </div>
                 </div>
@@ -101,7 +103,7 @@
                     
                     <div class="d-grid text-center">
                       <span class="text-lg font-weight-bolder"><b>89</b></span>
-                      <span class="text-sm opacity-8">Pemesanan</span>
+                      <span class="text-sm opacity-8">Orders</span>
                     </div>
                   </div>
                 </div>
@@ -117,7 +119,7 @@
                   <i class="ni business_briefcase-24 mr-2"></i>{{$account->nomortelepon}}
                 </div>
                 <div>
-                  <i class="ni education_hat mr-2"></i>Status Member | <b>{{$account->status}}</b>
+                  <i class="ni education_hat mr-2"></i>Member Status | <b>{{$account->status}}</b>
                 </div>
               </div>
             </div>
