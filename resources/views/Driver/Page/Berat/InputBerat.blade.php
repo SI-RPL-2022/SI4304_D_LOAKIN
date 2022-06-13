@@ -5,7 +5,7 @@
             <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Pick Up Loak.in Aja</h2>
         </div>
 
-    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;"">
+    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
         <div style="margin-left: 20px;margin-right:20px">
             <div class="d-flex align-items-center" style="float:right">
                 <a class="pl-3 mr-4">
