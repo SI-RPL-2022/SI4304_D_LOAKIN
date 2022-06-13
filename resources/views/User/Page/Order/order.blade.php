@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <div class="mt-4">
+    <div class="mt-4" style="font-family: 'Segoe UI', Arial, sans-serif;"">
         <form method="POST" action="{{ route('order.order') }}" enctype="multipart/form-data"> 
         @csrf
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
@@ -92,7 +92,7 @@
         </form>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-family: 'Segoe UI', Arial, sans-serif;"">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                 <div class="modal-header">
