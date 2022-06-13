@@ -1,7 +1,7 @@
 @extends('User.master')
 
 @section('content')
-<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Status Pemesanan</h2>
+<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Activity</h2>
 
 <div class="container mt-4 justify-content-center" id="cont">
         <div class="cont">
@@ -9,17 +9,17 @@
         <div class="row mt-4 mb-4">
                     <div class="col-6" >
                         <div class="d-grid gap-2">
-                            <a href="{{route('activityloakin.loakintrack')}}" class="btn btn-primary" type="button">Data Order Loak.In</a>
+                            <a href="{{route('activityloakin.loakintrack')}}" class="btn mb-2" style="background-color:#F8A44C;border-radius:15px; font-color: black; font-weight:500" type="button">Data Order Loak.In</a>
                         </div>
                     </div>
                     <div class="col-6" >
                         <div class="d-grid gap-2">
-                            <a href="{{route('activityloakin.shoptrack')}}" class="btn btn-primary" type="button">Data Order Loak.In Shop</a>
+                            <a href="{{route('activityloakin.shoptrack')}}" class="btn mb-2" style="background-color:#F8A44C;border-radius:15px; font-color: black; font-weight:500" type="button">Data Order Loak.In Shop</a>
                         </div>
                     </div>
                 </div>    
     <table  class="table table-responsive table-bordered ">
-        <thead class="table "style="background-color: #F58814">
+        <thead class="table "style="background-color: #F58814; color: white;">
             <tr>
             <th scope="col"><center>No Order</center></th>
             <th scope="col"><center>Status Order</center></th>
@@ -31,14 +31,13 @@
         </thead>
 
         <tbody>
-            {{-- jdjd --}}
             <?php
                 $no = 0;
             ?>
             @foreach($order as $or)
 
-            <tr>
-                <th style="">Nomer Order : {{$or->no_order}}</th>
+            <tr style="font-weight: 400">
+                <th >Nomer Order : {{$or->no_order}}</th>
                 <td style="text-align: center"><b style="color: red">( {{$or->status}} )</b></td>
                 <td style="text-align: center">{{$or->driver->name}}</td>
                 <td style="text-align: center">{{$or->payment}}</td>
