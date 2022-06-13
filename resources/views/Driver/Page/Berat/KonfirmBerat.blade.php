@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container d-flex justify-content-center mt-3">
-        <h1 style="font-family: 'Montserrat';color:#D77409"><b>Pick Up Loak.In Aja</b></h4>
+        <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Pick Up Loak.in Aja</h2>
     </div>
 
     <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">

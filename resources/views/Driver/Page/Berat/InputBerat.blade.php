@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container d-flex justify-content-center mt-3">
-            <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Input Detail Loak.in Aja</h2>
+            <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Pick Up Loak.in Aja</h2>
         </div>
 
-    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
+    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;"">
         <div style="margin-left: 20px;margin-right:20px">
             <div class="d-flex align-items-center" style="float:right">
                 <a class="pl-3 mr-4">
@@ -23,7 +23,11 @@
             <table class="table-responsive" cellpadding="4" >
                 <thead>
                     <tr style="color: #D77409">
-                        <td scope="col" colspan="5"><h5><b>Alamat Pengambilan </b></h5></td>
+                        <td scope="col" colspan="5">
+                            <h4 style="color: #D77409">
+                                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;"><b>Pick Up Address</b></a>
+                            </h4>
+                        </td>
                     </tr>
                 </thead>
                 <tbody>   
@@ -44,11 +48,13 @@
     </div>
     
 
-    <div class="mt-4" style="padding-bottom: 6%">
+    <div class="mt-4" style="padding-bottom: 6%" style="font-family: 'Segoe UI', Arial, sans-serif;">
         <form action="{{ route('inputberat.inputdetail', $ts->id) }}" method="POST" enctype="multipart/form-data" >
         @csrf
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-                <h5 style="color: #D77409; margin-left:20px"><b>Item Details</b></h5>
+                <h4 style="color: #D77409; margin-left:20px; margin-bottom:24px; margin-top: 16px;"> 
+                    <i class="fa fa-balance-scale" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Detail Item</b></a>
+                </h4>
                 <div style="margin-left: 50px;margin-right:40px">
                     <div class="mb-3">
                         <label for="desc" class="form-label"><b>Item Description</b> (Ex : TV, paper,etc)</label>
