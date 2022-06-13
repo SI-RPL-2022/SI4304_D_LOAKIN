@@ -51,7 +51,7 @@
                         @if($ts->status == 'Berhasil Menemukan Driver' )
                         <a class="btn btn-outline-light" href="{{route('driver.fixpickup', $ts->id)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">PICK UP</a>
                         @elseif($ts->status == 'Pesanan Selesai - Pembayaran')
-                        <a class="btn btn-danger" href="{{route('driver.selesai', $ts->id)}}" style="font-weight: 600; color:white;border-radius:7px 7px 7px 7px;width:15rem;">SELESAI</a>
+                        <a class="btn btn-success" href="{{route('driver.selesai', $ts->id)}}" style="font-weight: 600; color:white;border-radius:7px 7px 7px 7px;width:15rem;">SELESAI</a>
                         @else
                         <a class="btn btn-outline-light" href="{{route('trackingalamat.index', $ts->no_order)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">TRACK ALAMAT</a>
 
