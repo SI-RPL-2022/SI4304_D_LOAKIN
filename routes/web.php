@@ -98,6 +98,7 @@ Route::prefix('driver')->group(function () {
         Route::get('/', [DashboardDriverController::class, 'index'])->name('index');
         Route::get('/confirmpickup/{id}', [DashboardDriverController::class, 'fixpickup'])->name('fixpickup');
         Route::get('/selesai/{id}', [DashboardDriverController::class, 'selesai'])->name('selesai');
+        Route::get('/tolak/{id}', [DashboardDriverController::class, 'tolak'])->name('tolak');
     });
 
     Route::prefix('history')->name('history.')->group(function () {

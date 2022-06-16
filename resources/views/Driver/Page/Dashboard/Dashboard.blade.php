@@ -31,7 +31,7 @@
                                     <?php
                                         $no += 1;
                                     ?>
-                @if($ts->status != 'Pesanan Selesai' )
+                @if($ts->status != 'Pesanan Selesai' && $ts->status != 'Sistem Mencari Driver Lain')
         <table class="table table-responsive table-bordered" style="padding-bottom: 6%">
             <thead style="font-weight: 600; background-color:#F58814;color:white;">
                 <tr>
@@ -50,11 +50,11 @@
                         <a class="btn btn-info" href="{{route('pickup.view', $ts->no_order)}}"  style="font-weight: 600;color:white;border-radius:7px 7px 7px 7px;width:15rem;">DETAIL</a>
                         @if($ts->status == 'Berhasil Menemukan Driver' )
                         <a class="btn btn-outline-light" href="{{route('driver.fixpickup', $ts->id)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">PICK UP</a>
+                        <br><a class="btn btn-danger" href="{{route('driver.tolak', $ts->id)}}" style="font-weight: 600; border-radius:7px 7px 7px 7px;width:15rem;">TOLAK</a>
                         @elseif($ts->status == 'Pesanan Selesai - Pembayaran')
                         <a class="btn btn-danger" href="{{route('driver.selesai', $ts->id)}}" style="font-weight: 600; color:white;border-radius:7px 7px 7px 7px;width:15rem;">SELESAI</a>
                         @else
                         <a class="btn btn-outline-light" href="{{route('trackingalamat.index', $ts->no_order)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">TRACK ALAMAT</a>
-
                         @endif
                         
                     </center></td>
