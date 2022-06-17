@@ -40,7 +40,11 @@
             <tr>
                 <th style="">Nomer Order : {{$or->no_order}}</th>
                 <td style="text-align: center"><b style="color: red">( {{$or->status}} )</b></td>
-                <td style="text-align: center">{{$or->driver->name}}</td>
+                @if($or->id_driver == null)
+                    <td style="text-align: center">Belum Dapet Driver</td>
+                @else
+                    <td style="text-align: center">{{$or->driver->name}}</td>
+                @endif
                 <td style="text-align: center">{{$or->payment}}</td>
                 <td style="text-align: center">Rp {{$or->total_harga}}</td>
                 <td style="text-align: center">

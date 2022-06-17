@@ -26,6 +26,7 @@ use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\ProfileUserController;
 use App\Http\Controllers\User\KeranjangUserController;
 use App\Http\Controllers\User\ShopUserController;
+use App\Http\Controllers\User\FavoritUserController;
 use App\Http\Controllers\User\CartUserController;
 use App\Http\Controllers\User\ActivityUserController;
 use App\Http\Controllers\User\CheckoutShopUserController;
@@ -164,6 +165,12 @@ Route::prefix('/')->group(function () {
     Route::prefix('/shop')->name('shop.')->group(function () {
         Route::get('/', [ShopUserController::class, 'index'])->name('index')->middleware('auth');
         Route::get('/detail/{id}', [ShopUserController::class, 'detail'])->name('detail')->middleware('auth');
+    }); 
+
+    Route::prefix('/favorit')->name('favorit.')->group(function () {
+        Route::get('/', [FavoritUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::get('/create/{id}', [FavoritUserController::class, 'create'])->name('create')->middleware('auth');
+        Route::get('/delete/{id}', [FavoritUserController::class, 'delete'])->name('delete')->middleware('auth');
     }); 
 
     Route::prefix('/cart')->name('cart.')->group(function () {
