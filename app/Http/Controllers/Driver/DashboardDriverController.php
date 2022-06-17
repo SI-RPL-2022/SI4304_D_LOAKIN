@@ -64,5 +64,21 @@ class DashboardDriverController extends Controller
             return redirect()->route('loginadmin');
         }
     }
+
+    public function tolak($id)
+    {
+        if(Session::has('driver')){
+            $order = Order::find($id);
+
+            $order->status          = 'Sistem Mencari Driver Lain';
+            $order->id_driver       = null;
+            $order->save();
+
+            return redirect(route('driver.index'));
+        }
+        else{
+            return redirect()->route('loginadmin');
+        }
+    }
 }
 

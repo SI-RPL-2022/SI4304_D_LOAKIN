@@ -15,6 +15,7 @@ use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
 use App\Http\Controllers\Driver\TrackingAlamatDriverController;
 use App\Http\Controllers\Driver\InputBeratDriverController;
+use App\Http\Controllers\Driver\HistoryDriverController;
 
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
@@ -97,6 +98,11 @@ Route::prefix('driver')->group(function () {
         Route::get('/', [DashboardDriverController::class, 'index'])->name('index');
         Route::get('/confirmpickup/{id}', [DashboardDriverController::class, 'fixpickup'])->name('fixpickup');
         Route::get('/selesai/{id}', [DashboardDriverController::class, 'selesai'])->name('selesai');
+        Route::get('/tolak/{id}', [DashboardDriverController::class, 'tolak'])->name('tolak');
+    });
+
+    Route::prefix('history')->name('history.')->group(function () {
+        Route::get('/', [HistoryDriverController::class, 'index'])->name('index');
     });
 
     Route::prefix('profile')->name('profile.')->group(function () {
