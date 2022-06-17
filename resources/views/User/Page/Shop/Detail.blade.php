@@ -2,6 +2,11 @@
 
 @section('content')
     <h2 class="text-center fw-bold fst-italic" style="color: rgb(239,136,48)">Detail Produk</h2>
+    @if ($message = Session::get('success'))
+        <div class="alert alert-danger alert-block" style="margin-top: 10px">   
+            <strong>{{ $message }}</strong>
+        </div>
+    @endif
 
     <div class="card border-4 mb-3 mt-3 w-100 mx-auto rounded" style="border-color:rgb(239,136,48) ">
         <div class="row p-5 pt-3">
@@ -27,6 +32,7 @@
 
     </div>
     <div class="d-flex justify-content-end">
+        <a href="{{route('favorit.create', $produk->id)}}" class="w-25 btn btn-outline-light md-2" style="background-color: rgb(239,136,48); margin-right: 3%;height: 40px; ">Tambahkan Favorit</a>
         <a href="{{ route('cart.create', $produk->id) }}" style="background-color: rgb(239,136,48)" class="btn btn-md text-white w-25 align-right">Masukan keranjang</a>
     </div>
 @endsection

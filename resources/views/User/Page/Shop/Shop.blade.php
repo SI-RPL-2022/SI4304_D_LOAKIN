@@ -5,7 +5,13 @@
         <img src="https://drive.google.com/uc?export=view&id=1rombM23nFmTjJ2QlYspO0Y41L5Yvb1fX" alt="banner" width="100%">
         </div>
         <div class="container">
+        
             <div class="row pt-3">
+            @if ($message = Session::get('success'))
+                <div class="alert alert-danger alert-block" style="margin-top: 10px">   
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
                 @foreach($produk as $pr)
                 <div class="col-lg-3 justify-content-center pt-5">
                     <form>
