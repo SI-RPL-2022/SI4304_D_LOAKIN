@@ -27,34 +27,34 @@
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3cg">Name</label>
-                            <input class="form-control" id="inputEmailAddress" name="nama" type="text" placeholder="Masukkan Nama"/>
+                            <input class="form-control" id="inputEmailAddress" name="nama" type="text" placeholder="e.g : Hendery"/>
                         </div>
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3cg">Email</label>
-                            <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="Masukkan Email"/>
+                            <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="youremail@example.com"/>
                         </div>
         
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3cg">Address</label>
-                            <input class="form-control" id="inputEmailAddress" name="alamat" type="text" placeholder="Alamat Rumah, Kecamatan, Kota/Kabupaten, Provinsi"/>
+                            <input class="form-control" id="inputEmailAddress" name="alamat" type="text" placeholder="Address, District, City/Regency, Province"/>
                         </div>
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3cg">Phone Number</label>
-                            <input class="form-control" id="inputEmailAddress" name="telepon" type="number" placeholder="Masukkan Telepon"/>
+                            <input class="form-control" id="inputEmailAddress" name="telepon" type="number" placeholder="e.g : 081919191919"/>
                         </div>
         
                         
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example4cg">Password</label>
-                            <input class="form-control" id="inputEmailAddress" name="pass" type="password" placeholder="Masukkan password"/>
+                            <input class="form-control" id="inputEmailAddress" name="pass" type="password" placeholder="Password"/>
                         </div>
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example4cg"> Confirm Password</label>
-                            <input class="form-control" id="inputEmailAddress" name="confpass" type="password" placeholder="Masukkan password"/>
+                            <input class="form-control" id="inputEmailAddress" name="confpass" type="password" placeholder="Confirm Password"/>
                         </div>
         
                         <div class="d-flex justify-content-center">
