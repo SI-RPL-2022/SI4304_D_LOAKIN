@@ -11,4 +11,8 @@ class TambahAlamatUserController extends Controller
     {
         return view('User.Page.Profile.tambahalamat');
     }
+    public function lihat()
+    {
+        return view('User.Page.Profile.lihatalamat');
+    }
 }
