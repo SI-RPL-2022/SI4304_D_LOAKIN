@@ -57,7 +57,9 @@
                     <label for="example-text-input" class="form-control-label">Alamat</label>
                     <input class="form-control" type="text" name="alamat" value="">
                   </div>
-                  
+                  <div class="">
+                    <a href="#" class="btn btn-outline-light" style="background-color:#F2B87A;font-color:white;width:50%;border-radius:25px 25px 25px 25px" type="submit" name="submit"><i class="fa fa-plus" aria-hidden="true" style="margin-right: 10px"></i> Beli</a>
+                  </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
