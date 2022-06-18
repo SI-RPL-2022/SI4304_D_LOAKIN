@@ -32,11 +32,11 @@
                                         $no += 1;
                                     ?>
         <table class="table table-responsive table-bordered" style="padding-bottom: 6%">
-            <thead style="font-weight: 600; background-color:#F58814;color:white;">
+            <thead style="font-weight: 600; background-color:#D77409;color:white;">
                 <tr>
                     <th scope="col"><center><b>No. Order</b></center></th>
                     <th scope="col" style="width: 100%"><center><b>Customer Name</b></center></th>
-                    <th scope="col"><center><b>Aksi</b></center></th>
+                    <th scope="col"><center><b>Action</b></center></th>
                 </tr>
             </thead>
     

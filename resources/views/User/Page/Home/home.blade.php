@@ -12,7 +12,7 @@
         <img src="{{asset('loakinaja.png')}}" alt="foto" width="215px"  class="img-fluid mt-2">
         <div class="card-body">
           <h5 class="card-title" style=" font-weight:bold; text-align: center; color:#F58814">ORDER LOAK.IN</h5>
-          <p class="card-text" style="font-size:16px;  font-weight: 400; text-align: center;">Order Loak.in merupakan fitur utama dari Loak.in. Fitur ini berguna untuk memanggil tukang loak terdekat. Fitur ini bisa digunakan kapan saja dan dimana saja</p>
+          <p class="card-text" style="font-size:16px;  font-weight: 400; text-align: center;">Order Loak.in merupakan fitur yang berguna untuk memanggil tukang loak terdekat. Fitur ini bisa digunakan kapan saja dan dimana saja</p>
           <a href="{{ route('order.index') }}" class="btn btn-outline-light" style="background-color:#F58814;font-color:white;width:50%;border-radius:25px 25px 25px 25px; width: 182px; left: 336px;  margin-left: 100px">ORDER LOAK.IN</a>
         </div> 
       </div>
@@ -33,7 +33,7 @@
 </div>
 
 <div class="container py-3 bg-white mt-3" >
-  <h3 style=" color:#D77409; text-align:center;">ABOUT US</h3>
+  <h3 style=" color:#D77409; text-align:center; font-weight:bold">ABOUT US</h3>
   
   <div class="row mt-3">
     <div class="col justify-content-center">
@@ -50,7 +50,7 @@
 </div>
 
 <div class="container py-3 bg-white mt-3" >
-  <h3 style=" color:#D77409; text-align:center;">WHAT THEY SAID ABOUT US?</h3>
+  <h3 style=" color:#D77409; text-align:center;font-weight:bold">WHAT THEY SAID ABOUT US?</h3>
 
   <div class="row mt-5 pt-3 justify-content-center">
     
