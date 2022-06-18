@@ -1,7 +1,7 @@
 @extends('User.master')
 
 @section('content')
-<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Activity</h2>
+<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Activity Loak.in</h2>
 
 <div class="container mt-4 justify-content-center" id="cont" style="font-family: 'Segoe UI', Arial, sans-serif;">
         <div class="cont">
@@ -9,12 +9,12 @@
         <div class="row mt-4 mb-4">
                     <div class="col-6" >
                         <div class="d-grid gap-2">
-                            <a href="{{route('activityloakin.loakintrack')}}" class="btn mb-2" style="background-color:#F8A44C;border-radius:15px; font-color: black; font-weight:500" type="button">Data Order Loak.In</a>
+                            <a href="{{route('activityloakin.loakintrack')}}" class="btn mb-2" style="background-color:#F8A44C;border-radius:5px; font-color: black; font-weight:500" type="button">Data Order Loak.In</a>
                         </div>
                     </div>
                     <div class="col-6" >
                         <div class="d-grid gap-2">
-                            <a href="{{route('activityloakin.shoptrack')}}" class="btn mb-2" style="background-color:#F8A44C;border-radius:15px; font-color: black; font-weight:500" type="button">Data Order Loak.In Shop</a>
+                            <a href="{{route('activityloakin.shoptrack')}}" class="btn mb-2" style="background-color:#F8A44C;border-radius:5px; font-color: black; font-weight:500" type="button">Data Order Loak.In Shop</a>
                         </div>
                     </div>
                 </div>    
@@ -23,10 +23,10 @@
             <tr>
             <th scope="col"><center>No Order</center></th>
             <th scope="col"><center>Status Order</center></th>
-            <th scope="col"><center>Nama Driver</center></th>
-            <th scope="col"><center>Pembayaran</center></th>
-            <th scope="col"><center>Total Harga</center></th>
-            <th scope="col"><center>Aksi</center></th>
+            <th scope="col"><center>Driver Name</center></th>
+            <th scope="col"><center>Payment</center></th>
+            <th scope="col"><center>Total Price</center></th>
+            <th scope="col"><center>Action</center></th>
             </tr>
         </thead>
 
