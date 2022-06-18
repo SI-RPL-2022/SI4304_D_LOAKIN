@@ -35,7 +35,7 @@
                                     </a>
                                     <p class="card-text" style="color:red;font-weight:500 ">Rp {{$pr->harga}}</p>
                                     <div class="d-flex justify-content-center">
-                                        <a href="{{route('shop.detail', $pr->id)}}" class="btn btn-outline-light" style="background-color:#F58814;font-color:white;width:50%;border-radius:25px 25px 25px 25px" type="submit" name="submit"><i class="fa fa-plus" aria-hidden="true" style="margin-right: 10px"></i> Beli</a>
+                                        <a href="{{route('shop.detail', $pr->id)}}" class="btn btn-outline-light" style="background-color:#F58814;font-color:white;width:50%;border-radius:25px 25px 25px 25px" type="submit" name="submit"><i class="fa fa-plus" aria-hidden="true" style="margin-right: 10px"></i> Buy</a>
                                     </div>
                                 </div>
                             </div>
