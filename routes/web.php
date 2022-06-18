@@ -148,7 +148,10 @@ Route::prefix('/')->group(function () {
 
     Route::prefix('/order')->name('order.')->group(function () {
         Route::get('/', [OrderUserController::class, 'index'])->name('index')->middleware('auth');
-        Route::post('/order', [OrderUserController::class, 'order'])->name('order');
+        Route::get('/order', [OrderUserController::class, 'orderbaru'])->name('orderbaru')->middleware('auth');
+        Route::post('/order/{id}', [OrderUserController::class, 'order'])->name('order');
+        Route::post('/neworder/{id}', [OrderUserController::class, 'ordernew'])->name('ordernew');
+        Route::post('/neworder', [OrderUserController::class, 'neworder'])->name('neworder');
         
     }); 
 
@@ -165,6 +168,9 @@ Route::prefix('/')->group(function () {
         Route::get('/', [ProfileUserController::class, 'index'])->name('index')->middleware('auth');
         Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
         Route::post('/updateimg', [ProfileUserController::class, 'updateimg'])->name('updateimg')->middleware('auth');
+        Route::get('/alamat/{id}', [ProfileUserController::class, 'alamat'])->name('alamat')->middleware('auth');
+        Route::post('/tambahalamat/{id}', [ProfileUserController::class, 'tambah'])->name('tambah')->middleware('auth');
+        Route::get('/ubahalamat/{id}', [ProfileUserController::class, 'ubah'])->name('ubah')->middleware('auth');
     });
 
     Route::prefix('/shop')->name('shop.')->group(function () {

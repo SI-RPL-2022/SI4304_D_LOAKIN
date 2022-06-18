@@ -1,5 +1,16 @@
 @extends('User.Master')
-
+<style>
+.label{
+  display: inline-block;
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+</style>
 @section('content')
     <div class="card shadow-lg mx-3 card-profile-bottom mt-4" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight:500">
       <div class="card-body p-3">
@@ -20,13 +31,17 @@
             </div>
           </div>
           <div class="col-4 ">
+            
             <form action="{{route('account.updateimg')}}" method="POST" id="logForm" enctype="multipart/form-data"> 
               {{ csrf_field() }}
-              <div class="file-upload col-md-6" style="margin-top: 30px">
-                <input type="file" value="{{old('foto')}}" name="foto"> 
+              <div class="row">
+              <div class="file-upload col-md-4" style="margin-top: 35px">
+                <input type="file" id="upload" value="{{old('foto')}}" name="foto" hidden/>
+                <label for="upload">Choose file</label>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" style="margin-top: 30px">
                 <button type="submit" class="form-control " style="background-color: #F58814; color:white;">Upload Foto Profile</button>
+              </div>
               </div>
             </form>
           </div>
@@ -65,6 +80,7 @@
                     <label for="example-text-input" class="form-control-label">Address</label>
                     <input class="form-control" type="text" name="alamat" value="{{$account->alamat}}">
                   </div>
+                  
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
@@ -75,7 +91,11 @@
               </div>
               <hr class="horizontal dark">
                 <div class="row ">
-                <div class="col-md-12">
+                <div class="col-md-3">
+                    <a href="{{route('account.alamat', $account->id)}}" class="btn btn-outline-light " style="background-color:#F58814;font-color:white; width:100%" type="submit" name="submit">
+                      <i class="fa fa-plus" aria-hidden="true" style="margin-right: 10px"></i> Tambah Alamat</a>
+                  </div>
+                <div class="col-md-9">
                 <button type="submit" class="form-control " style="background-color: #F58814; color:white;">Update Profile</button>
                 </div>
                 </div>

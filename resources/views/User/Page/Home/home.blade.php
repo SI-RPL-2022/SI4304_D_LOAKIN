@@ -13,7 +13,7 @@
         <div class="card-body">
           <h5 class="card-title" style=" font-weight:bold; text-align: center; color:#F58814">ORDER LOAK.IN</h5>
           <p class="card-text" style="font-size:16px;  font-weight: 400; text-align: center;">Order Loak.in merupakan fitur yang berguna untuk memanggil tukang loak terdekat. Fitur ini bisa digunakan kapan saja dan dimana saja</p>
-          <a href="{{ route('order.index') }}" class="btn btn-outline-light" style="background-color:#F58814;font-color:white;width:50%;border-radius:25px 25px 25px 25px; width: 182px; left: 336px;  margin-left: 100px">ORDER LOAK.IN</a>
+          <a href="{{ route('order.orderbaru') }}" class="btn btn-outline-light" style="background-color:#F58814;font-color:white;width:50%;border-radius:25px 25px 25px 25px; width: 182px; left: 336px;  margin-left: 100px">ORDER LOAK.IN</a>
         </div> 
       </div>
     </div> 

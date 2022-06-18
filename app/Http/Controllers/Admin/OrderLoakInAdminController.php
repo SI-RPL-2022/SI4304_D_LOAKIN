@@ -16,7 +16,7 @@ class OrderLoakInAdminController extends Controller
     {
         if(Session::has('admin')){
 
-            $order = Order::with(['user'])->orderBy('created_at', 'desc')->paginate(10);
+            $order = Order::with(['user'])->orderBy('created_at', 'desc')->where('status', '!=', 'On Process')->paginate(10);
 
             return view('Admin.Page.DataOrder.Order', compact('order'));
         }

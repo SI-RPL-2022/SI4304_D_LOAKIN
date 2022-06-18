@@ -9,15 +9,16 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 
 use App\Models\User;
+use App\Models\Alamat;
 use Session;
 
 class ProfileUserController extends Controller
 {
     public function index()
     {   
-            $account = User::where('id', Auth::user()->id)->firstOrFail();
+        $account = User::where('id', Auth::user()->id)->firstOrFail();
             
-            return view('User.Page.Profile.Profile', compact('account'));
+        return view('User.Page.Profile.Profile', compact('account'));
 
     }
 
@@ -64,5 +65,38 @@ class ProfileUserController extends Controller
             $account->save();
 
         return redirect(route('account.index'));
+    }
+
+    public function alamat($id)
+    {   
+        $account = User::find($id);
+            
+        return view('User.Page.Profile.tambahalamat', compact('account'));
+
+    }
+
+    public function tambah(Request $request, $id)
+    {
+        $request->validate([
+            'alamat'      => 'required',
+        ]);
+
+        $account = User::findOrFail($id);
+        $alamat = new Alamat;
+
+        $alamat->alamat        = $request->alamat;
+        $alamat->id_user       = $id;
+        $alamat->save();
+
+        return redirect(route('account.index'));
+    }
+
+    public function ubah($id)
+    {   
+        $account = User::find($id);
+        $alamat = Alamat::with(['user'])->where('id_user', Auth::user()->id)->get();
+            
+        return view('User.Page.Order.ubahalamat', compact('account', 'alamat'));
+
     }
 }
