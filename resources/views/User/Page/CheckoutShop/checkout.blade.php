@@ -11,7 +11,7 @@
             <i class="fa fa-user-circle" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Detail Customer</b></a>
         </h4>
 
-        <div style="margin-left: 55px;margin-right:40px;">
+        <div style="margin-left: 64px;margin-right:40px; font-weight:500">
         @foreach($user as $us)
             <div class="mb-3">
                 <p>{{$us->name}}</p>
@@ -22,7 +22,7 @@
             <div class="mb-3">
                 <p>{{$us->alamat}}</p>
             </div>
-            <div class="mb-3" style="color: red;">
+            <div class="mb-3" style="color: red; font-weight:400">
                 <h6>*Shipping using JnT</h6>
             </div>
         @endforeach
@@ -32,7 +32,7 @@
 
     <div class="mt-4" style=" font-family: 'Segoe UI', Arial, sans-serif;">
         <table class="table table-responsive table-bordered">
-            <thead style="font-weight: 600; background-color:#F58814;color:white;">
+            <thead style="background-color: #D77409;color:white;">
                 <tr>
                     <th scope="col"><center><b>No</b></center></th>
                     <th scope="col"><center><b>Image</b></center></th>
@@ -53,7 +53,7 @@
                         ?>
                 <form class="form form-horizontal" action="{{ route('checkoutshop.create') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <tr>  
+                <tr style="font-weight: 400" >  
                     <th scope="row" style="line-height: 8rem; text-align: center">{{$no}}</th>
                     <td style="line-height: 8rem;text-align: center"><img src="{{ asset('dataproduk/' . $ts->produk->foto_produk) }}" width="200" height="" alt=""></td>
                     <td style="line-height: 8rem;text-align: center">{{$ts->produk->nama_produk}}</td>
@@ -74,7 +74,7 @@
     </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 30px;">
-        <button type="submit" class="btn p-2 bd-highlight" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">CHECKOUT</button>
+        <button type="submit" class="btn p-2 bd-highlight" style="background-color:#F58814;color:white;border-radius:7px;width:15rem;">CHECKOUT</button>
     </div>
 </form>
 @endsection

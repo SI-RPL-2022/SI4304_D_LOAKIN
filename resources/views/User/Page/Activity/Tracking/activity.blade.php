@@ -19,7 +19,7 @@
                     </div>
                 </div>    
     <table  class="table table-responsive table-bordered ">
-        <thead class="table "style="background-color: #F58814; color: white;">
+        <thead class="table "style="background-color: #D77409; color: white;">
             <tr>
             <th scope="col"><center>No Order</center></th>
             <th scope="col"><center>Status Order</center></th>

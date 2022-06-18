@@ -12,7 +12,7 @@
         <div class="cont">
         <div class="isitabel">
     <table  class="table table-responsive table-bordered">
-        <thead class="table " style="background-color: #F58814; color: white;" >
+        <thead class="table " style="background-color: #D77409; color: white;" >
             <tr>
               <th scope="col" style="text-align: center">No</th>
               <th scope="col" style="text-align: center">Image</th>
@@ -40,14 +40,14 @@
                 </td>
                 <td style="line-height: 8rem;text-align: center">Rp {{$cr->produk->harga * $cr->jumlah}}</td>
                 <td style="line-height: 8rem;text-align: center"><center>
-                    <a class="btn btn-danger" href="{{route('cart.delete', $cr->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:80%;border-radius:25px 25px 25px 25px;margin-top: 3rem">Delete</a>
+                    <a class="btn btn-danger" href="{{route('cart.delete', $cr->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:80%;border-radius:15px;margin-top: 3rem">Delete</a>
                 </center></td>
             </tr>
             @endforeach
             <tr>
                 <th colspan="4" style="line-height: 2rem;">Total Belanja</th>
                 <th style="line-height: 2rem;text-align: center">Rp {{$tot}}</th>
-                <th><center><a href="{{ route('checkoutshop.checkout') }}" class="btn btn-outline-light" name="hapus" style="background-color:#F58814;font-color:white;width:80%;border-radius:25px 25px 25px 25px;">Checkout</a></center></th>
+                <th><center><a href="{{ route('checkoutshop.checkout') }}" class="btn btn-outline-light" name="hapus" style="background-color:#F58814;font-color:white;width:80%;border-radius:7px;">CHECKOUT</a></center></th>
             </tr>
        
         </tbody>

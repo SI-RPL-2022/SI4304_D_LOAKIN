@@ -15,7 +15,7 @@
     </center>
     @else
     <table class="table table-responsive  table-bordered" >
-      <thead class="table " style="background-color: #F58814; color: white;" >
+      <thead class="table " style="background-color: #D77409; color: white;" >
         <tr>
           <th scope="col" style="text-align: center">No</th>
           <th scope="col" style="text-align: center">Image</th>
@@ -39,8 +39,8 @@
             <td style="line-height: 8rem;text-align: center">{{$fav->produk->nama_produk}}</td>
             <td style="line-height: 8rem;text-align: center">Rp {{$fav->produk->harga}}</td>
             <td style="line-height: 8rem;text-align: center"><center>
-                <a class="btn btn-info" href="{{route('shop.detail', $fav->produk->id)}}" style="font-color:white;width:40%; margin-right: 3%">Detail</button>
-                <a class="btn btn-danger" href="{{route('favorit.delete', $fav->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:40%;">Delete</a>
+                <a class="btn btn-info" href="{{route('shop.detail', $fav->produk->id)}}" style="font-color:white;width:40%; margin-right: 3%;border-radius:15px">Detail</button>
+                <a class="btn btn-danger" href="{{route('favorit.delete', $fav->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:40%;border-radius:15px">Delete</a>
             </center></td>
         </tr>
        
