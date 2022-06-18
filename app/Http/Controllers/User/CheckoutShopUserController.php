@@ -66,7 +66,7 @@ class CheckoutShopUserController extends Controller
                 $c->delete();
             }
 
-            return redirect(route('home.index'));
+            return redirect(route('bayar.index', $cr->id));
 
     }
 }

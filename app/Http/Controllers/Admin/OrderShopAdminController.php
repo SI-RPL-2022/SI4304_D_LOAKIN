@@ -51,4 +51,33 @@ class OrderShopAdminController extends Controller
             return redirect()->route('loginadmin');
         }
     }
+
+    public function konfirmasi($id)
+    {
+        if(Session::has('admin')){
+            $order = OrderShop::find($id);
+
+            $order->status     = 'Confirmed';
+            $order->save();
+            
+            return redirect(route('ordershopadmin.index'))->with(['success' => 'Pesanan Berhasil di Proses']);
+        }
+        else{
+            return redirect()->route('loginadmin');
+        }
+    }
+    public function kirim($id)
+    {
+        if(Session::has('admin')){
+            $order = OrderShop::find($id);
+
+            $order->status     = 'Barang Kirim';
+            $order->save();
+
+            return redirect(route('ordershopadmin.index'))->with(['success' => 'Pesanan Berhasil di Proses']);
+        }
+        else{
+            return redirect()->route('loginadmin');
+        }
+    }
 }

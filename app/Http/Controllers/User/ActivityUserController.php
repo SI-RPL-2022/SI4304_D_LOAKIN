@@ -38,4 +38,15 @@ class ActivityUserController extends Controller
             
         return view('User.Page.Activity.History.activity', compact('order'));
     }
+
+    public function update($id)
+    {
+        
+        $order = OrderShop::find($id);
+
+        $order->status     = 'Selesai';
+        $order->save();
+
+        return redirect(route('activityloakin.shoptrack'))->with(['success' => 'Pesanan Telah Diterima']);
+    }
 }

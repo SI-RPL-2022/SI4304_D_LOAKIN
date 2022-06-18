@@ -41,16 +41,16 @@
                 <th colspan="4" style="line-height: 3rem">Nomer Order : {{$or->no_order}} <b style="color: red">( {{$or->status}} )</b></th>
                 <th style="line-height: 3rem"><center>Total : Rp {{$or->total}} </center></th>
                 @if ($or->status == 'On Prosess' or $or->status == 'Pesanan Sudah Diterima - Menunggu Pembayaran')
-                    <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Bayar Sekarang</a></center></td>
+                    <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="{{route('bayar.bayar', $or->id)}}" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Bayar Sekarang</a></center></td>
                 @elseif($or->status == 'Confirmed')
-                    <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Cetak Nota</a></center></td>
+                    <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="{{ url('generate-pdf', $or->no_order) }}" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Cetak Nota</a></center></td>
                 @elseif($or->status == 'Barang Kirim')
-                    <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Barang Sampai</a></center></td>
+                    <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="{{ route('activityloakin.update', $or->id) }}" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Barang Sampai</a></center></td>
                 @elseif($or->status == 'Sudah Upload Bukti Pembayaran')
                     <td style="line-height: 3rem"><center><div class="btn btn-outline-light" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Waiting List</div></center></td>
                 @elseif($or->status == 'Selesai')
-                    <td style="line-height: 3rem"><center><a href="" class="btn btn-outline-light" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Review Product</a>
-                    <a class="btn btn-outline-light" href="" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Cetak Nota</a></center></td>
+                    <td style="line-height: 3rem"><center>
+                    <a class="btn btn-outline-light" href="{{ url('generate-pdf', $or->no_order) }}" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Cetak Nota</a></center></td>
                 @endif
             </tr>
             
