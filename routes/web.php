@@ -116,3 +116,4 @@ Route::get('/KonfirmBerat', [KonfirmBeratDriverController::class, 'index'])->nam
 Route::get('/HomeShop', [HomeShopUserController::class, 'index'])->name('index');
 Route::get('/UbahAlamat', [UbahAlamatUserController::class, 'index'])->name('index');
 Route::get('/TambahAlamat', [TambahAlamatUserController::class, 'index'])->name('index');
+Route::get('/LihatAlamat', [TambahAlamatUserController::class, 'lihat'])->name('lihat');
