@@ -3,25 +3,25 @@
 @section('content')
 
 <div class="container mt-5 justify-content-center" id="cont">
-<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Keranjang Saya</h2>
+<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">My Cart</h2>
 
         <div class="d-grid gap-2" style="padding-left: 20%; padding-right: 20%; margin-top: 30px;margin-bottom:30px;">
-            <a href="{{ route('shop.index') }}" class="btn btn-outline-light" name="hapus" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px;">Belanja Lagi Yuk</a>
+            <a href="{{ route('shop.index') }}" class="btn" name="hapus" style="background-color:#F8A44C;font-color:black;border-radius:25px 25px 25px 25px; font-weight:500">Let's Go Shopping!</a>
         </div>
     
         <div class="cont">
         <div class="isitabel">
     <table  class="table table-responsive table-bordered">
-        <thead class="table">
+        <thead class="table " style="background-color: #F58814; color: white;" >
             <tr>
-            <th scope="col"><center>No</center></th>
-            <th scope="col"><center>Gambar</center></th>
-            <th scope="col"><center>Nama Produk</center></th>
-            <th scope="col"><center>Jumlah</center></th>
-            <th scope="col"><center>Harga</center></th>
-            <th scope="col"><center>Aksi</center></th>
+              <th scope="col" style="text-align: center">No</th>
+              <th scope="col" style="text-align: center">Image</th>
+              <th scope="col" style="text-align: center">Product Name</th>
+              <th scope="col" style="text-align: center">Qty</th>
+              <th scope="col" style="text-align: center">Price</th>
+              <th scope="col" style="text-align: center">Action</th>
             </tr>
-        </thead>
+          </thead>
 
         <tbody>
         {{-- jdjd --}}
@@ -40,7 +40,7 @@
                 </td>
                 <td style="line-height: 8rem;text-align: center">Rp {{$cr->produk->harga * $cr->jumlah}}</td>
                 <td style="line-height: 8rem;text-align: center"><center>
-                    <a class="btn btn-danger" href="{{route('cart.delete', $cr->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:80%;border-radius:25px 25px 25px 25px;margin-top: 3rem">Hapus</a>
+                    <a class="btn btn-danger" href="{{route('cart.delete', $cr->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:80%;border-radius:25px 25px 25px 25px;margin-top: 3rem">Delete</a>
                 </center></td>
             </tr>
             @endforeach

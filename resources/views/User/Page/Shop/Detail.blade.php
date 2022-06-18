@@ -34,8 +34,8 @@
     </div>
     <div class="row mt-4 mb-4" style="font-family: 'Segoe UI', Arial, sans-serif;">
         <div class="d-flex justify-content-end">
-            <a href="" class="w-25 btn btn-outline-light md-2" style="background-color:rgb(241, 60, 90);border-radius:5px;color: white; font-weight:500;margin-right: 3%" type="button"><i class="fa fa-heart" aria-hidden="true" style="margin-right: 10px"></i>Add to Favorite</a>
-            <a href="" style="background-color:rgb(239,136,48);border-radius:5px;color: white; font-weight:500;" class="btn btn-md w-25 align-right" type="button"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right: 10px"></i>Add to Cart</a>
+            <a href="{{route('favorit.create', $produk->id)}}" class="w-25 btn btn-outline-light md-2" style="background-color:rgb(241, 60, 90);border-radius:5px;color: white; font-weight:500;margin-right: 3%" type="button"><i class="fa fa-heart" aria-hidden="true" style="margin-right: 10px"></i>Add to Favorite</a>
+            <a href="{{ route('cart.create', $produk->id) }}" style="background-color:rgb(239,136,48);border-radius:5px;color: white; font-weight:500;" class="btn btn-md w-25 align-right" type="button"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right: 10px"></i>Add to Cart</a>
         </div>
     </div>  
 @endsection

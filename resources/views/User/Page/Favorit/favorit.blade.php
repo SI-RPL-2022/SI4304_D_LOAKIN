@@ -40,7 +40,7 @@
             <td style="line-height: 8rem;text-align: center">Rp {{$fav->produk->harga}}</td>
             <td style="line-height: 8rem;text-align: center"><center>
                 <a class="btn btn-info" href="{{route('shop.detail', $fav->produk->id)}}" style="font-color:white;width:40%; margin-right: 3%">Detail</button>
-                <a class="btn btn-danger" href="{{route('favorit.delete', $fav->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:40%;">Hapus</a>
+                <a class="btn btn-danger" href="{{route('favorit.delete', $fav->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:40%;">Delete</a>
             </center></td>
         </tr>
        
