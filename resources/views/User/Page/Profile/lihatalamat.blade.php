@@ -8,40 +8,38 @@
 
     <div class="container">
             <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-                        <div>
-                            <table class="table-responsive" cellpadding="4">
-                                <tbody>   
-                                    <tr>
-                                        <td></td>
-                                        <td><b>Jaehyun</b></td>
-                                        <td rowspan="2">Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><b>(+62)81233671818</b></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <div>
+                    <table class="table-responsive" cellpadding="4">
+                        <tbody>   
+                            <tr>
+                                <td></td>
+                                <td><b>Jaehyun</b></td>
+                                <td rowspan="2">Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>(+62)81233671818</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-                
-                        <div>
-                            <table class="table-responsive" cellpadding="4">
-                                <tbody>   
-                                    <tr>
-                                        <td></td>
-                                        <td><b>Lucas</b></td>
-                                        <td rowspan="2">Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><b>(+62)8124592890</b></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                  
+                <div>
+                    <table class="table-responsive" cellpadding="4">
+                        <tbody>   
+                            <tr>
+                                <td></td>
+                                <td><b>Lucas</b></td>
+                                <td rowspan="2">Jl. Telekomunikasi No. 1, Terusan Buahbatu - Bojongsoang, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>(+62)8124592890</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
                 <div>
