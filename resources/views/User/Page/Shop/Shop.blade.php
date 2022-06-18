@@ -3,15 +3,9 @@
 @section('content')
     <div class="pt-3" style="font-family: 'Segoe UI', Arial, sans-serif;">
         <div class="row mt-4 mb-4">
-            <div class="col-6" >
-                <div class="d-grid gap-2">
-                    <a href="" class="btn mb-2" style="background-color:rgb(241, 60, 90);border-radius:5px;color: white; font-weight:500;" type="button"><i class="fa fa-heart" aria-hidden="true" style="margin-right: 10px"></i>Favorite</a>
-                </div>
-            </div>
-            <div class="col-6" >
-                <div class="d-grid gap-2">
-                    <a href="" class="btn mb-2" style="background-color:#F2B87A;border-radius:5px; font-color: black; font-weight:500;" type="button"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right: 10px"></i>My Cart</a>
-                </div>
+            <div class="d-flex justify-content-end">
+                <a href="" class="w-25 btn btn-outline-light md-2" style="background-color:rgb(241, 60, 90);border-radius:5px;color: white; font-weight:500;margin-right: 3%" type="button"><i class="fa fa-heart" aria-hidden="true" style="margin-right: 10px"></i>Favorite</a>
+                <a href="" style="background-color:#F2B87A;border-radius:5px;color: black; font-weight:500;" class="btn btn-md w-25 align-right" type="button"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right: 10px"></i>My Cart</a>
             </div>
         </div>  
         <img src="https://drive.google.com/uc?export=view&id=1rombM23nFmTjJ2QlYspO0Y41L5Yvb1fX" alt="banner" width="100%">
