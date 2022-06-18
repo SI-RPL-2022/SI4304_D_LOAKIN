@@ -13,18 +13,20 @@
             <h4 style="color: #D77409">
                 <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;"><b>Pick Up Address</b></a>
             </h4>
-        </div>
-        <div class="col-lg-2 d-flex justify-content-end"><h5><b><a href="" style="color: #D77409;text-decoration:none" data-bs-toggle="modal" data-bs-target="#exampleModal">Change</a></b></h5></div>
-    </div>
+        </div></div>
         
         <div class="row" style="font-weight: 500; margin-left:25px;">
-            @foreach($user as $us)  
+            @foreach($order as $us)  
             <div class="col-lg-4">
-                <p><b>{{$us->name}}</b></p>
-                <p><b>{{$us->telepon}}</b></p>
+                <p><b>{{$us->user->name}}</b></p>
+                <p><b>{{$us->user->telepon}}</b></p>
             </div>
             <div class="col-lg-6">
-                <b>{{$us->alamat}}</b>
+                @if($us->alamat == null)
+                    <b>{{$us->user->alamat}}</b>
+                @else
+                    <b>{{$us->alamat}}</b>
+                @endif
            
             </div>
             <div class="col-lg-2">

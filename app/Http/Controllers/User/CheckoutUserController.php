@@ -16,7 +16,7 @@ class CheckoutUserController extends Controller
     public function index()
     {
         $user = User::where('id', Auth::user()->id)->paginate(5);
-        $order = Order::where('status', 'On Prosess')
+        $order = Order::where('status', 'On Process')
                 ->where('id_user', Auth::user()->id)
                 ->orderBy('id','DESC')
                 ->paginate(1);

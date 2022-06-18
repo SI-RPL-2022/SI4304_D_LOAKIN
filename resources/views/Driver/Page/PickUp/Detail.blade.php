@@ -37,7 +37,7 @@
                                     <p>: {{$ts->weight}}</p>
                                     <p>: {{$ts->payment}}</p>
                                     <p>: {{$ts->items}}</p>
-                                    <p>: {{$ts->user->alamat}}</p>
+                                    <p>: {{$ts->alamat}}</p>
                                 </div>
                             </div>
                             @endforeach

@@ -92,7 +92,7 @@
               <hr class="horizontal dark">
                 <div class="row ">
                 <div class="col-md-3">
-                    <a href="#" class="btn btn-outline-light " style="background-color:#F58814;font-color:white; width:100%" type="submit" name="submit">
+                    <a href="{{route('account.alamat', $account->id)}}" class="btn btn-outline-light " style="background-color:#F58814;font-color:white; width:100%" type="submit" name="submit">
                       <i class="fa fa-plus" aria-hidden="true" style="margin-right: 10px"></i> Tambah Alamat</a>
                   </div>
                 <div class="col-md-9">

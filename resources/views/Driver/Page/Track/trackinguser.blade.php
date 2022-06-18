@@ -39,7 +39,7 @@
 
                 <div class="row">
                     <div class="col-lg-6 mt-2" style="margin-left:35px; font-weight:600;">
-                        <p>{{$ts->user->alamat}}</p>
+                        <p>{{$ts->alamat}}</p>
                     </div>
                 </div>
                 

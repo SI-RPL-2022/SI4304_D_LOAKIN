@@ -18,7 +18,7 @@ class ActivityUserController extends Controller
 {
     public function loakintrack()
     {
-        $order = Order::with(['driver'])->orderBy('created_at', 'desc')->where('id_user', Auth::user()->id)->get();
+        $order = Order::with(['driver'])->orderBy('created_at', 'desc')->where('id_user', Auth::user()->id)->where('status', '!=', 'On Process')->get();
             
         return view('User.Page.Activity.Tracking.activity', compact('order'));
     }

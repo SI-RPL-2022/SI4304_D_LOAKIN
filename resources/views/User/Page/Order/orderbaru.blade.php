@@ -15,15 +15,15 @@
                     <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;"><b>Pick Up Address</b></a>
                 </h4>
             </div>
-            @foreach($alamat as $us)
+            @foreach($user as $us)
             <div class="col-lg-2 d-flex justify-content-end"><h5><b><a href="{{route('account.ubah', $us->id)}}" style="color: #D77409;text-decoration:none">Change</a></b></h5></div>
         </div>
             
             <div class="row" style="font-weight: 500; margin-left:25px;">
                   
                 <div class="col-lg-4">
-                    <p><b>{{$us->user->name}}</b></p>
-                    <p><b>{{$us->user->telepon}}</b></p>
+                    <p><b>{{$us->name}}</b></p>
+                    <p><b>{{$us->telepon}}</b></p>
                 </div>
                 <div class="col-lg-6">
 
@@ -40,7 +40,7 @@
     </div>
 
     <div class="mt-4" style="font-family: 'Segoe UI', Arial, sans-serif;"">
-        <form method="POST" action="{{ route('order.order', $us->id) }}" enctype="multipart/form-data"> 
+        <form method="POST" action="{{ route('order.ordernew', $us->id) }}" enctype="multipart/form-data"> 
         @csrf
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
                 <h4 style="color: #D77409">
