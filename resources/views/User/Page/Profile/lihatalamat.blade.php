@@ -10,6 +10,12 @@
         <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
             <div>
                 <table class="table-responsive" cellpadding="4">
+                    <thead>
+                        <tr style="color: #D77409">
+                            <td scope="col"><h5><i class="bi bi-geo-alt-fill" ></i></h5></td>
+                            <td scope="col"><h5><b>Alamat 1</b></h5></td>
+                        </tr>
+                    </thead>
                     <tbody>   
                         <tr>
                             <td></td>
@@ -27,6 +33,12 @@
         <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
             <div>
                 <table class="table-responsive" cellpadding="4">
+                    <thead>
+                        <tr style="color: #D77409">
+                            <td scope="col"><h5><i class="bi bi-geo-alt-fill" ></i></h5></td>
+                            <td scope="col"><h5><b>Alamat 2</b></h5></td>
+                        </tr>
+                    </thead>
                     <tbody>   
                         <tr>
                             <td></td>
@@ -44,6 +56,12 @@
         <div class="mt-3" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
             <div>
                 <table class="table-responsive" cellpadding="4">
+                    <thead>
+                        <tr style="color: #D77409">
+                            <td scope="col"><h5><i class="bi bi-geo-alt-fill" ></i></h5></td>
+                            <td scope="col"><h5><b>Alamat 3</b></h5></td>
+                        </tr>
+                    </thead>
                     <tbody>   
                         <tr>
                             <td></td>
