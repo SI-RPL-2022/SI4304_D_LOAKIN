@@ -6,16 +6,16 @@
         <div class="row gx-4">
           <div class="col-lg-2">
             <div class="avatar avatar-xl position-relative">
-              <img src="{{ asset('fotouser/' . $account->foto) }}" alt="profile_image" class="w-50 img-fluid border-radius-lg " style="margin-right: 0px">
+              <img src="" alt="profile_image" class="w-50 img-fluid border-radius-lg " style="margin-right: 0px">
             </div>
           </div>
           <div class="col-lg-8 my-auto">
             <div class="h-100">
               <h5 class="mb-1">
-                {{$account->name}}
+                
               </h5>
               <p class="mb-0 font-weight-bold text-sm">
-                Status Member - <b>{{$account->status}}</b>
+                Status Member - <b></b>
               </p>
             </div>
           </div>
@@ -37,15 +37,15 @@
                 <h4 class="mb-3 mt-2">Edit Profile</h4>
               </div>
             </div>
-            <form class="form form-horizontal" action="{{ route('account.update') }}" method="POST" enctype="multipart/form-data">
-            @csrf
+            <form class="form form-horizontal" action="" method="POST" enctype="multipart/form-data">
+            
             <div class="card-body">
               <p class="text-uppercase text-sm mb-2"><b>User Information</b></p>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="example-text-input" class="form-control-label">Nama Lengkap</label>
-                    <input class="form-control" type="text" name="nama" value="{{$account->name}}">
+                    <input class="form-control" type="text" name="nama" value="">
                   </div>
                 </div>
               </div>
@@ -55,13 +55,14 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="example-text-input" class="form-control-label">Alamat</label>
-                    <input class="form-control" type="text" name="alamat" value="{{$account->alamat}}">
+                    <input class="form-control" type="text" name="alamat" value="">
                   </div>
+                  
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="example-text-input" class="form-control-label">Nomor Telepon</label>
-                    <input class="form-control" type="text" name="nomor" value="{{$account->telepon}}">
+                    <input class="form-control" type="text" name="nomor" value="">
                   </div>
                 </div>
               </div>
@@ -77,7 +78,7 @@
         </div>
         <div class="col-md-4">
           <div class="card card-profile">
-            <img src="{{ asset('bg1.jpg') }}" alt="Image placeholder" class="card-img-top">
+            <img src="" alt="Image placeholder" class="card-img-top">
             <div class="row justify-content-center">
               <div class="col-4 col-lg-4 order-lg-2">
                 <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
@@ -102,16 +103,16 @@
               </div>
               <div class="text-center mt-4">
                 <h5>
-                    {{$account->name}}
+                    
                 </h5>
                 <div class="h6 font-weight-300">
-                  <i class="ni location_pin mr-2"></i>{{$account->alamat}}
+                  <i class="ni location_pin mr-2"></i>
                 </div>
                 <div class="h6 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i>{{$account->nomortelepon}}
+                  <i class="ni business_briefcase-24 mr-2"></i>
                 </div>
                 <div>
-                  <i class="ni education_hat mr-2"></i>Status Member | <b>{{$account->status}}</b>
+                  <i class="ni education_hat mr-2"></i>Status Member | <b></b>
                 </div>
               </div>
             </div>
