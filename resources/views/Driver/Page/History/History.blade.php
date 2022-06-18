@@ -36,7 +36,7 @@
                 <tr>
                     <th scope="col"><center><b>No. Order</b></center></th>
                     <th scope="col" style="width: 100%"><center><b>Customer Name</b></center></th>
-                    <th scope="col"><center><b>Aksi</b></center></th>
+                    <th scope="col"><center><b>Action</b></center></th>
                 </tr>
             </thead>
     
