@@ -1,14 +1,14 @@
 @extends('User.Master')
 
 @section('content')
-    <h2 class="text-center fw-bold fst-italic" style="color: rgb(239,136,48)">Detail Produk</h2>
+<h2 class="mt-4" style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center;  line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Detail</h2>
     @if ($message = Session::get('success'))
         <div class="alert alert-danger alert-block" style="margin-top: 10px">   
             <strong>{{ $message }}</strong>
         </div>
     @endif
 
-    <div class="card border-4 mb-3 mt-3 w-100 mx-auto rounded" style="border-color:rgb(239,136,48) ">
+    <div class="card mb-3 mt-3 w-100 mx-auto" style="border-style:solid;border-color:rgb(239,136,48);">
         <div class="row p-5 pt-3">
             <div class="col-5 mt-4">
                     <img
@@ -19,12 +19,13 @@
                     />
             </div>
             <div class="col mt-4">
-                    <h5 class="fw-bold" style="color: rgb(239,136,48)"> {{$produk->nama_produk}}</h5>
-                    <p class="fw-bold text-danger">Rp. {{$produk->harga}}</p>
+                    <h4 style="color: black; font-weight:500">{{$produk->nama_produk}}</h4>
+                    <h5 class="text-danger" style="font-weight:500">Rp. {{$produk->harga}}</h5>
 
-                    <p class="mt-5">
+                    <h5 class="mt-5" style="font-weight:400">Description : </h5>
+                    <h6 style="font-weight:400">
                     {{$produk->detail_produk}}
-                    </p>
+                    </h6>
 
                 
             </div>
