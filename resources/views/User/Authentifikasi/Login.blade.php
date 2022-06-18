@@ -28,12 +28,12 @@
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3cg">Email</label>
-                            <input class="form-control py-3" id="inputEmailAddress" name="email" type="email" placeholder="Masukkan Email"/>
+                            <input class="form-control py-3" id="inputEmailAddress" name="email" type="email" placeholder="Email"/>
                         </div>
         
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example4cg">Password</label>
-                            <input class="form-control py-3" id="inputEmailAddress" name="password" type="password" placeholder="Masukkan password"/>
+                            <input class="form-control py-3" id="inputEmailAddress" name="password" type="password" placeholder="Password"/>
                         </div>
         
         
