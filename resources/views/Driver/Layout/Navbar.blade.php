@@ -42,7 +42,7 @@
                 </a>
               </li>
               <li class="nav-item " style="padding-left: 3%; padding-right: 3%">
-                <a class="nav-link " href="#">
+                <a class="nav-link " href="{{ route('history.index') }}">
                   <i class="mdi mdi-contacts menu-icon"></i>
                   <span class="menu-title">History Pemesanan</span>
                 </a>

@@ -39,7 +39,7 @@
 
                 <div class="row">
                     <div class="col-lg-6 mt-2" style="margin-left:35px; font-weight:600;">
-                        <p>{{$ts->user->alamat}}</p>
+                        <p>{{$ts->alamat}}</p>
                     </div>
                 </div>
                 
@@ -78,7 +78,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="weight" class="form-label"><b>Chat with Customer</b></label>
-                    <p style="color: rgb(7, 166, 7)"><i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 10px"></i><a class="text-reset" href="https://web.whatsapp.com/" style="text-decoration:none;" target="_blank">Whatsapp</a></p>
+                    <p style="color: rgb(7, 166, 7)"><i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 10px"></i><a class="text-reset" href="https://wa.me/081911111111" style="text-decoration:none;" target="_blank">Whatsapp</a></p>
                 </div>
             </div>
 

@@ -18,7 +18,7 @@ class ActivityUserController extends Controller
 {
     public function loakintrack()
     {
-        $order = Order::with(['driver'])->orderBy('created_at', 'desc')->where('id_user', Auth::user()->id)->get();
+        $order = Order::with(['driver'])->orderBy('created_at', 'desc')->where('id_user', Auth::user()->id)->where('status', '!=', 'On Process')->get();
             
         return view('User.Page.Activity.Tracking.activity', compact('order'));
     }
@@ -37,5 +37,16 @@ class ActivityUserController extends Controller
         $order = OrderShop::with(['produk'])->orderBy('created_at', 'desc')->where('id_user', Auth::user()->id)->get();
             
         return view('User.Page.Activity.History.activity', compact('order'));
+    }
+
+    public function update($id)
+    {
+        
+        $order = OrderShop::find($id);
+
+        $order->status     = 'Selesai';
+        $order->save();
+
+        return redirect(route('activityloakin.shoptrack'))->with(['success' => 'Pesanan Telah Diterima']);
     }
 }

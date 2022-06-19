@@ -14,9 +14,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="card" style="border-radius: 15px; margin-top: 3%">
+                <div class="card" style="border-radius: 15px; margin-top: 3%; box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;">
                     <div class="card-body p-5">
-                        <h2 class="text-uppercase text-center " style="font-family: 'Montserrat'; color: #F58814; "><b>DAFTAR</b></h2>
+                        <h2 class="text-uppercase text-center " style="font-family: 'Montserrat'; color: #F58814; "><b>REGISTER</b></h2>
                         @if ($message = Session::get('success'))
                             <div class="alert alert-danger alert-block" style="margin-top: 10px">   
                                 <strong>{{ $message }}</strong>
@@ -26,42 +26,42 @@
                             {{ csrf_field() }}
 
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example3cg">Nama</label>
-                            <input class="form-control" id="inputEmailAddress" name="nama" type="text" placeholder="Masukkan Nama"/>
+                            <label class="form-label" for="form3Example3cg">Name</label>
+                            <input class="form-control" id="inputEmailAddress" name="nama" type="text" placeholder="e.g : Hendery"/>
                         </div>
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example3cg">Email</label>
-                            <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="Masukkan Email"/>
+                            <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="youremail@example.com"/>
                         </div>
         
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example3cg">Alamat Lengkap</label>
-                            <input class="form-control" id="inputEmailAddress" name="alamat" type="text" placeholder="Alamat Rumah, Kecamatan, Kota/Kabupaten, Provinsi"/>
+                            <label class="form-label" for="form3Example3cg">Address</label>
+                            <input class="form-control" id="inputEmailAddress" name="alamat" type="text" placeholder="Address, District, City/Regency, Province"/>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example3cg">Telepon</label>
-                            <input class="form-control" id="inputEmailAddress" name="telepon" type="number" placeholder="Masukkan Telepon"/>
+                            <label class="form-label" for="form3Example3cg">Phone Number</label>
+                            <input class="form-control" id="inputEmailAddress" name="telepon" type="number" placeholder="e.g : 081919191919"/>
                         </div>
         
                         
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form3Example4cg">Password</label>
-                            <input class="form-control" id="inputEmailAddress" name="pass" type="password" placeholder="Masukkan password"/>
+                            <input class="form-control" id="inputEmailAddress" name="pass" type="password" placeholder="Password"/>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example4cg"> Confirmasi Password</label>
-                            <input class="form-control" id="inputEmailAddress" name="confpass" type="password" placeholder="Masukkan password"/>
+                            <label class="form-label" for="form3Example4cg"> Confirm Password</label>
+                            <input class="form-control" id="inputEmailAddress" name="confpass" type="password" placeholder="Confirm Password"/>
                         </div>
         
                         <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-light" name="checkout" type="submit" style="background-color:#F58814;font-color:white;width:100%;border-radius:25px 25px 25px 25px; font-size:18px"><b>Masuk</b></button>
+                            <button class="btn btn-outline-light" name="checkout" type="submit" style="background-color:#F58814;font-color:white;width:100%;border-radius:25px 25px 25px 25px; font-size:18px"><b>Register</b></button>
                         </div>
         
-                        <p class="text-center text-muted mt-2 mb-0">have an account? <a href="{{route('loginuser')}}" class="fw-bold text-body"><u>Login here</u></a></p>
+                        <p class="text-center text-muted mt-2 mb-0">Have an account? <a href="{{route('loginuser')}}" class="fw-bold text-body"><u>Login here</u></a></p>
         
                         </form>
         

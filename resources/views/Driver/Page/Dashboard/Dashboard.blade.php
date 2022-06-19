@@ -22,6 +22,9 @@
             {{-- Judul --}}
 
 
+    @if($order->isEmpty())
+      <center><h4>Belum Ada Orderan Nih... Yuk Semangatt...</h4></center>
+    @else
     {{-- Tabel --}}
     <div class="comtainer mt-3 " style=" font-family: 'Segoe UI', Arial, sans-serif; ">
     <?php
@@ -31,13 +34,13 @@
                                     <?php
                                         $no += 1;
                                     ?>
-                @if($ts->status != 'Pesanan Selesai' )
+                @if($ts->status != 'Pesanan Selesai' && $ts->status != 'Sistem Mencari Driver Lain')
         <table class="table table-responsive table-bordered" style="padding-bottom: 6%">
-            <thead style="font-weight: 600; background-color:#F58814;color:white;">
+            <thead style="font-weight: 600; background-color:#D77409;color:white;">
                 <tr>
                     <th scope="col"><center><b>No. Order</b></center></th>
                     <th scope="col" style="width: 50%"><center><b>Customer Name</b></center></th>
-                    <th scope="col"><center><b>Aksi</b></center></th>
+                    <th scope="col"><center><b>Action</b></center></th>
                 </tr>
             </thead>
     
@@ -50,11 +53,11 @@
                         <a class="btn btn-info" href="{{route('pickup.view', $ts->no_order)}}"  style="font-weight: 600;color:white;border-radius:7px 7px 7px 7px;width:15rem;">DETAIL</a>
                         @if($ts->status == 'Berhasil Menemukan Driver' )
                         <a class="btn btn-outline-light" href="{{route('driver.fixpickup', $ts->id)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">PICK UP</a>
+                        <br><a class="btn btn-danger" href="{{route('driver.tolak', $ts->id)}}" style="font-weight: 600; border-radius:7px 7px 7px 7px;width:15rem;">REJECT</a>
                         @elseif($ts->status == 'Pesanan Selesai - Pembayaran')
-                        <a class="btn btn-danger" href="{{route('driver.selesai', $ts->id)}}" style="font-weight: 600; color:white;border-radius:7px 7px 7px 7px;width:15rem;">SELESAI</a>
+                        <a class="btn btn-success" href="{{route('driver.selesai', $ts->id)}}" style="font-weight: 600; color:white;border-radius:7px 7px 7px 7px;width:15rem;">DONE</a>
                         @else
                         <a class="btn btn-outline-light" href="{{route('trackingalamat.index', $ts->no_order)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem;">TRACK ALAMAT</a>
-
                         @endif
                         
                     </center></td>
@@ -65,5 +68,6 @@
 
         </table>
     </div>
+    @endif
 
 @endsection

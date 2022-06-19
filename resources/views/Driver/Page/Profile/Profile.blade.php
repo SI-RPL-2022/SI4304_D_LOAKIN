@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Nama Lengkap</label>
+                    <label for="example-text-input" class="form-control-label">Full Name</label>
                     <input class="form-control" type="text" name="nama" value="{{$account->name}}">
                   </div>
                 </div>
@@ -55,13 +55,13 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Alamat</label>
+                    <label for="example-text-input" class="form-control-label">Address</label>
                     <input class="form-control" type="text" name="alamat" value="{{$account->alamat}}">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Nomor Telepon</label>
+                    <label for="example-text-input" class="form-control-label">Phone Number</label>
                     <input class="form-control" type="text" name="nomor" value="{{$account->nomortelepon}}">
                   </div>
                 </div>
@@ -97,13 +97,13 @@
                   <div class="d-flex justify-content-center">
                     <div class="d-grid text-center">
                       <span class="text-lg font-weight-bolder">22 KM</span><br>
-                      <span class="text-sm opacity-8">Perjalanan</span>
+                      <span class="text-sm opacity-8">Journey</span>
                     </div>
                     <div class="d-grid text-center mx-4">
                     </div>
                     <div class="d-grid text-center">
                       <span class="text-lg font-weight-bolder">89</span><br>
-                      <span class="text-sm opacity-8">Pemesanan</span>
+                      <span class="text-sm opacity-8">Orders</span>
                     </div>
                   </div>
                 </div>

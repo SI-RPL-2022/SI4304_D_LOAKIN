@@ -15,7 +15,9 @@ use App\Http\Controllers\Driver\LoginDriverController;
 use App\Http\Controllers\Driver\ProfileDriverController;
 use App\Http\Controllers\Driver\TrackingAlamatDriverController;
 use App\Http\Controllers\Driver\InputBeratDriverController;
+use App\Http\Controllers\Driver\HistoryDriverController;
 
+use App\Http\Controllers\PDFController;
 use App\Http\Controllers\User\HomeUserController;
 use App\Http\Controllers\User\OrderUserController;
 use App\Http\Controllers\User\StatusUserController;
@@ -25,9 +27,12 @@ use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\ProfileUserController;
 use App\Http\Controllers\User\KeranjangUserController;
 use App\Http\Controllers\User\ShopUserController;
+use App\Http\Controllers\User\FavoritUserController;
 use App\Http\Controllers\User\CartUserController;
 use App\Http\Controllers\User\ActivityUserController;
 use App\Http\Controllers\User\CheckoutShopUserController;
+use App\Http\Controllers\User\PembayaranUserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -72,6 +77,8 @@ Route::prefix('admin')->group(function () {
         Route::get('/', [OrderShopAdminController::class, 'index'])->name('index');
         Route::get('/view/{no_order}', [OrderShopAdminController::class, 'view'])->name('view');
         Route::get('/approve/{id}', [OrderShopAdminController::class, 'aprove'])->name('aprove');
+        Route::get('/konfirmasi/{id}', [OrderShopAdminController::class, 'konfirmasi'])->name('konfirmasi');
+        Route::get('/kirim/{id}', [OrderShopAdminController::class, 'kirim'])->name('kirim');
     });
 
     Route::prefix('driverdata')->name('driverdata.')->group(function () {
@@ -97,6 +104,11 @@ Route::prefix('driver')->group(function () {
         Route::get('/', [DashboardDriverController::class, 'index'])->name('index');
         Route::get('/confirmpickup/{id}', [DashboardDriverController::class, 'fixpickup'])->name('fixpickup');
         Route::get('/selesai/{id}', [DashboardDriverController::class, 'selesai'])->name('selesai');
+        Route::get('/tolak/{id}', [DashboardDriverController::class, 'tolak'])->name('tolak');
+    });
+
+    Route::prefix('history')->name('history.')->group(function () {
+        Route::get('/', [HistoryDriverController::class, 'index'])->name('index');
     });
 
     Route::prefix('profile')->name('profile.')->group(function () {
@@ -136,7 +148,10 @@ Route::prefix('/')->group(function () {
 
     Route::prefix('/order')->name('order.')->group(function () {
         Route::get('/', [OrderUserController::class, 'index'])->name('index')->middleware('auth');
-        Route::post('/order', [OrderUserController::class, 'order'])->name('order');
+        Route::get('/order', [OrderUserController::class, 'orderbaru'])->name('orderbaru')->middleware('auth');
+        Route::post('/order/{id}', [OrderUserController::class, 'order'])->name('order');
+        Route::post('/neworder/{id}', [OrderUserController::class, 'ordernew'])->name('ordernew');
+        Route::post('/neworder', [OrderUserController::class, 'neworder'])->name('neworder');
         
     }); 
 
@@ -153,11 +168,21 @@ Route::prefix('/')->group(function () {
         Route::get('/', [ProfileUserController::class, 'index'])->name('index')->middleware('auth');
         Route::post('/update', [ProfileUserController::class, 'update'])->name('update')->middleware('auth');
         Route::post('/updateimg', [ProfileUserController::class, 'updateimg'])->name('updateimg')->middleware('auth');
+        Route::get('/alamat/{id}', [ProfileUserController::class, 'alamat'])->name('alamat')->middleware('auth');
+        Route::post('/tambahalamat/{id}', [ProfileUserController::class, 'tambah'])->name('tambah')->middleware('auth');
+        Route::get('/ubahalamat/{id}', [ProfileUserController::class, 'ubah'])->name('ubah')->middleware('auth');
+        Route::get('/hapus/{id}', [ProfileUserController::class, 'delete'])->name('delete')->middleware('auth');
     });
 
     Route::prefix('/shop')->name('shop.')->group(function () {
         Route::get('/', [ShopUserController::class, 'index'])->name('index')->middleware('auth');
         Route::get('/detail/{id}', [ShopUserController::class, 'detail'])->name('detail')->middleware('auth');
+    }); 
+
+    Route::prefix('/favorit')->name('favorit.')->group(function () {
+        Route::get('/', [FavoritUserController::class, 'index'])->name('index')->middleware('auth');
+        Route::get('/create/{id}', [FavoritUserController::class, 'create'])->name('create')->middleware('auth');
+        Route::get('/delete/{id}', [FavoritUserController::class, 'delete'])->name('delete')->middleware('auth');
     }); 
 
     Route::prefix('/cart')->name('cart.')->group(function () {
@@ -166,10 +191,16 @@ Route::prefix('/')->group(function () {
         Route::get('/delete/{id}', [CartUserController::class, 'delete'])->name('delete')->middleware('auth');
     });
 
+    Route::prefix('/bayar')->name('bayar.')->group(function () {
+        Route::get('/bayar/{id}', [PembayaranUserController::class, 'bayar'])->name('bayar')->middleware('auth');
+        Route::post('/updateimg/{id}', [PembayaranUserController::class, 'updateimg'])->name('updateimg')->middleware('auth');
+    });
+
     Route::prefix('/activityloakin')->name('activityloakin.')->group(function () {
         Route::get('/', [ActivityUserController::class, 'loakintrack'])->name('loakintrack')->middleware('auth');
         Route::get('/viewtrack/{no_order}', [ActivityUserController::class, 'viewtrack'])->name('viewtrack')->middleware('auth');
         Route::get('/shoptrack', [ActivityUserController::class, 'shoptrack'])->name('shoptrack')->middleware('auth');
+        Route::get('/update/{id}', [ActivityUserController::class, 'update'])->name('update');
     });
 
     Route::prefix('/checkoutshop')->name('checkoutshop.')->group(function () {
@@ -179,6 +210,4 @@ Route::prefix('/')->group(function () {
     }); 
 });
 
-Route::view('/berat', '/Driver/Page/Berat/InputBerat');
-
-Route::view('/konfberat', '/Driver/Page/Berat/KonfirmBerat');
+Route::get('generate-pdf/{no_order}', [PDFController::class, 'generatePDF']);

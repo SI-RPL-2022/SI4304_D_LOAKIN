@@ -2,44 +2,53 @@
 
 @section('content')
 
-    <div class="container d-flex justify-content-center mt-3">
-        <h1 style="font-family: 'Montserrat';color:#D77409"><b>Loak.in Aja</b></h4>
-    </div>
+<div class="container d-flex justify-content-center mt-3">
+    <h2 style="font-family: 'Nunito'; font-style: italic; font-weight:900; color:#D77409; text-align:center; font-size:38px; line-height: 52px; text-shadow: 3px 2px #FDE0C3;">Loak.in Aja </h2>
+</div>
 
-    <div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-        <div style="margin-left: 20px;margin-right:20px">
-        <div class="row">
-            <div class="col-lg-10"><h4 style="color: #D77409">Alamat Pengambilan</h4></div>
-            <div class="col-lg-2 d-flex justify-content-end"><h5><b><a href="" style="color: #D77409;text-decoration:none" data-bs-toggle="modal" data-bs-target="#exampleModal">UBAH</a></b></h5></div>
-        </div>
+<div class="container mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif;">
+    <div style="margin-left: 20px;margin-right:20px">
+    <div class="row">
+        <div class="col-lg-10"><h4 style="color: #D77409">
+            <h4 style="color: #D77409">
+                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 20px"></i><a class="text-reset" style="text-decoration:none;"><b>Pick Up Address</b></a>
+            </h4>
+        </div></div>
+        
+        <div class="row" style="font-weight: 500; margin-left:25px;">
+            @foreach($order as $us)  
+            <div class="col-lg-4">
+                <p><b>{{$us->user->name}}</b></p>
+                <p><b>{{$us->user->telepon}}</b></p>
+            </div>
+            <div class="col-lg-6">
+                @if($us->alamat == null)
+                    <b>{{$us->user->alamat}}</b>
+                @else
+                    <b>{{$us->alamat}}</b>
+                @endif
+           
+            </div>
+            <div class="col-lg-2">
             
-            <div class="row">
-                @foreach($user as $us)  
-                <div class="col-lg-4">
-                    <p><b>{{$us->name}}</b></p>
-                    <p><b>{{$us->telepon}}</b></p>
-                </div>
-                <div class="col-lg-6">
-                    {{$us->alamat}}
-               
-                </div>
-                <div class="col-lg-2">
-                
-                </div>
-                @endforeach
-                    </div>   
-            
-        </div>
+            </div>
+            @endforeach
+        </div>   
+        
     </div>
+</div>
+
     @foreach($order as $or) 
-    <div class="mt-4">
+    <div class="mt-4" style="font-family: 'Segoe UI', Arial, sans-serif;"">
             
             <div style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px;">
-                <h5 style="color: #D77409; margin-left:20px"><b>Item Details</b></h5>
-                <div style="margin-left: 50px;margin-right:40px">
+                <h4 style="color: #D77409">
+                    <i class="fa fa-balance-scale" aria-hidden="true" style="margin-right: 16px"></i><a class="text-reset" style="text-decoration:none;"><b>Detail Item</b></a>
+                </h4>
+                <div style="margin-left: 50px;margin-right:40px;font-weight: 500;">
                     
                     <div class="mb-3">
-                        <label for="weightm" class="form-label"><b>Nomor Order</b></label>
+                        <label for="weightm" class="form-label"><b>No order</b></label>
                         <p>{{$or->no_order}}</p>
                     </div>
                     <div class="mb-3">
