@@ -6,18 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 
 <title> Congrats Loakin </title>
 </head>
 
-
 <body>
-<div class="container mt-5">
-    <div class="card-body container d-flex justify-content-center mt-3">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-achieving-success-in-career-2952273-2451605.png"></img>
+    <div class="overlay">
+        <div class="Loading"></div>
     </div>
 <center>
+    <div class="container mt-5">
+        <div class="card-body container d-flex justify-content-center mt-3">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-achieving-success-in-career-2952273-2451605.png"></img>
+        </div>
 <div style="width: 18rem;">
     <div class="container dflex- justify-content-center mt-3">
         <h3 style="font-family: 'Montserrat';color:#D77409"><b> PAYMENT SUCCESS </b></h3>
