@@ -2,7 +2,9 @@
 
 ## Apa itu Loak.in
 
-LOAK.IN merupakan sebuah aplikasi mobile untuk memanggil tukang loak untuk menjual barang bekas. Selain itu, aplikasi LOAK.IN ini juga menyediakan suatu fitur untuk membeli barang bekas yang sudah di daur ulang. Aplikasi ini diciptakan dengan melihat keadaan masyarakat yang sulit untuk menemukan tukang loak dan menyalurkan barang bekas agar dapat didaur ulang.
+LOAK.IN merupakan sebuah aplikasi berbasis website untuk memanggil tukang loak untuk menjual barang bekas. Selain itu, aplikasi LOAK.IN ini juga menyediakan suatu fitur untuk membeli barang bekas yang sudah di daur ulang. Aplikasi ini diciptakan dengan melihat keadaan masyarakat yang sulit untuk menemukan tukang loak dan menyalurkan barang bekas agar dapat didaur ulang.
+
+Disini kami membuat Loak.in untuk user, driver dan juga admin.
 
 ## Fitur apa saja yang ada di Loak.in?
 
