@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+p{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.loading{
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    margin-bottom: 2opx;
+    border-radius: 50%;
+    border-top: 3px solid #D77409;
+    animation: rotate is invinite;
+}
