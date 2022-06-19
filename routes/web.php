@@ -171,6 +171,7 @@ Route::prefix('/')->group(function () {
         Route::get('/alamat/{id}', [ProfileUserController::class, 'alamat'])->name('alamat')->middleware('auth');
         Route::post('/tambahalamat/{id}', [ProfileUserController::class, 'tambah'])->name('tambah')->middleware('auth');
         Route::get('/ubahalamat/{id}', [ProfileUserController::class, 'ubah'])->name('ubah')->middleware('auth');
+        Route::get('/hapus/{id}', [ProfileUserController::class, 'delete'])->name('delete')->middleware('auth');
     });
 
     Route::prefix('/shop')->name('shop.')->group(function () {

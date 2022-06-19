@@ -99,4 +99,14 @@ class ProfileUserController extends Controller
         return view('User.Page.Order.ubahalamat', compact('account', 'alamat'));
 
     }
+
+    public function delete($id)
+    {
+        $account = Auth::user()->id;
+
+        $alamat = Alamat::find($id);
+        $alamat->delete();
+
+        return redirect(route('account.ubah', $account));
+    }
 }

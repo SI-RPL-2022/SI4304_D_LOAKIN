@@ -40,6 +40,7 @@
                             <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Nomor Order</th>
                             <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Tanggal Pesanan</th>
                             <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Nama Pelanggan</th>
+                            <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Status Pemesanan</th>
                             <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Total Transaksi</th>
                             <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Aksi</th>
                             </tr>
@@ -56,12 +57,13 @@
                                 <td>{{$ts->no_order}}</td>
                                 <td>{{date('d-m-Y', strtotime($ts->created_at));}}</td>
                                 <td>{{$ts->user->name}}</td>
+                                <td>{{$ts->status}}</td>
                                 <td>Rp {{$ts->total_harga}}</td>
                                 <td>
                                     <a href="{{route('orderadmin.view', $ts->no_order)}}" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>
                                     @if($ts->status == 'On Prosess')
                                         <a href="{{route('orderadmin.fixorder', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Approve</a>
-                                    @elseif($ts->status == 'Fix Order')
+                                    @elseif($ts->status == 'Fix Order' || $ts->status == 'Sistem Mencari Driver Lain')
                                         <a href="{{route('orderadmin.pilihdriver', $ts->id)}}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true" style="margin-right: 10px;"></i>Pilih Driver</a>
                                     @endif
                                 </td>

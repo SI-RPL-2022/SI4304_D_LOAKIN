@@ -16,7 +16,6 @@
                 </h4>
             </div>
             @foreach($alamat as $us)
-            <div class="col-lg-2 d-flex justify-content-end"><h5><b><a href="{{route('account.ubah', $us->id)}}" style="color: #D77409;text-decoration:none">Change</a></b></h5></div>
         </div>
             
             <div class="row" style="font-weight: 500; margin-left:25px;">

@@ -22,28 +22,29 @@
                 <div class="form-check">
                     <input class="form-check-input " type="radio" id="alamat" name="alamat" value="{{$al->alamat}}">
                     <label class="form-check-label" for="alamat1">
-                        <div>
-                            <table class="table-responsive" cellpadding="5" style="font-weight: 500;">
-                                <tbody>   
-                                    <tr>
-                                        <td></td>
-                                        <td ><b>{{$al->user->name}}</b></td>
-                                        <td rowspan="2">{{$al->alamat}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><b>{{$al->user->telepon}}</b></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <div class="row" style="font-weight: 500; margin-left:25px;">
+                            <div class="col-lg-4">
+                                <p><b>{{$al->user->name}}</b></p>
+                                <b>{{$al->user->telepon}}</b>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><b>{{$al->alamat}}</b></p>
+                                
+                            
+                            </div>
+                            <div class="col-lg-2">
+                                <a href="{{route('account.delete', $al->id)}}" style="color: red; text-decoration: none"><b>Delete</b></a>
+                            </div>
+                            
+                        </div>   
                     </label>
                 </div>
             </div>
-            <div class="d-flex flex-row-reverse mt-4">
+            
+        @endforeach
+        <div class="d-flex flex-row-reverse mt-4">
 				<button class="btn" type="submit" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem">NEXT</button>
 			</div>
-        @endforeach
         </form>
     </div>
     @endif

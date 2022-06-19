@@ -22,6 +22,9 @@
             {{-- Judul --}}
 
 
+    @if($order->isEmpty())
+      <center><h4>Belum Ada Orderan Nih... Yuk Semangatt...</h4></center>
+    @else
     {{-- Tabel --}}
     <div class="comtainer mt-3 " style=" font-family: 'Segoe UI', Arial, sans-serif; ">
     <?php
@@ -65,5 +68,6 @@
 
         </table>
     </div>
+    @endif
 
 @endsection

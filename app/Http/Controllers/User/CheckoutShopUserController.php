@@ -64,9 +64,9 @@ class CheckoutShopUserController extends Controller
                 $ordershop->save();
 
                 $c->delete();
-            }
 
-            return redirect(route('bayar.index', $cr->id));
+                return redirect(route('bayar.bayar', $ordershop->id));
+            }
 
     }
 }
