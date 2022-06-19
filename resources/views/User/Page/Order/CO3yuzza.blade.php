@@ -45,6 +45,11 @@
                     <div>
                     <h9 style="color: #B3B3B3; ">Maks 5 mb</h9>
                     </div>
+
+                    <div> <center>
+                        <h9><b>"Please Wait Until Verification Process Updated"</b></h9>
+                        </div></center>
+                </div>
                 </div>
     </div>
 
@@ -62,7 +67,7 @@
     </div>
     
     <div class="d-flex" style="margin-top: 30px;">
-        <button class="btn ms-auto p-2 bd-highlight" type="submit" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem"> CHECKOUT </button>
+        <button class="btn ms-auto p-2 bd-highlight" type="Verify" style="background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width:15rem"> Verify </button>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
