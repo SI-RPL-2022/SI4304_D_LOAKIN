@@ -17,11 +17,11 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->string('no_order');
             $table->unsignedBigInteger('id_user');
-            $table->index('id_user');
-            $table->string('payment');
-            $table->string('tipeweight');
-            $table->string('weight');
-            $table->string('items');
+            $table->index('id_user')->default(null);
+            $table->string('payment')->default(null);
+            $table->string('tipeweight')->default(null);
+            $table->string('weight')->default(null);
+            $table->string('items')->default(null);
             $table->string('status')->default('On Prosess');
             $table->unsignedBigInteger('id_driver');
             $table->index('id_driver')->default('0');
