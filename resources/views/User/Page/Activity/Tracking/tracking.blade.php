@@ -84,7 +84,7 @@
         <div class="mt-4" style="border-style:solid; border-width:1px; border-color: #F58814;border-radius: 10px; padding:10px; font-family: 'Segoe UI', Arial, sans-serif; font-weight:500">
                 <center><div class="loader mt-4 mb-4 "></div></center>
                 <h5 class="card-title" style="font-weight:bold; text-align: center; color:#F58814">No. Order : <b style="color: black">{{$ts->no_order}}</b></h5>
-                <p class="card-text mb-5" style="font-size:20px; font-weight: 400; text-align: center;">Tunggu Dulu yaa... Admin sedang mencarikan driver untuk kamu...</p>
+                <p class="card-text mb-5" style="font-size:20px; font-weight: 400; text-align: center;">Wait a minute... Admin is looking for a driver for you...</p>
         </div>
         @else
         {{-- Contact Driver --}}
