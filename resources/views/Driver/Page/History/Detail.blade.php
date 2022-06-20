@@ -34,9 +34,9 @@
                                 </div>
                                 <div class="col-8">
                                     <p><b>: {{$ts->no_order}}<b></p>
-                                    <p>: {{$ts->weight}}</p>
+                                    <p>: {{$ts->berat_asli}}</p>
                                     <p>: {{$ts->payment}}</p>
-                                    <p>: {{$ts->items}}</p>
+                                    <p>: {{$ts->item_asli}}</p>
                                     @if ($ts->alamat == null)
                                     <p>: {{$ts->user->alamat}}</p>
                                     @else
@@ -44,17 +44,8 @@
                                     @endif
                                 </div>
                             </div>
-                           
-
-                            <div class="row">
-                                <div class="col-6" style=" margin-top: 30px;">
-                                    <a href="{{route('driver.fixpickup', $ts->id)}}" class="btn btn-outline-light" type="submit" name="driver" style="width: 100%;background-color:#F58814;">PICK UP</a>
-                                </div>
-                                <div class="col-6" style=" margin-top: 30px;">
-                                    <a href="{{route('driver.tolak', $ts->id)}}" class="btn btn-danger" type="submit" name="driver" style="width: 100%;">REJECT</a>
-                                </div>
-                            </div>
                             @endforeach
+                            
                             
                         </div>
                     </div>

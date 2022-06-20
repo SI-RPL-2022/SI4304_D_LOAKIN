@@ -28,4 +28,11 @@ class HistoryDriverController extends Controller
             return redirect()->route('logindriver');
         }
     }
+
+    public function view($no_order)
+    {
+        $order = Order::with(['user'])->where('no_order', $no_order)->paginate(5);
+
+        return view('Driver.Page.History.Detail', compact('order'));
+    }
 }

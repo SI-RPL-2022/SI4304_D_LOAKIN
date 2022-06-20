@@ -28,6 +28,7 @@ class CreateOrdersTable extends Migration
             $table->float('berat_asli')->default('0');
             $table->float('total_harga')->default('0');
             $table->string('item_asli')->default('0');
+            $table->string('alamat')->nullable();
             $table->timestamps();
         });
     }

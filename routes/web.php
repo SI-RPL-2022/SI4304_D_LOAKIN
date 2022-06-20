@@ -109,6 +109,7 @@ Route::prefix('driver')->group(function () {
 
     Route::prefix('history')->name('history.')->group(function () {
         Route::get('/', [HistoryDriverController::class, 'index'])->name('index');
+        Route::get('/detail/{no_order}', [HistoryDriverController::class, 'view'])->name('view');
     });
 
     Route::prefix('profile')->name('profile.')->group(function () {
