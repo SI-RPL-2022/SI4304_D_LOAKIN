@@ -34,7 +34,7 @@ Berikut merupakan flow saat user malakukan pembelian barang di loak.in shop
 
 Berikut merupakan beberapa design system yang digunakan 
 
-<p align="center"><img src="https://drive.google.com/uc?export=view&id=1W6_XPvAAiXfjDD52pKYn1fSn53Q5Szs4" width="1000"></p>
+<p align="center"><img src="https://drive.google.com/uc?export=view&id=1NXmDWLUdNPmRmGc3V6Y_-mo-DNuJ8NyZ" width="1000"></p>
 
 ## Figma Prototype
 
