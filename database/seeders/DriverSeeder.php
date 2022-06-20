@@ -25,7 +25,7 @@ class DriverSeeder extends Seeder
                 'nomortelepon'  => '0812456782',
                 'alamat'        => 'surabaya',
                 'kodedriver'    => str::random(5),
-                'foto'          => 'joko.png',
+                'foto'          => 'joko.jpg',
             ]
         ];
 
