@@ -15,16 +15,16 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('no_order');
-            $table->unsignedBigInteger('id_user');
-            $table->index('id_user')->default(null);
-            $table->string('payment')->default(null);
-            $table->string('tipeweight')->default(null);
-            $table->string('weight')->default(null);
-            $table->string('items')->default(null);
-            $table->string('status')->default('On Prosess');
-            $table->unsignedBigInteger('id_driver');
-            $table->index('id_driver')->default('0');
+            $table->string('no_order')->nullable();
+            $table->unsignedBigInteger('id_user')->default('0');
+            $table->index('id_user');
+            $table->string('payment')->nullable();
+            $table->string('tipeweight')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('items')->nullable();
+            $table->string('status')->default('Pilih Alamat');
+            $table->unsignedBigInteger('id_driver')->default('0');
+            $table->index('id_driver');
             $table->float('berat_asli')->default('0');
             $table->float('total_harga')->default('0');
             $table->string('item_asli')->default('0');
