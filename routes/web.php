@@ -84,6 +84,8 @@ Route::prefix('admin')->group(function () {
     Route::prefix('driverdata')->name('driverdata.')->group(function () {
         Route::get('/', [DriverAdminController::class, 'index'])->name('index');
         Route::get('/view/{id}', [DriverAdminController::class, 'view'])->name('view');
+        Route::get('/create', [DriverAdminController::class, 'create_view'])->name('create');
+        Route::post('/create', [DriverAdminController::class, 'create_process'])->name('create.process');
         
     });
 

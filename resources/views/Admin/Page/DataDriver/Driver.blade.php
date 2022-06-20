@@ -10,6 +10,14 @@
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 " href="javascript:;">Pages</a></li>
                     <li class="breadcrumb-item text-sm active" aria-current="page">Data Driver</li>
                 </ol>
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block mt-4">   
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+                <div class="d-flex justify-content-center mt-2">
+                    <a href="{{ route('driverdata.create') }}" class="btn btn-outline-light" name="checkout" type="submit" style="background-color:#F58814;font-color:white;width:100%;border-radius:15px; font-size:18px"><b>Add Driver</b></a>
+                </div>
                 <div class="card-header pb-0">
                 <h4>Data Driver</h4>
                 </div>
