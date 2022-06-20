@@ -50,7 +50,12 @@
                                 <div class="col-12" style=" margin-top: 30px;">
                                     <a class="btn btn-outline-light" href="{{route('trackingalamat.index', $ts->no_order)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width: 100%">TRACK ALAMAT</a>
                                 </div>
-                            </div>  
+                            </div> 
+                            @elseif($ts->status == 'Pesanan Selesai - Pembayaran') 
+                            <div class="row">
+                                <div class="col-12" style=" margin-top: 30px;">
+                                    <a class="btn btn-success" href="{{route('driver.selesai', $ts->id)}}" style="font-weight: 600; color:white;border-radius:7px 7px 7px 7px;width:100%;">DONE</a>
+                            </div>        
                             @else
                             <div class="row">
                                 <div class="col-6" style=" margin-top: 30px;">
