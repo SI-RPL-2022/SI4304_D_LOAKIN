@@ -2,11 +2,12 @@
 <style>
 .label{
   display: inline-block;
-  background-color: #F8A44C;
-  color: white;
+  color: #F58814;
   padding: 0.5rem;
   font-family: sans-serif;
   border-radius: 0.3rem;
+  border-style: solid;
+  border-color: coral;
   cursor: pointer;
   margin-top: 1rem;
 }
