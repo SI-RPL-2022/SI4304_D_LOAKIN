@@ -150,9 +150,9 @@ Route::prefix('/')->group(function () {
     Route::prefix('/order')->name('order.')->group(function () {
         Route::get('/', [OrderUserController::class, 'index'])->name('index')->middleware('auth');
         Route::get('/order', [OrderUserController::class, 'orderbaru'])->name('orderbaru')->middleware('auth');
-        Route::post('/order/{id}', [OrderUserController::class, 'order'])->name('order');
-        Route::post('/neworder/{id}', [OrderUserController::class, 'ordernew'])->name('ordernew');
-        Route::post('/neworder', [OrderUserController::class, 'neworder'])->name('neworder');
+        Route::post('/order/{id}', [OrderUserController::class, 'order'])->name('order')->middleware('auth');
+        Route::post('/neworder/{id}', [OrderUserController::class, 'ordernew'])->name('ordernew')->middleware('auth');
+        Route::post('/neworder', [OrderUserController::class, 'neworder'])->name('neworder')->middleware('auth');
         
     }); 
 

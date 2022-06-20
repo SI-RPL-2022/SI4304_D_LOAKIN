@@ -10,7 +10,7 @@ class ShopUserController extends Controller
 {
     public function index()
     {
-        $produk = Produk::all();
+        $produk = Produk::where('stok_produk', '>=', '1')->get();
 
         return view('User.Page.Shop.Shop', compact('produk'));
     }

@@ -45,7 +45,13 @@
                                 </div>
                             </div>
                            
-
+                            @if($ts->status == 'Driver Menuju Ke Lokasi')
+                            <div class="row">
+                                <div class="col-12" style=" margin-top: 30px;">
+                                    <a class="btn btn-outline-light" href="{{route('trackingalamat.index', $ts->no_order)}}" style="font-weight: 600; background-color:#F58814;color:white;border-radius:7px 7px 7px 7px;width: 100%">TRACK ALAMAT</a>
+                                </div>
+                            </div>  
+                            @else
                             <div class="row">
                                 <div class="col-6" style=" margin-top: 30px;">
                                     <a href="{{route('driver.fixpickup', $ts->id)}}" class="btn btn-outline-light" type="submit" name="driver" style="width: 100%;background-color:#F58814;">PICK UP</a>
@@ -54,6 +60,7 @@
                                     <a href="{{route('driver.tolak', $ts->id)}}" class="btn btn-danger" type="submit" name="driver" style="width: 100%;">REJECT</a>
                                 </div>
                             </div>
+                            @endif
                             @endforeach
                             
                         </div>

@@ -18,6 +18,10 @@
                     <strong>{{ $message }}</strong>
                 </div>
             @endif
+
+            @if($produk->isEmpty())
+            <center><h5>Maaf Gais... Barang lagi Sold Out Nih...</h5></center>
+            @else
                 @foreach($produk as $pr)
                 <div class="col-lg-3 justify-content-center pt-5">
                     <form>
@@ -36,6 +40,7 @@
                     </form>
                 </div>
                 @endforeach
+            @endif
                 
             </div>
         </div>
