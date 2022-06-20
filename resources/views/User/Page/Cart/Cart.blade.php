@@ -41,7 +41,7 @@
                 <td style="line-height: 8rem;text-align: center">{{$cr->produk->nama_produk}}</td>
                 <td style="line-height: 8rem;text-align: center">{{$cr->jumlah}}
                 </td>
-                <td style="line-height: 8rem;text-align: center">Rp {{$cr->produk->harga * $cr->jumlah}}</td>
+                <td style="line-height: 8rem;text-align: center">@currency($cr->produk->harga * $cr->jumlah)</td>
                 <td style="line-height: 8rem;text-align: center"><center>
                     <a class="btn btn-danger" href="{{route('cart.delete', $cr->id)}}" onclick="return confirm('Are you sure?')" style="font-color:white;width:80%;border-radius:15px;margin-top: 3rem">Delete</a>
                 </center></td>
@@ -49,7 +49,7 @@
             @endforeach
             <tr>
                 <th colspan="4" style="line-height: 2rem;">Total Belanja</th>
-                <th style="line-height: 2rem;text-align: center">Rp {{$tot}}</th>
+                <th style="line-height: 2rem;text-align: center">@currency($tot)</th>
                 <th><center><a href="{{ route('checkoutshop.checkout') }}" class="btn btn-outline-light" name="hapus" style="background-color:#F58814;font-color:white;width:80%;border-radius:7px;">CHECKOUT</a></center></th>
             </tr>
        

@@ -52,7 +52,7 @@
                             {{$pr->stok_produk}}
                             </td>
                             <td class="align-middle text-center">
-                                {{$pr->harga}}
+                                @currency($pr->harga)
                             </td>
                             <td class="align-middle text-center"> 
                                 <a href="{{route('produk.view', $pr->id)}}" class="btn btn-info" ><i class="fa fa-info" aria-hidden="true" style="margin-right: 10px;"></i>Detail</a>

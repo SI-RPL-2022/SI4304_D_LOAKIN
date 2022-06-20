@@ -72,8 +72,10 @@
                         <p>{{$ts->status}} </p>
                     </div> 
                     <div class="col-lg-6 mt-2">
+                        @if($ts->status == 'Pesanan Selesai')
+                        @else
                         <p>{{date('h:i:s', strtotime('now') - strtotime($ts->updated_at))}}</p>
-                
+                        @endif
                     </div>
                 </div>
 
@@ -128,16 +130,28 @@
                     <p>{{$ts->tipeweight}}</p>
                 </div>
                 <div class="mb-3">
-                    <label for="desc" class="form-label"><b>Item Descirption</b> (Ex : TV, paper, etc)</label>
+                    <label for="desc" class="form-label"><b>Item Estimation</b> (Ex : TV, paper, etc)</label>
                     <p>{{$ts->items}}</p>
                 </div>
                 <div class="mb-3">
-                    <label for="desc" class="form-label"><b>Weight</b> (more or less)</label>
+                    <label for="desc" class="form-label"><b>Original Item</b></label>
+                    <p>{{$ts->item_asli}}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label"><b>Weight Estimation</b> (more or less)</label>
                     <p>{{$ts->weight}} Kg</p>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label"><b>Original Weight</b></label>
+                    <p>{{$ts->berat_asli}} Kg</p>
                 </div>
                 <div class="mb-3">
                     <label for="desc" class="form-label"><b>Payment</b></label>
                     <p>{{$ts->payment}}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label"><b>Total Price</b></label>
+                    <p>@currency($ts->total_harga)</p>
                 </div>
             </div>
             

@@ -20,7 +20,7 @@
             </div>
             <div class="col mt-4">
                     <h4 style="color: black; font-weight:500">{{$produk->nama_produk}}</h4>
-                    <h5 class="text-danger" style="font-weight:500">Rp. {{$produk->harga}}</h5>
+                    <h5 class="text-danger" style="font-weight:500">@currency($produk->harga)</h5>
 
                     <h5 class="mt-5" style="font-weight:400">Description : </h5>
                     <h6 style="font-weight:400">

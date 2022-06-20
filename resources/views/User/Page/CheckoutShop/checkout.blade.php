@@ -58,14 +58,14 @@
                     <td style="line-height: 8rem;text-align: center"><img src="{{ asset('dataproduk/' . $ts->produk->foto_produk) }}" width="200" height="" alt=""></td>
                     <td style="line-height: 8rem;text-align: center">{{$ts->produk->nama_produk}}</td>
                     <td style="line-height: 8rem;text-align: center">{{$ts->jumlah}}</td>
-                    <td style="line-height: 8rem;text-align: center">Rp {{$ts->produk->harga * $ts->jumlah}}</td>
+                    <td style="line-height: 8rem;text-align: center">@currency($ts->produk->harga * $ts->jumlah)</td>
                 
                 </tr>
 
                 @endforeach
                 <tr>
                     <th colspan="4">Total</th>
-                    <th style="text-align: center; color: red;">Rp {{$tot}}</th>
+                    <th style="text-align: center; color: red;">@currency($tot)</th>
                 </tr>
                     
             </tbody>

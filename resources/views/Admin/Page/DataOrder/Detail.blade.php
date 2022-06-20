@@ -34,6 +34,7 @@
                                     <p>Metode Pembayaran</p>
                                     <p>Items</p>
                                     <p>Nama Driver</p>
+                                    <p>Item Asli</p>
                                     <p>Berat Asli</p>
                                     <p>Total Bayar</p>
                                 </div>
@@ -47,8 +48,9 @@
                                     @else
                                     <p>: {{$ts->driver->name}}</p>
                                     @endif
+                                    <p>: {{$ts->item_asli}}</p>
                                     <p>: {{$ts->berat_asli}}</p>
-                                    <p>: {{$ts->total_harga}}</p>
+                                    <p>: @currency($ts->total_harga)</p>
                                 </div>
                             </div>
                             @endforeach
