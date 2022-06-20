@@ -65,7 +65,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="total" class="form-label"><b>Total</b></label>
-                        <p>Rp {{$ts->total_harga}}</p> <!-- weight * 3000 -->
+                        <p>@currency($ts->total_harga)</p> <!-- weight * 3000 -->
                     </div>
                 </div>
             </div>
