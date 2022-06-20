@@ -46,7 +46,7 @@
                     <td style="line-height: 8rem;text-align: center">{{$ts->no_order}}</td>
                     <td style="line-height: 8rem;text-align: center">{{$ts->user->name}}</td>
                     <td style="line-height: 4rem;text-align: center"><center>
-                        <a class="btn btn-info" href="{{route('pickup.view', $ts->no_order)}}"  style="font-weight: 600;color:white;border-radius:7px 7px 7px 7px;width:15rem;">DETAIL</a>
+                        <a class="btn btn-info" href="{{route('history.view', $ts->no_order)}}"  style="font-weight: 600;color:white;border-radius:7px 7px 7px 7px;width:15rem;">DETAIL</a>
                         
                     </center></td>
                 </tr>

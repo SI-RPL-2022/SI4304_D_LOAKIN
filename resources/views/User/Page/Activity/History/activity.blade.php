@@ -39,7 +39,7 @@
 
             <tr style="font-weight: 400;">
                 <th colspan="4" style="line-height: 3rem">Nomer Order : {{$or->no_order}} <b style="color: red">( {{$or->status}} )</b></th>
-                <th style="line-height: 3rem"><center>Total : Rp {{$or->total}} </center></th>
+                <th style="line-height: 3rem"><center>Total : @currency($or->total) </center></th>
                 @if ($or->status == 'On Prosess' or $or->status == 'Pesanan Sudah Diterima - Menunggu Pembayaran')
                     <td style="line-height: 3rem"><center><a class="btn btn-outline-light" href="{{route('bayar.bayar', $or->id)}}" style="background-color:#F58814;font-color:white;border-radius:25px 25px 25px 25px">Bayar Sekarang</a></center></td>
                 @elseif($or->status == 'Confirmed')
@@ -64,7 +64,7 @@
                         <td style="line-height: 8rem;text-align: center"><center><img src="{{ asset('dataproduk/' . $ts->produk->foto_produk) }}" alt="foto" class="img-fluid" style="height: 8rem; padding-right: 0;"><center></td>
                         <td style="line-height: 8rem;text-align: center">{{$ts->produk->nama_produk}}</td>
                         <td style="line-height: 8rem;text-align: center">{{$ts->jumlah}}</td>
-                        <td style="line-height: 8rem;text-align: center">Rp {{$ts->produk->harga * $ts->jumlah}}</td>
+                        <td style="line-height: 8rem;text-align: center">@currency($ts->produk->harga * $ts->jumlah)</td>
                         <td style="line-height: 8rem;text-align: center"></td>
                     </tr>
                     @endif

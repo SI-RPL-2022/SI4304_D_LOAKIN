@@ -2,11 +2,12 @@
 <style>
 .label{
   display: inline-block;
-  background-color: indigo;
-  color: white;
+  color: #F58814;
   padding: 0.5rem;
   font-family: sans-serif;
   border-radius: 0.3rem;
+  border-style: solid;
+  border-color: coral;
   cursor: pointer;
   margin-top: 1rem;
 }
@@ -35,9 +36,9 @@
             <form action="{{route('account.updateimg')}}" method="POST" id="logForm" enctype="multipart/form-data"> 
               {{ csrf_field() }}
               <div class="row">
-              <div class="file-upload col-md-4" style="margin-top: 35px">
+              <div class="file-upload col-md-4" style="margin-top: 3%">
                 <input type="file" id="upload" value="{{old('foto')}}" name="foto" hidden/>
-                <label for="upload">Choose file</label>
+                <label class="label" for="upload">Choose file</label>
               </div>
               <div class="col-md-6" style="margin-top: 30px">
                 <button type="submit" class="form-control " style="background-color: #F58814; color:white;">Upload Foto Profile</button>

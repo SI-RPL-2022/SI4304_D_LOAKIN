@@ -45,7 +45,7 @@
                     <td style="text-align: center">{{$or->driver->name}}</td>
                 @endif
                 <td style="text-align: center">{{$or->payment}}</td>
-                <td style="text-align: center">Rp {{$or->total_harga}}</td>
+                <td style="text-align: center">@currency($or->total_harga)</td>
                 <td style="text-align: center">
                     <a href="{{route('activityloakin.viewtrack', $or->no_order)}}" class="btn btn-outline-light mb-2" style="background-color:#F58814;font-color:white;border-radius:15px; width: 210px; ">TRACK ORDER</a><br>
                 </td>

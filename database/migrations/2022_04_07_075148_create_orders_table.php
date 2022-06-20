@@ -23,11 +23,12 @@ class CreateOrdersTable extends Migration
             $table->string('weight')->nullable();
             $table->string('items')->nullable();
             $table->string('status')->default('Pilih Alamat');
-            $table->unsignedBigInteger('id_driver')->default('0');
+            $table->unsignedBigInteger('id_driver')->nullable();
             $table->index('id_driver');
             $table->float('berat_asli')->default('0');
             $table->float('total_harga')->default('0');
             $table->string('item_asli')->default('0');
+            $table->string('alamat')->nullable();
             $table->timestamps();
         });
     }

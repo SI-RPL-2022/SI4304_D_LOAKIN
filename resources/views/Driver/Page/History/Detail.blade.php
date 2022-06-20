@@ -1,4 +1,4 @@
-@extends('Admin.master')
+@extends('Driver.master')
 
 @section('content')
             <div class="page-heading">
@@ -12,11 +12,8 @@
                     <div class="card">
                         
                         <div class="card-header">
-                        <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5 mb-4">
-                            <li class="breadcrumb-item text-sm"><a class="opacity-5 " href="javascript:;">Pages</a></li>
-                            <li class="breadcrumb-item text-sm active" aria-current="page">Data Order</li>
-                        </ol>
-                        <h4 class="mb-0">Detail Order Loak.In</h4>
+                        
+                        <h4 class="mb-4 mt-4">Detail Order Loak.In</h4>
                         </div>
                         <div class="card-body">
                         <?php
@@ -30,30 +27,31 @@
                             <div class="row">
                                 <div class="col-4">
                                     <p><b>No. Order</b></p>
-                                    <p>Berat Estimasi</p>
-                                    <p>Metode Pembayaran</p>
+                                    <p>Estimated Weight</p>
+                                    <p>Payment Method</p>
                                     <p>Items</p>
-                                    <p>Nama Driver</p>
-                                    <p>Item Asli</p>
-                                    <p>Berat Asli</p>
-                                    <p>Total Bayar</p>
+                                    <p>Address User</p>
+                                    <p>Original Items</p>
+                                    <p>Original Weight</p>
+                                    <p>Total Price</p>
                                 </div>
                                 <div class="col-8">
                                     <p><b>: {{$ts->no_order}}<b></p>
                                     <p>: {{$ts->weight}}</p>
                                     <p>: {{$ts->payment}}</p>
                                     <p>: {{$ts->items}}</p>
-                                    @if($ts->id_driver == null)
-                                    <p>: -</p>
+                                    @if ($ts->alamat == null)
+                                    <p>: {{$ts->user->alamat}}</p>
                                     @else
-                                    <p>: {{$ts->driver->name}}</p>
+                                    <p>: {{$ts->alamat}}</p>
                                     @endif
-                                    <p>: {{$ts->item_asli}}</p>
                                     <p>: {{$ts->berat_asli}}</p>
+                                    <p>: {{$ts->item_asli}}</p>
                                     <p>: @currency($ts->total_harga)</p>
                                 </div>
                             </div>
                             @endforeach
+                            
                             
                         </div>
                     </div>
