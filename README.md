@@ -1,6 +1,6 @@
 <p align="center"><img src="public/logo.png" width="400"></p>
 
-## Apa itu Loak.in
+## Apa itu Loak.in?
 
 LOAK.IN merupakan sebuah aplikasi berbasis website untuk memanggil tukang loak untuk menjual barang bekas. Selain itu, aplikasi LOAK.IN ini juga menyediakan suatu fitur untuk membeli barang bekas yang sudah di daur ulang. Aplikasi ini diciptakan dengan melihat keadaan masyarakat yang sulit untuk menemukan tukang loak dan menyalurkan barang bekas agar dapat didaur ulang.
 
@@ -18,6 +18,18 @@ Loak.in Shop merupakan fitur yang berguna untuk pembelian dan penjualan barang b
 Sementara fitur lainnya yaitu :
 - Activity : Fitur ini berfungsi untuk melakukan tracking pesanan kita baik Order Loak.in maupun Loak.in Shop
 - Account : fitur ini dapat melihat profil dari pengguna serta menambahkan alamat untuk melakukan Order Loak.in
+
+
+## Bagaimana Cara Menjalankan Loak.In?
+
+1. Git clone https://github.com/SI-RPL-2022/SI4304_D_LOAKIN.git
+2. php artisan migrate atau php artisan migrate:refresh
+3. php artisan db:seed --class=DatabaseSeeder
+4. php artisan db:seed --class=UserSeeder
+5. php artisan db:seed --class=DriverSeeder
+6. composer require barryvdh/laravel-dompdf
+
+*Note : Untuk melihat email dan password driver dan admin dapat di cek di database ya!
 
 ## Flowchart Loak.In
 
