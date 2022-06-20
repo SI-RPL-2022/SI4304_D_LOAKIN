@@ -63,7 +63,10 @@
                             @endforeach
                         </tbody>
                         </table>
+                        {!! $produk->links() !!}
+                        
                     </div>
+                    
                 </div>
             </div>
         </div>

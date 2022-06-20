@@ -14,7 +14,7 @@ class ProdukAdminController extends Controller
     public function index()
     {
         if(Session::has('admin')){
-            $produk = Produk::paginate(10);
+            $produk = Produk::paginate(2);
 
             return view('Admin.Page.DataProduk.Produk',  compact('produk'));
         }
