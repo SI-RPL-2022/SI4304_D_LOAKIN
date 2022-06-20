@@ -18,6 +18,12 @@
                         </div>
                     </div>
                 </div>    
+    @if($order->isEmpty())
+        <center><h5>Yahhhh.... Belum ada order loakin nih...</h5></center>
+        <div class="d-grid gap-2" style="padding-left: 20%; padding-right: 20%; margin-top: 30px;margin-bottom:30px;">
+            <a href="{{ route('order.orderbaru') }}" class="btn" name="hapus" style="background-color:#F8A44C;font-color:black;border-radius:25px 25px 25px 25px; font-weight:500">Let's Go Order Loak.In!</a>
+        </div>
+    @else
     <table  class="table table-responsive table-bordered ">
         <thead class="table "style="background-color: #D77409; color: white;">
             <tr>
@@ -53,6 +59,7 @@
             @endforeach
         </tbody>
     </table>
+    @endif
         </div>
         </div>
 </div>

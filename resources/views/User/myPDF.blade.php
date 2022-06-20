@@ -48,8 +48,8 @@
 		      <th>{{$no}}</th>
 		      <td>{{$a->produk->nama_produk}}</td>
 		      <td>{{$a->jumlah}}</td>
-              <td>Rp {{$a->produk->harga}}</td>
-              <td>Rp {{$a->produk->harga*$a->jumlah}}</td>
+              <td>@currency($a->produk->harga)</td>
+              <td>@currency($a->produk->harga*$a->jumlah)</td>
 		    </tr>
             @endforeach
 		  </tbody>
@@ -62,12 +62,12 @@
     <table style="width:100%;">
         <tr>
             <th style="text-align: left;">Sub Total Pembelanjaan </th>
-            <td style="text-align: right;padding-right: 50px">Rp {{$o->total}}</td>
+            <td style="text-align: right;padding-right: 50px">@currency($o->total)</td>
         </tr>
         
         <tr>
             <th style="text-align: left;border-top: 1px solid black"><h2>Total Pembayaran</h2></th>
-            <td style="text-align: right;padding-right: 50px;border-top: 1px solid black"><h2><b>Rp {{$o->total}}</b></h2></td>
+            <td style="text-align: right;padding-right: 50px;border-top: 1px solid black"><h2><b>@currency($o->total)</b></h2></td>
         </tr>
     </table>
     @endforeach

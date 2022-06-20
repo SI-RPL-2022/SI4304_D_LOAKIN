@@ -33,6 +33,12 @@ class CartUserController extends Controller
             $user_id = Auth::user()->id;
 
             $pro =Produk::find($id);
+
+            if($pro->stok_produk < 1)
+            {
+                return redirect(route('shop.index', $pro->id))->with(['success' => 'Stok Tidak Tersedia']);
+            }
+            else{
             
                 $cart = new cart;
 
@@ -45,6 +51,7 @@ class CartUserController extends Controller
 
                 $pro->stok_produk = $pro->stok_produk-1;
                 $pro->save();
+            }
 
                 return redirect(route('cart.index'))->with(['success' => 'Delete Cart Berhasil']);
             
