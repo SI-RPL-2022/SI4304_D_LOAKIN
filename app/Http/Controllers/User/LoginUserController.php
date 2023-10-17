@@ -75,7 +75,8 @@ class LoginUserController extends Controller
                     'password'          => 0,
                     'email_verified_at' => now(),
                     'telepon'           => 0,
-                    'alamat'            => "-"
+                    'alamat'            => "-",
+                    'status'            => "Aktif"
                 ]);
         
                 
