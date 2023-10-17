@@ -37,9 +37,14 @@
                         </div>
         
         
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center mb-4">
                             <button class="btn btn-outline-light" name="checkout" type="submit" style="background-color:#F58814;font-color:white;width:100%;border-radius:25px 25px 25px 25px; font-size:18px"><b>Login</b></button>
                         </div>
+
+                        <center><a href="{{ '/auth/redirect'}}" style="text-decoration: none;">
+                            <img src="{{asset('path_to_google_logo.png')}}" alt="Google Logo" style="width: 5%">
+                            Login with Google
+                        </a></center>
         
                         <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="{{route('registeruser')}}" class="fw-bold text-body"><u>Register here</u></a></p>
         

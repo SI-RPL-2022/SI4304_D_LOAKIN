@@ -138,6 +138,9 @@ Route::prefix('driver')->group(function () {
 Route::get('loginuser', [LoginUserController::class, 'loginuser'])->name('loginuser');
 Route::post('proses_loginuser', [LoginUserController::class, 'proses_loginuser'])->name('proses_loginuser');
 
+Route::get('auth/redirect', [LoginUserController::class, 'redirectToProvider']);
+Route::get('auth/callback', [LoginUserController::class, 'handleProviderCallback']);
+
 Route::get('registeruser', [RegisterUserController::class, 'registeruser'])->name('registeruser');
 Route::post('proses_registeruser', [RegisterUserController::class, 'proses_registeruser'])->name('proses_registeruser');
 
