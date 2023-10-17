@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class HomeUserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['auth','verified']);
-    }
     
     public function index()
     {
