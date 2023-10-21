@@ -4,6 +4,16 @@
     <div class="pt-3" style="font-family: 'Segoe UI', Arial, sans-serif;">
         <div class="row mt-4 mb-4">
             <div class="d-flex justify-content-end">
+                <form class="form-inline mr-auto w-90 navbar-search" style="margin-right: 10px" action="{{ route('shop.index') }}" method="GET"> 
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search..." name="search">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
                 <a href="{{route('favorit.index')}}" class="w-25 btn btn-outline-light md-2" style="background-color:rgb(241, 60, 90);border-radius:5px;color: white; font-weight:500;margin-right: 3%" type="button"><i class="fa fa-heart" aria-hidden="true" style="margin-right: 10px"></i>Favorite</a>
                 <a href="{{route('cart.index')}}" style="background-color:#F2B87A;border-radius:5px;color: black; font-weight:500;" class="btn btn-md w-25 align-right" type="button"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right: 10px"></i>My Cart</a>
             </div>

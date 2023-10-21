@@ -8,9 +8,14 @@ use App\Models\Produk;
 
 class ShopUserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $keyword=$request->get('search');
         $produk = Produk::where('stok_produk', '>=', '1')->get();
+
+        if($keyword !=null){
+            $produk = Produk::where('stok_produk', '>=', '1')->where('nama_produk', 'like', '%'.$keyword.'%')->paginate(10);
+        }
 
         return view('User.Page.Shop.Shop', compact('produk'));
     }
